@@ -17,3 +17,9 @@ def Velja(n):
 #_main_
 n= input('Veldu þér átt\\ 1 er Norður, 2 er Suður, 3 er Vestur og 4 er Austur')
 Velja(n)
+
+dfgbdfgbdfgbdf
+bdf
+bdf
+# BUG: dfgb
+dfgbdfgbdfgbdffb
