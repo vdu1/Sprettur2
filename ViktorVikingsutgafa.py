@@ -32,8 +32,8 @@ def nidurstada(fjoldirett, heildarspurn):
         print("Þú skeist á þig og varst með " + str(fjoldirangt) + " spurningar rangar af " + str(heildarspurn) + ", Viktor hefur því miður fallið úr skólanum.")
 
 #_main_
-    Kynning()
-    spurningar = [("Fílar Viktor hávaða? (Já/Nei):", "Nei"),
+Kynning()
+spurningar = [("Fílar Viktor hávaða? (Já/Nei):", "Nei"),
     ("Fílar Viktor að tala? (Já/Nei):", "Nei"),
     ("Elskar Viktor þögnina? (Já/Nei):", "Já"),
     ("Hvað er uppáhaldsdrykkurinn hans Viktors? (Coke Zero/Peru Nocco/Hvítur GoGo/Pepsi Max):", "Pepsi Max"),
@@ -41,12 +41,12 @@ def nidurstada(fjoldirett, heildarspurn):
     ("Hvað á Viktor margar klippingar eftir? (0/3 max/1/∞):", "3 max"),
     ("Hvað er uppáhalds tækjavörumerkið hans Viktors? (Apple/Dell/HP/Denver):", "Apple"),
     ("Hver er besti hópfélagi Viktors? (Hrólfur/Aron/Þorgeir/Víkingur):", "Þorgeir")]
-    shuffle(spurningar)
-    i=0
-    counter =0
-    for spurning, rettsvar in spurningar:
-        i += 1
-        counter =counter + spyrja(spurning, rettsvar, i)
+shuffle(spurningar)
+i=0
+counter =0
+for spurning, rettsvar in spurningar:
+    i += 1
+    counter =counter + spyrja(spurning, rettsvar, i)
 
 
-    nidurstada(counter, len(spurningar))
+nidurstada(counter, len(spurningar))
