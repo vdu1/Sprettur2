@@ -1,9 +1,16 @@
 from random import shuffle
 
-print("Viktor er dularfullar maður og hefur ýmis leyndarmál að geyma. Þú færð 10 spurningar um Viktor og þarft að svara 5 af þeim rétt til þess að útskrifa Viktor úr HÍ, ef þú nærð því ekki þá fellur Viktor úr skólanum!")
-spurningar = [("Fílar Viktor hávaða? (já/nei)", "nei"),("Fílar Viktor að tala? (já/nei)", "nei"),("Elskar Viktor þögnina? (já/nei)", "já"),("Hvað er uppáhaldsdrykkurinn hans Viktors? (coke zero/peru nocco/hvítur gogo/pepsi max)", "pepsi max"),("Hvernig bíl á Vikki D? (trabant/lada sport/audi/passat)", "audi"),("Hvað á Viktor margar klippingar eftir? (0/3 max/1/∞)", "3 max"),("Hvað er uppáhalds tækjavörumerkið hans Viktors? (apple/dell/hp/denver)", "apple"),("Hver er hópfélagi Viktors? (Hrólfur/Aron/Þorgeir/Víkingur)", "Þorgeir")]
+print()
+print("Viktor er dularfullar og hljóðlátur maður og hefur ýmis leyndarmál að geyma. Það fer ekki mikið fyrir honum og vita fáir að það eina sem Viktor þráir í raun er ást, umhyggja og smá athygli.")
+print()
+print("Verkefni þitt er að svara 10 laufléttum spurningum um Viktor og svara að lágmarki 5 af þeim rétt til þess að sýna Viktori að þú þekkir hann og kunnir að meta. Ef þetta tekst mun Viktor brjótast út úr skelinni, blómstra í námi sínu og útskrifast úr HÍ, ef ekki, mun hann falla úr skólanum!")
+print()
+
+spurningar = [("Fílar Viktor hávaða? (Já/Nei):", "Nei"),("Fílar Viktor að tala? (Já/Nei):", "Nei"),("Elskar Viktor þögnina? (Já/Nei):", "Já"),("Hvað er uppáhaldsdrykkurinn hans Viktors? (Coke Zero/Peru Nocco/Hvítur GoGo/Pepsi Max):", "Pepsi Max"),("Hvernig bíl á Vikki D? (Trabant/Lada Sport/Audi/Passat)", "Audi"),("Hvað á Viktor margar klippingar eftir? (0/3 max/1/∞):", "3 max"),("Hvað er uppáhalds tækjavörumerkið hans Viktors? (Apple/Dell/HP/Denver):", "Apple"),("Hver er besti hópfélagi Viktors? (Hrólfur/Aron/Þorgeir/Víkingur):", "Þorgeir")]
 
 shuffle(spurningar)
+print("Spurningarnar:")
+print()
 fjoldirett = 0
 i=0
 for spurning, rettsvar in spurningar:
@@ -14,6 +21,7 @@ for spurning, rettsvar in spurningar:
         fjoldirett += 1
     else:
         print("Rangt, svarið er: " + rettsvar)
+    print()
 fjoldirangt = len(spurningar) - fjoldirett
 heildarspurn = len(spurningar)
 print( "Þú náðir " + str(fjoldirett) + " rétt og " + str(fjoldirangt) + " rangt.")
