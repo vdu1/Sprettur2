@@ -6,7 +6,7 @@ from random import shuffle
 
 
 
-def Kynning():
+def kynning():
     print()
     print("Viktor er dularfullar og hljóðlátur maður og hefur ýmis leyndarmál að geyma. Það fer ekki mikið fyrir honum og vita fáir að það eina sem Viktor þráir í raun er ást, umhyggja og smá athygli.")
     print()
@@ -15,7 +15,18 @@ def Kynning():
 
 
 
-def spurningar(spurningar):
+def spurningar():
+    spurningar = [
+    ("Fílar Viktor hávaða? (Já/Nei):", "Nei"),
+    ("Fílar Viktor að tala? (Já/Nei):", "Nei"),
+    ("Elskar Viktor þögnina? (Já/Nei):", "Já"),
+    ("Hvað er uppáhaldsdrykkurinn hans Viktors? (Coke Zero/Peru Nocco/Hvítur GoGo/Pepsi Max):", "Pepsi Max"),
+    ("Hvernig bíl á Vikki D? (Trabant/Lada Sport/Audi/Passat)", "Audi"),
+    ("Hvað á Viktor margar klippingar eftir? (0/3 max/1/∞):", "3 max"),
+    ("Hvað er uppáhalds tækjavörumerkið hans Viktors? (Apple/Dell/HP/Denver):", "Apple"),
+    ("Hver er besti hópfélagi Viktors? (Hrólfur/Aron/Þorgeir/Víkingur):", "Þorgeir")
+    ]
+    shuffle(spurningar)
 
     print("Spurningarnar:")
     print()
@@ -33,27 +44,15 @@ def spurningar(spurningar):
     fjoldirangt = len(spurningar) - fjoldirett
     heildarspurn = len(spurningar)
     print( "Þú náðir " + str(fjoldirett) + " rétt og " + str(fjoldirangt) + " rangt.")
+    print()
     if fjoldirett >= 5:
         print("Þú náðir að svara " + str(fjoldirett) + " spurningum af " + str(heildarspurn) + ", til hamingju, Viktor er kominn með BS-gráðu og fer hlæjandi út í atvinnulífið, hjálpaðu næsta nemanda að útskrifast.")
     else:
         print("Þú skeist á þig og varst með " + str(fjoldirangt) + " spurningar rangar af " + str(heildarspurn) + ", Viktor hefur því miður fallið úr skólanum.")
 
 def main():
-    Kynning()
-    spurningar = [("Fílar Viktor hávaða? (Já/Nei):", "Nei"),
-    ("Fílar Viktor að tala? (Já/Nei):", "Nei"),
-    ("Elskar Viktor þögnina? (Já/Nei):", "Já"),
-    ("Hvað er uppáhaldsdrykkurinn hans Viktors? (Coke Zero/Peru Nocco/Hvítur GoGo/Pepsi Max):", "Pepsi Max"),
-    ("Hvernig bíl á Vikki D? (Trabant/Lada Sport/Audi/Passat)", "Audi"),
-    ("Hvað á Viktor margar klippingar eftir? (0/3 max/1/∞):", "3 max"),
-    ("Hvað er uppáhalds tækjavörumerkið hans Viktors? (Apple/Dell/HP/Denver):", "Apple"),
-    ("Hver er besti hópfélagi Viktors? (Hrólfur/Aron/Þorgeir/Víkingur):", "Þorgeir")]
-    shuffle(spurningar)
-    spurningar(spurningar)
-
-
-
-
+    kynning()
+    spurningar()
 
 if __name__ == "__main__":
     main()
