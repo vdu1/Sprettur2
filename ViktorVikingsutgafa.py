@@ -40,7 +40,10 @@ spurningar = [("Fílar Viktor hávaða? (Já/Nei):", "Nei"),
     ("Hvernig bíl á Vikki D? (Trabant/Lada Sport/Audi/Passat)", "Audi"),
     ("Hvað á Viktor margar klippingar eftir? (0/3 max/1/∞):", "3 max"),
     ("Hvað er uppáhalds tækjavörumerkið hans Viktors? (Apple/Dell/HP/Denver):", "Apple"),
-    ("Hver er besti hópfélagi Viktors? (Hrólfur/Aron/Þorgeir/Víkingur):", "Þorgeir")]
+    ("Hver er besti hópfélagi Viktors? (Hrólfur/Aron/Þorgeir/Víkingur):", "Þorgeir"),
+    ("Bjó Vikki D til iPad gryfjuna? (Já/Nei/Ekki Lexi):", "Já"),
+    ("Hvað er prófælmyndin hans Viktors gömul? (2 vikna/3 mánaða/6 ára/Á ekki facebook):", "6 ára")
+    ]
 shuffle(spurningar)
 i=0
 counter =0
