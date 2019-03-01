@@ -225,16 +225,6 @@ def Lprof():
     if einkunn<5:
         print('Þú náðir ekki prófinu og ert kominn ennþá meira aftur úr í náminu')
     return StadFall
-
-
-
-
-
-
-
-
-
-
 #_main_
 #Einingarnar byrja sem núll en ef maður nær tveimur prófum maður 12 einingar
 einingar=0
