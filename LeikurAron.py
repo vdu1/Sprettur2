@@ -199,8 +199,6 @@ def Lprof():
 
 
 
-
-
 #_main_
 einingar=0
 namskeid1=Velja1()
