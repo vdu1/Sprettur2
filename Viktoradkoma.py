@@ -1,14 +1,20 @@
 from random import shuffle
+import time
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 class Viktor:
 
     def kynning(self):
-        print()
-        print("Viktor er dularfullar og hljóðlátur maður og hefur ýmis leyndarmál að geyma. Það fer ekki mikið fyrir honum og vita fáir að það eina sem Viktor þráir í raun er ást, umhyggja og smá athygli.")
-        print()
-        print("Verkefni þitt er að svara 10 laufléttum spurningum um Viktor og svara að lágmarki 5 af þeim rétt til þess að sýna Viktori að þú þekkir hann og kunnir að meta. Ef þetta tekst mun Viktor brjótast út úr skelinni, blómstra í námi sínu og útskrifast úr HÍ, ef ekki, mun hann falla úr skólanum!")
-        print()
+        time.sleep(1)
+        print("\nViktor er dularfullar og hljóðlátur maður og hefur ýmis"
+        " leyndarmál að geyma. Það fer ekki mikið fyrir honum og vita fáir að"
+        " það eina sem Viktor þráir í raun er ást, umhyggja og smá athygli.\n")
+        time.sleep(5)
+        print("Verkefni þitt er að svara 10 laufléttum spurningum um Viktor"
+        " og svara að lágmarki 5 af þeim rétt til þess að sýna Viktori að"
+        " þú þekkir hann og kunnir að meta. Ef þetta tekst mun Viktor brjótast"
+        " út úr skelinni, blómstra í námi sínu og útskrifast úr HÍ, ef ekki,"
+        " mun hann falla úr skólanum!\n")
 
     def spurningar(self):
 
@@ -26,27 +32,35 @@ class Viktor:
 
         shuffle(spurningar)
 
-        print("Spurningarnar:")
-        print()
+        time.sleep(5)
+        print("Spurningarnar:\n")
         fjoldirett = 0
         i=0
         for spurning, rettsvar in spurningar:
             i=i+1
             svar = input(str(i) + ". " + spurning + " ")
+            time.sleep(1)
             if svar.lower() == rettsvar.lower():
-                print("Rétt")
+                print("Rétt\n")
                 fjoldirett += 1
+                time.sleep(2)
             else:
-                print("Rangt, svarið er: " + rettsvar)
-            print()
+                print("Rangt, svarið er: " + rettsvar + "\n")
+                time.sleep(2)
         fjoldirangt = len(spurningar) - fjoldirett
         heildarspurn = len(spurningar)
-        print( "Þú náðir " + str(fjoldirett) + " rétt og " + str(fjoldirangt) + " rangt.")
-        print()
+        time.sleep(1)
+        print( "Þú náðir " + str(fjoldirett) + " rétt og " + str(fjoldirangt) + " rangt.\n")
+        time.sleep(2)
         if fjoldirett >= 5:
-            print("Þú náðir að svara " + str(fjoldirett) + " spurningum af " + str(heildarspurn) + ", til hamingju, Viktor er kominn með BS-gráðu og fer hlæjandi út í atvinnulífið, hjálpaðu næsta nemanda að útskrifast.")
+            print("Þú náðir að svara " + str(fjoldirett) + " spurningum af "
+            + str(heildarspurn) + ", til hamingju, Viktor er kominn með"
+            " BS-gráðu og fer hlæjandi út í atvinnulífið, hjálpaðu næsta"
+            " nemanda að útskrifast.\n")
         else:
-            print("Þú skeist á þig og varst með " + str(fjoldirangt) + " spurningar rangar af " + str(heildarspurn) + ", Viktor hefur því miður fallið úr skólanum.")
+            print("Þú skeist á þig og varst með " + str(fjoldirangt) +
+            " spurningar rangar af " + str(heildarspurn) + ", Viktor hefur því"
+            " miður fallið úr skólanum.\n")
 
 def main():
 
