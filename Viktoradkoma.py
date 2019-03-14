@@ -55,13 +55,13 @@ class Viktor:
         if fjoldirett >= 5:
             print("Þú náðir að svara " + str(fjoldirett) + " spurningum af "
             + str(heildarspurn) + ", til hamingju, Viktor er kominn með"
-            " BS-gráðu og fer hlæjandi út í atvinnulífið, hjálpaðu næsta"
-            " nemanda að útskrifast.\n")
+            " BS-gráðu og fer hlæjandi út í atvinnulífið.\nHjálpaðu næsta"
+            " nemanda að útskrifast!\n")
         else:
             print("Þú skeist á þig og varst með " + str(fjoldirangt) +
             " spurningar rangar af " + str(heildarspurn) + ", Viktor hefur því"
-            " miður fallið úr skólanum. Hjálpaðu næsta"
-            " nemanda að útskrifast.\n")
+            " miður fallið úr skólanum.\n\nHjálpaðu næsta"
+            " nemanda að útskrifast!\n")
 
 def main():
 
