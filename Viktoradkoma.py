@@ -60,7 +60,8 @@ class Viktor:
         else:
             print("Þú skeist á þig og varst með " + str(fjoldirangt) +
             " spurningar rangar af " + str(heildarspurn) + ", Viktor hefur því"
-            " miður fallið úr skólanum.\n")
+            " miður fallið úr skólanum. Hjálpaðu næsta"
+            " nemanda að útskrifast.\n")
 
 def main():
 
