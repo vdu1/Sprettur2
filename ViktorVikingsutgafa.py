@@ -19,7 +19,6 @@ def spyrja(spurning, rsvar, i):
             rettrangt=1
         else:
             print("Rangt, svarið er: " + rsvar)
-        print()
         return rettrangt
 
 
