@@ -3,7 +3,7 @@ import math
 import random
 import time
 
-class Viktor:
+class Hrolfur:
 
     def __init__(self):
         pass
@@ -38,9 +38,9 @@ class Viktor:
             print("Jæja, þú ert ömurlegur ráðgjafi. Hrólfur missti allt hárið og féll úr MR á fyrstu önninni. Hann er samt mjög ánægður á dælunni.")
             return 100
         elif choice in svar_B:
-            counter += option_Flens()
+            counter += self.option_Flens()
         elif choice in svar_C:
-            counter += option_Verzl()
+            counter += self.option_Verzl()
         else:
             print ("A, B eða C takk fyrir")
             intro()
@@ -62,7 +62,7 @@ class Viktor:
         print("Hrólfur er hinsvegar í erfiðri stöðu. Félagarnir eru ekki með jafn mikið metnað í boltanum. Hrólfur sjálfur gæti fengið að æfa með meistaraflokki FH í sumar."+"\n")
         print("Hrólfur veit samt að það er mikið álag að vera í meistaraflokki"+"Ætti hann að eltast við draumana í FH eða ætti hann að fara með félögunum í Passion League"+"\n")
         time.sleep(1)
-        print (" A. FH"
+        print (" A. FH  "
         "B. Passion League ")
         choice = input(">>> ")
         if choice in svar_A:
@@ -147,11 +147,11 @@ class Viktor:
         print("B - Finna sér kærustu til að gera nestið fyrir sig alla daga? "+"\n")
         choice = input(">>> ")
         if choice in svar_A:
-            counter += HaskoliA()
+            counter += self.HaskoliA()
         elif choice in svar_B:
-            counter += HaskoliB()
+            counter += self.HaskoliB()
         else:
-            HaskoliStart()
+            self.HaskoliStart()
         return counter
 
     def HaskoliA(self):
@@ -260,14 +260,24 @@ class Viktor:
         print("Við það að reyna að ná þessum fáranlegu námskeiðum sem Lexi valdi missti Hrólfur 10 hár, vonandi átti hann efni á því"+"\n")
         counter +=10
         return counter
-    def Nidurstada(x):
+
+
+    def Nidurstada(self, x):
         print("Nú er Hrólfur búinn með skólann")
+        print("Hann endaði með "+str(x)+"hár eftir á kollinum")
+        if x>20:
+            print("Þarf sem Hrólfur átti meira en 20 hár eftir á hausnum þá hafði hann nóg sjálfstraust til að klára dæmið"+"\n")
+        if x <= 20:
+            print("Þarf sem Hrólfur missti of mikið hár gat hann ekki náð að klára dæmið, þú náðir ekki að útskrifa Hrólf")
 
 
 
-
-    #_main_
+def main():
+    kall = Hrolfur()
     har = 100
-    har -= intro()
-    har -= HaskoliStart()
-    Nidurstada(har)
+    har -= kall.intro()
+    har -= kall.HaskoliStart()
+    kall.Nidurstada(har)
+
+if __name__ == "__main__":
+    main()
