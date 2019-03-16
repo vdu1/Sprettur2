@@ -80,7 +80,10 @@ def option_Flens():
         print ("Geggjuð ákvörðun. Hrólfur skemmtir sér konunglega með félögunum í Passion League, einn stóran Tuborg takk."+"\n")
     else:
         print ("A eða B koma svo")
+    print("Hrólfur útskrifaðist úr Flensborg og stefnir núna á Iðnaðarverkfræði við Háskóla Íslands")
     return counter
+
+
 
 def option_Verzl():
     counter=0
@@ -123,7 +126,83 @@ def option_Verzl():
         return counter
     else:
         print ("A eða B koma svo")
+    print("Hrólfur útskrifaðist úr Verzlunarskólanum og stefnir núna á Iðnaðarverkfræði við Háskóla Íslands"+"\n")
     return counter
+
+
+def HaskoliStart():
+    counter=0
+    svar_A = ["A", "a"]
+    svar_B = ["B", "b"]
+    print("Nú er Hrólfur mættur í háskólann eftir fína framhaldsskólagöngu"+"\n")
+    time.sleep(1)
+    print("Hrólfur fattar strax að hann eigi ekki efni á kaupa sér hádegismat alla daga"+"\n")
+    time.sleep(1)
+    print("A - Á Hrólfur að læra að gera sér nesti eða "+"\n")
+    print("B - Finna sér kærustu til að gera nestið fyrir sig alla daga? "+"\n")
+    choice = input(">>> ")
+    if choice in svar_A:
+        counter += HaskoliA()
+    elif choice in svar_B:
+        counter += HaskoliB()
+    else:
+        HaskoliStart()
+    return counter
+
+def HaskoliA():
+    counter=0
+    svar_A = ["A", "a"]
+    svar_B = ["B", "b"]
+    svar_C = ["C", "c"]
+    Ja = ["J", "j", "já", "JÁ", "Já"]
+    Nei = ["N", "n", "nei", "Nei", "NEI"]
+    time.sleep(1)
+    print("Hrólfur lærði að gera nesti, hann missir hinsvegar smá svefn við að vakna alltaf til að gera nesti"+"\n")
+    print("Mínus 5 hár útaf svefnleysi"+"\n")
+    counter += 5
+    time.sleep(1)
+    print("Hrólf gengur vel í náminu á fyrstu önn, hann þarf að fara í eitt endurtektarpróf en pakkar því saman"+"\n")
+    print("Á annarri önninni trúðar Hrólfur oft yfir sig á djamminu"+"\n")
+    time.sleep(1)
+    print("Á Hrólfur að hætta að drekka eins og T-Paul vinur hans?")
+    choice1 = input(">>> ")
+    if choice1 in Ja:
+        print("Slæm ákvörðun, þar sem Hrólfur getur ekki slakað á um helgar með félögunum og einn skíítkaldan missir hann 20 hár")
+        counter += 20
+    if choice1 in Nei:
+        print("Góð ákvörðun, þrátt fyrir að Hrólfur prjónaði stundum yfir sig þá getur hann slakað vel á um helgar með félögunum"+"\n")
+        print("Hann þarf samt oft að hafa áhyggjur eftir að hafa trúðað yfir sig og missir því 5 hár")
+        counter += 5
+    time.sleep(1)
+    if choice1 in Ja:
+        print("Þrátt fyrir að vera hættur að drekka þá nær Hrólfur öllum prófunum á önn númer 2"+"\n")
+    if choice1 in Nei:
+        print("Hrólfur náði öllum prófunum og fagnaði proflokunum vel á b5"+"\n")
+    print("Á önn númer 3 fattar Hrólfur að hann þurfi að finna sér kærustu"+"\n")
+    time.sleep(1)
+    print("Þrjár stelpur reyna við hann, allar eru með frábæran hlátur en hverja á hann að velja?"+"\n")
+    print("A - Hressa sveitastelpu sem hatar ekki sopann"+"\n")
+    print("B - Verzló skvísu af nesinu"+"\n")
+    print("C - Aðeins eldri en skemmtilega skvísu úr Hafnarfirðinum"+"\n")
+    choice2 = input(">>> ")
+    time.sleep(1)
+    if choice2 in A:
+        print("Þetta gengur vel en auðvitað eru einhverjir hnökkrar og Hrólfur missir samtals 5 hár")
+        counter += 5
+    if choice2 in B:
+        print("Þetta gengur vel en auðvitað eru einhverjir hnökkrar og Hrólfur missir samtals 5 hár")
+        counter += 5
+    if choice2 in C:
+        print("Þetta gengur vel en auðvitað eru einhverjir hnökkrar og Hrólfur missir samtals 5 hár")
+        counter += 5
+    print("Á önn númer þrjú eru 4 auðveldir áfangar sem Hrólfur þarf ekki að hafa neinar áhyggjur af"+"\n")
+    time.sleep(1)
+    print("Hrólfur þarf samt líka að taka áfangann Verkefnastjórnun, áfanginn er gríðarlega erfiður og þarf mikla vinnu til að ná honum"+"\n")
+    print("Hvaða einkunn stefnir Hrólfur á að fá í áfanganum, því meiri vinnu sem hann leggur í áfangann því meira hár missir hann"+"\n")
+    verk = input()
+    counter += verk
+
+
 
 
 
@@ -132,7 +211,6 @@ def option_Verzl():
 
 
 #_main_
-
-
 har = 100
 har -= intro()
+har -= HaskoliStart()
