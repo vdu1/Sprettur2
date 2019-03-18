@@ -29,5 +29,7 @@ def main():
     leikur2.inngangur()
     leikur3 = Aron()
     leikur3.Velja1()
+    leikur3.Velja2(namskeid1)
+
 if __name__ == "__main__":
     main()
