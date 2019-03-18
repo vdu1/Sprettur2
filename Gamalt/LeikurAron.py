@@ -10,7 +10,7 @@ class Aron:
 
     # Fall til að velja fyrsta endurtektarprófið
     time.sleep(1)
-    def Velja1():
+    def Velja1(self):
         time.sleep(1)
         print('\nÞú féllst í þremur lokaprófum á fyrstu önninni þinni.\n'
         'Nú verður þú að velja tvö námskeið til að taka í endurtekt.')
@@ -252,16 +252,21 @@ class Aron:
 
 #_main_
 #Einingarnar byrja sem núll en ef maður nær tveimur prófum maður 12 einingar
-einingar=0
-namskeid1=Velja1()
-namskeid2=Velja2(namskeid1)
-if namskeid1 == 'S' or namskeid2 == 'S':
-    einingar = einingar+6*S1Prof()
-# Til að spara forritun átti maður ekki séns á að ná eðlisfræðinni
-# Bætum mögulega við prófi í eðlisfræði fyrir næsta sprett
-if namskeid1 == 'E' or namskeid2 == 'E':
-    print('Aldeilis mistök sem þú gerðir að velja Eðlisfræði prófið.')
-    print('Þú áttir aldrei séns og fékkst núll í prófinu')
-if namskeid1 == 'L' or namskeid2 =='L':
-    einingar = einingar+6*Lprof()
-print('Þú endaðir með '+ einingar + " , til hamingju! Hjálpaðu næsta nemanda að útskrifast")
+def main():
+    einingar=0
+    kall = Aron()
+    namskeid1 = kall.Velja1()
+    namskeid2=Velja2(namskeid1)
+    if namskeid1 == 'S' or namskeid2 == 'S':
+        einingar = einingar+6*S1Prof()
+    # Til að spara forritun átti maður ekki séns á að ná eðlisfræðinni
+    # Bætum mögulega við prófi í eðlisfræði fyrir næsta sprett
+    if namskeid1 == 'E' or namskeid2 == 'E':
+        print('Aldeilis mistök sem þú gerðir að velja Eðlisfræði prófið.')
+        print('Þú áttir aldrei séns og fékkst núll í prófinu')
+    if namskeid1 == 'L' or namskeid2 =='L':
+        einingar = einingar+6*Lprof()
+    print('Þú endaðir með '+ einingar + " , til hamingju! Hjálpaðu næsta nemanda að útskrifast")
+
+if __name__ == "__main__":
+    main()
