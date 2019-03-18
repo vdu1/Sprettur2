@@ -1,4 +1,7 @@
 import time
+from klasavikingur import Vikingur
+from Viktoradkoma import Viktor
+
 svar_A = ["Hrólfur", "hrólfur"]
 svar_B = ["Aron", "aron"]
 tsvar = ("\nNotaðu aðeins A eða B\n")
@@ -22,10 +25,16 @@ class Inngangur:
             inngangur()
     inngangur()
 
-from Viktoradkoma import Viktor
-leikur1 = Viktor()
+
+#__main__
+kennari=[]
+leikur1 = Viktor(True)
+kennri.append(leikur1)
+
 leikur1.kynning()
 leikur1.spurningar()
-from klasavikingur import Vikingur
-leikur2 = Vikingur()
+
+leikur2 = Vikingur(False)
+kennari.append(leikur2)
+
 leikur2.inngangur()

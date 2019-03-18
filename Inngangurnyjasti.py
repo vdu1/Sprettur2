@@ -1,9 +1,14 @@
-import time
-from Viktornyjasti import Viktor
-from Vikingurnyjasti import Vikingur
+import unittest #Importum module til að að geta framkvæmd einingaprófanir
+import time #Importum module til að að hafa smá biðtíma milli falla og skipana
+from Viktornyjasti import Viktor #Importum Viktor úr Viktornyjasti til að geta kallað á leikinn í inngangsforritinu
+from Vikingurnyjasti import Vikingur #Importum Vikingur úr Vikingurnyjasti til að geta kallað á leikinn í inngangsforritinu
 
-class Inngangur:
-    def inngangur():
+class Inngangur: #Klasinn
+
+    def __init__(self): #Smiðurinn, notum engan "smið" eins og er, eða hvað?
+        pass
+
+    def inngangur(): #Fallið sem byrjar leikinn
         time.sleep(1)
         print("\nAllir nemendur við Háskóla Íslands glíma við sín eigin vandamál og þurfa þeir að leysa þau ef"
         " þeir ætla að útskrifast með sæmd úr háskólanum. Þitt verkefni er að ná að brautskrá sem flesta nemendur.")
