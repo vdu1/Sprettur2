@@ -266,7 +266,7 @@ def main():
         print('Þú áttir aldrei séns og fékkst núll í prófinu')
     if namskeid1 == 'L' or namskeid2 =='L':
         einingar = einingar+6*kall.Lprof()
-    print('Þú endaðir með '+ einingar + " , til hamingju! Hjálpaðu næsta nemanda að útskrifast")
+    print('Þú endaðir með '+ str(einingar) + " , til hamingju! Hjálpaðu næsta nemanda að útskrifast")
 
 if __name__ == "__main__":
     main()
