@@ -4,6 +4,9 @@ import time
 # -*- coding: utf-8 -*-
 class Viktor:
 
+    def __init__(self, tegund_nema):
+        self.tegund_nema=tegund_nema
+
     def kynning(self):
         time.sleep(1)
         print("\nViktor er dularfullar og hljóðlátur maður og hefur ýmis"

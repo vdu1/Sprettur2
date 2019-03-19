@@ -1,6 +1,7 @@
 import time #Importum module til að að hafa smá biðtíma milli spurninga
 
 #Svona ættu notendur að svara spurningunum
+"""
 answer_A = ["A", "a"]
 answer_B = ["B", "b"]
 answer_C = ["C", "c"]
@@ -12,29 +13,43 @@ snooz = 0
 
 rettinntak = ("\nNotaðu aðeins A, B, eða C\n") #Til að koma í veg fyrir misskilning
 jn = ("\nNotaðu aðeins já eða nei\n")
-
+"""
 class Vikingur:
+    answer_A = ["A", "a"]
+    answer_B = ["B", "b"]
+    answer_C = ["C", "c"]
+    yes = ["J", "j", "Já", "já"]
+    no = ["N", "n", "Nei", "nei"]
+
+    #Hlutir sem notendur geta notfært sér
+    snooz = 0
+
+    rettinntak = ("\nNotaðu aðeins A, B, eða C\n") #Til að koma í veg fyrir misskilning
+    jn = ("\nNotaðu aðeins já eða nei\n")
 
     #Leið Víkings er brotin niður í mismunandi leiðir og byrjar í "inngangur"
-    time.sleep(5)
+    def __init__(self):
+        pass
+
+    time.sleep(2)
     def inngangur(self):
       time.sleep(1)
       print("Jæja, komið að Víkingi!")
-      time.sleep(5)
+      time.sleep(1)
       print ("\nÞað er próf á morgun í Stærðfræðigreiningu II. Víkingur Goði var handviss um að hann gæti"
       " tekið þetta próf með bundið fyrir augun. Þess vegna mætti hann ekki fyrr en eftir miðnætti á"
       " næturvakt í VR-II. Þegar Víkingur sér hvað þetta er létt námsefni þá hugsar hann með sér að"
       " hann geti nú alveg eins sleppt því að læra.\nHvað gerir Víkingur næst?\n")
-      time.sleep(5)
+      time.sleep(1)
       print ("""      A. Fer að spila surviv.io
       B. Fer að spila Fifa
       C. Hugsar með sér að það nægi að mæta vel seint í prófið""")
       choice = input("\n>>> ") #Here is your first choice.
-      if choice in answer_A:
+      if choice in self.answer_A:
         time.sleep(3)
         print ("\nGlæsilegt þú gast ekki klúðrað þessari spurningu því Stægrein II"
         " var svo létt fyrir Víking. Nú er Víkingur mættur í prófið.\nHvernig tekst hann á við prófið?\n")
-        prof()
+        self.prof()
       elif choice in answer_B:
         time.sleep(3)
         print ("\nGlæsilegt þú gast ekki klúðrað þessari spurningu því Stægrein II"
@@ -49,7 +64,7 @@ class Vikingur:
         print (rettinntak)
         inngangur()
 
-    def prof():
+    def prof(self):
       time.sleep(3)
       print ("""  A. Biður um krassblað til að geta fínskrifað svörin sín
       B. Dritar niður á blað einhverju gáfulegu og fer út án þess að fara yfir
@@ -58,7 +73,7 @@ class Vikingur:
       if choice in answer_A:
         time.sleep(3)
         print ("\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur skepnan þín!\n")
-        prof()
+        self.prof()
       elif choice in answer_B:
         time.sleep(3)
         print ("\nVíkingi leið ágætlega með prófið og langar að fagna. Leiðin liggur beint"
@@ -72,7 +87,6 @@ class Vikingur:
         print (rettinntak)
         prof()
 
-    def matur():
       time.sleep(3)
       print ("""  A. Burger og bjór
       B. Grænmetislasagna

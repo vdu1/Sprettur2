@@ -1,4 +1,4 @@
-import time #Importum module til að að hafa smá biðtíma milli spurninga
+import time #Importum module til að að hafa smá biðtíma milli falla og skipana
 
 class Vikingur:
     #Svona ættu notendur að svara spurningunum
@@ -14,10 +14,10 @@ class Vikingur:
     rettinntak = ("\nNotaðu aðeins A, B, eða C\n") #Til að koma í veg fyrir misskilning
     jn = ("\nNotaðu aðeins já eða nei")
 
-    #Leið Víkings er brotin niður í mismunandi leiðir og byrjar í "inngangur"
     def __init__(self):
         pass
 
+    #Leið Víkings er brotin niður í mismunandi leiðir og byrjar í "inngangur"
     #Það þarf að laga byrjunina
     time.sleep(1)
     def inngangur(self):
