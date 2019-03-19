@@ -259,7 +259,7 @@ class Hrolfur:
         time.sleep(1)
         print("Hrólfur þarf samt líka að taka áfangann Verkefnastjórnun, áfanginn er gríðarlega erfiður og þarf mikla vinnu til að ná honum"+"\n")
         print("Hvaða einkunn stefnir Hrólfur á að fá í áfanganum, því meiri vinnu sem hann leggur í áfangann því meira hár missir hann"+"\n")
-        verk = input()
+        verk = int(input(">>>"))
         counter += (verk-5)*5
         print("Það var stressandi að fá góða einkunn í verkefnastjórnun, Hrólfur missti 4 hár fyrir hverja einkunn sem hann fékk yfir 5"+"\n")
         time.sleep(1)
