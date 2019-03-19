@@ -18,10 +18,11 @@ class Aron:
         print('Þú féllst í þremur lokaprófum á fyrstu önninni þinni.\n'
         'Nú verður þú að velja tvö námskeið til að taka í endurtekt.')
         time.sleep(1)
-        namskeid1 = str(input('\nS fyrir Stærðfræði greiningu, L fyrir Línulega Algebru eða E fyrir Eðlisfræði: '))
+        namskeid1 = input('\nS fyrir Stærðfræði greiningu, L fyrir Línulega Algebru eða E fyrir Eðlisfræði: ')
         if namskeid1.lower() in self.afangar:
             return namskeid1
         else:
+            time.sleep(1)
             print("Það fór eitthvað úrskeiðis hjá þér reyndu aftur að velja námskeið")
             self.Velja1()
 
@@ -29,14 +30,15 @@ class Aron:
     time.sleep(1)
     def Velja2(self, namskeid1):
         time.sleep(1)
-        print('\nNú ertu búinn að velja eitt námskeið til að taka í endurtekt, próftaflan er heppileg svo þú getur tekið eitt endurtektarpróf í viðbót.\n')
+        print("\nNú ertu búinn að velja eitt námskeið til að taka í endurtekt,"
+        " próftaflan er heppileg svo þú getur tekið eitt endurtektarpróf í viðbót.\n")
         # Það er ekki hægt að velja sama endurtektarprófið tvisvar
         if namskeid1.lower() =='s':
-            namskeid2= str(input('L fyrir Línulega Algebru eða E fyrir Eðlisfræði: '))
+            namskeid2= input('L fyrir Línulega Algebru eða E fyrir Eðlisfræði: ')
         elif namskeid1.lower() =='l':
-            namskeid2= str(input('S fyrir Stærðfræði greiningu eða E fyrir Eðlisfræði: '))
+            namskeid2 = input('S fyrir Stærðfræði greiningu eða E fyrir Eðlisfræði: ')
         elif namskeid1.lower() =='e':
-            namskeid2=str(input('S fyrir Stærðfræði greiningu eða L fyrir Línulega Algebru: '))
+            namskeid2 = input('S fyrir Stærðfræði greiningu eða L fyrir Línulega Algebru: ')
 
         if namskeid2.lower() in self.afangar:
             return namskeid2
@@ -56,105 +58,140 @@ class Aron:
         'Þú verður að velja hvort þú viljir læra diffrun eða heildun fyrir prófið.\n')
         time.sleep(1)
         #Maður lærir hvort maður eyði tímanum sínum í að læra diffrun eða heildun, það er 50/50 hvort kemur.
-        dh= str(input('Diffrun = D eða Heildun = H: '))
+        dh= input('Diffrun = D eða Heildun = H: ')
         #Hérna fær maður að velja hversu mikið maður ætlar að sofa fyrir prófið, það fer eftir hvernig próf kennarinn gerir hvort það gagnist manni að sofa mikið
+        if dh.lower() != "d" and dh.lower() != "h":
+            print("Það mistókst hjá þér að velja diffrun eða heildun svo þú kant hvorugt.\n")
         time.sleep(1)
-        svefn = int(input('\nÞú ert illa undirbúinn en veist að svefn getur gert gott fyrir þig, hvað ætlar þú að sofa mikið nóttinni fyrir prófið? '))
+        svefn = int(input("\nÞú ert illa undirbúinn en veist að svefn getur"
+        " gert gott fyrir þig, hvað ætlar þú að sofa mikið nóttinni fyrir prófið? "))
         #Til þess að maður græði eitthvað á að læra fram eftir þá nær maður að læra um Taylor margliður ef maður lærir frameftir
         if svefn<4.5:
-            print('Þú fórst svo seint að sofa að þú hafðir tíma til að læra Taylor margliður, vonandi kemur það á prófinu')
+            time.sleep(1)
+            print("\nÞú fórst svo seint að sofa að þú hafðir tíma til að læra"
+            " Taylor margliður, vonandi kemur það á prófinu.\n")
             TM =1
         # 50/50 hvort það komi diffrun eða heildun, spurningin sem kemur verður 20% af prófinu
         DH=random.randint(0,1)
         time.sleep(1)
         if DH==1:
             time.sleep(1)
-            print('\nNú ertu mættur í prófið, fyrsta spurningin er um Diffrun.\n')
-            if dh == 'D':
+            print('Nú ertu mættur í prófið, fyrsta spurningin er um Diffrun.\n')
+            if dh.lower() == 'd':
                 time.sleep(1)
-                print('Þú ert heppinn, þú lærðir diffrun og hún kom á prófinu, einkunin þín hækkar um 2')
+                print('Þú ert heppinn, þú lærðir diffrun og hún kom á prófinu, einkunin þín hækkar um 2.\n')
                 einkunn = einkunn +2
-            if dh == 'H':
+            elif dh.lower() == 'h':
                 time.sleep(1)
-                print('\nÞú valdir vitlaust, þú lærðir ekki diffrun og hún var 20% af prófinu, þú getur í mesta lagi fengið 8.\n')
+                print("\nÞú valdir vitlaust, þú lærðir ekki diffrun og hún var"
+                " 20% af prófinu, þú getur í mesta lagi fengið 8.\n")
+            else:
+                time.sleep(1)
+                print("Þar sem þú valdir þú hvorugt áðan varst þú jafn týndur þegar þessi spurning kom og VD á b5.\n")
+
         if DH==0:
             time.sleep(1)
-            print('Nú ertu mættur í prófið, fyrsta spurningin er um heildun.')
-            if dh == 'H':
+            print('Nú ertu mættur í prófið, fyrsta spurningin er um heildun.\n')
+            if dh.lower() == 'h':
                 time.sleep(1)
-                print('Þú ert heppinn, þú lærðir heildun og hún kom á prófinu, einkunin þín hækkar um 2')
+                print('Þú ert heppinn, þú lærðir heildun og hún kom á prófinu, einkunin þín hækkar um 2.\n')
                 einkunn = einkunn +2
-            if dh == 'D':
+            if dh.lower() == 'd':
                 time.sleep(1)
-                print('Þú valdir vitlaust, þú lærðir ekki heildun og hún var 20% af prófinu, þú getur í mesta lagi fengið 8.')
+                print("Þú valdir vitlaust, þú lærðir ekki heildun og hún var 20% af prófinu,"
+                " þú getur í mesta lagi fengið 8.\n")
+            else:
+                time.sleep(1)
+                print("Þar sem þú valdir þú hvorugt áðan varst þú jafn týndur þegar þessi spurning kom og VD á B5.\n")
         # 50/50 hvort Taylor margliður komi á prófinu. Ef maður lærði frameftir nær maður spurningunni rétt annars fær maður 0 stig.
         if random.randint(0,1)==1:
             time.sleep(1)
-            print('\nTaylor margliður komu á prófinu.\n')
+            print('Taylor margliður komu á prófinu.\n')
             if TM == 0:
                 time.sleep(1)
                 print('Þú hefðir kannski átt að vaka lengur til að læra Taylor margliður, þær voru 20% af prófinu.\n')
             if TM == 1:
-                print('Vel gert að læra Taylor margliður, þú varst að ná auka 2 heilum á prófinu')
+                time.sleep(1)
+                print('Vel gert að læra Taylor margliður, þú varst að ná auka 2 heilum á prófinu.\n')
                 einkunn=einkunn + 2
         else:
-            print('Taylor margliður komu ekki. Það kom fáranlegt markgildisdæmi sem þú áttir aldrei séns í. Óheppinn.')
+            time.sleep(2)
+            print('Taylor margliður komu ekki. Það kom fáranlegt markgildisdæmi sem þú áttir aldrei séns í. Óheppinn.\n')
         # Já eða nei spurning um hvort fall sé samfell
         # Gætum bætt við mynd af falli í næsta sprett til að hafa smá raunverulega stærðfræðigreiningu í þessu
-        print('20% spurning hvort að fall sé samfellt á ákveðnu bili\n'
-        'Er það ekki bara já og nei spurning, eða 50/50')
-        svar = str(input('Er fallið samfellt eða ekki? J fyrir Já, N fyrir nei: '))
+        time.sleep(1)
+        print('20% spurning hvort að fall sé samfellt á ákveðnu bili, Er það ekki bara já og nei spurning, eða 50/50...')
+        svar = input('Er fallið samfellt eða ekki? J fyrir Já, N fyrir nei: ')
         if random.randint(0,1)==1:
-            rsvar= 'J'
-            if svar == rsvar:
-                print('Vel gert, þú giskaðir rétt')
-                print('Útskýringin þín var samt ekki nægilega góð svo þú færð bara helmingin af dæminu rétt')
+            rsvar = 'j'
+            if svar.lower() == rsvar:
+                time.sleep(2)
+                print("\nVel gert, þú giskaðir rétt!\nÚtskýringin þín var"
+                " samt ekki nægilega góð svo þú færð bara helmingin af dæminu rétt.\n")
                 einkunn = einkunn + 1
             else:
-                print('Þú giskaðir vitlaust og kunnir ekki nóg um efnið til að búa þér til stig')
+                time.sleep(2)
+                print('Þú giskaðir vitlaust og kunnir ekki nóg um efnið til að búa þér til stig.\n')
         else:
-            rsvar= 'N'
-            if svar == rsvar:
-                print('Vel gert, þú giskaðir rétt')
-                print('Útskýringin þín var samt ekki nægilega góð svo þú færð bara helmingin af dæminu rétt')
+            rsvar= 'n'
+            if svar.lower() == rsvar:
+                tims.sleep(2)
+                print('Vel gert, þú giskaðir rétt.\n'
+                'Útskýringin þín var samt ekki nægilega góð svo þú færð bara helmingin af dæminu rétt.\n')
                 einkunn = einkunn + 1
             else:
-                print('Þú giskaðir vitlaust og kunnir ekki nóg um efnið til að búa þér til stig')
+                time.sleep(2)
+                print('Þú giskaðir vitlaust og kunnir ekki nóg um efnið til að búa þér til stig.')
         # Hérna á að svara með tölustafnum 1
-        print('Einfalt einingahringsdæmi, sem gildir 10%. Wu-hu.')
+        time.sleep(2)
+        print('Einfalt einingahringsdæmi, sem gildir 10%. Wu-hu.\n')
         SvarImba = 1
-        Imba=int(input('cos^2(theta)+sin^2(theta)=x. Hvað er x?'))
+        Imba=int(input('cos^2(theta)+sin^2(theta)=x. Hvað er x? '))
         if Imba==SvarImba:
-            print('Var þetta gisk? Það breytir engu, þetta var allavega rétt')
+            time.sleep(2)
+            print('\nVar þetta gisk? Það breytir engu, þetta var allavega rétt.\n')
             einkunn=einkunn+1
         else:
-            print('Svona á að vita, þarna misstir þú dýrmætt stig úr pokanum')
+            time.sleep(2)
+            print('Svona á að vita, þarna misstir þú dýrmætt stig úr pokanum.\n')
         # Hérna kemur svefninn inn. Ef maður fékk nægan svefn nær maður flóknu dæmi. Það er tilviljanakennt hversu mikinn svefn maður þarf.
         svefnkrafa = random.randint(0,9)
         if svefnkrafa >svefn:
-            print('Þú hefðir átt að sofa meira. Benni kennari henti í svæsið 20% dæmi sem þú fattaðir ekki hvernig á að leysa.')
+            time.sleep(2)
+            print("Þú hefðir átt að sofa meira. Benni kennari henti í svæsið"
+            " 20% dæmi sem þú fattaðir ekki hvernig á að leysa.\n")
         if svefn >= svefnkrafa:
             einkunn= einkunn+2
-            print('Vel gert, þú varst vel sofinn og fattaðir trixið í svæsnu 20% dæmi frá Benna')
+            time.sleep(2)
+            print('Vel gert, þú varst vel sofinn og fattaðir trixið í svæsnu 20% dæmi frá Benna.\n')
         # Það stendur á hverri blaðsíðu á EdBook quote eftir Douglas Adams
-        print('Þetta er nú fáranleg 10% spurning')
-        print('Hver er uppáhalds rithöfundurinn hans Benna kennara?')
-        print('A George R.R. Martin')
-        print('B Douglas Adams')
-        print('eða C Yrsa Sigurðardóttir')
-        skrifa=str(input('A, B eða C?'))
-        if skrifa == 'B':
+        time.sleep(2)
+        print('Þetta er nú fáranleg 10% spurning.'
+        ' Hver er uppáhalds rithöfundurinn hans Benna kennara?\n')
+        time.sleep(2)
+        print('A George R.R. Martin\n'
+        'B Douglas Adams\n'
+        'C Yrsa Sigurðardóttir\n')
+
+        skrifa=input('A, B eða C? ')
+        if skrifa.lower() == 'b':
+            time.sleep(1)
             einkunn= einkunn +1
-            print('Þú varst augljóslega duglegur að lesa EdBook yfir önnina')
+            time.sleep(2)
+            print('\nÞú varst augljóslega duglegur að lesa EdBook yfir önnina.\n')
         else:
-            print('Það þarf að lesa EdBook til að ná svona prófum')
+            time.sleep(1)
+            print('Það þarf að lesa EdBook til að ná svona prófum.')
         #Prentum í lokin út lokaeinkunn og hvort viðkomandi hafi náð prófinu eða ekki
-        print('Þú fékkst '+ str(einkunn) +'á prófinu')
+        time.sleep(2)
+        print('Þú fékkst '+ str(einkunn) +' á prófinu.\n')
         if einkunn>4:
-            print('Vel gert að ná prófinu, þú færð 6 einingar')
+            time.sleep(2)
+            print('Vel gert að ná prófinu, þú færð 6 einingar.\n')
             StadFall=1
         if einkunn<5:
-            print('Þú náðir ekki prófinu og ert kominn ennþá meira aftur úr í náminu')
+            time.sleep(2)
+            print('Þú náðir ekki prófinu og ert kominn ennþá meira aftur úr í náminu.\n')
         return StadFall
     # Fall sem er endurtektarpróf í Línulegri algebru
     def Lprof(self):
@@ -163,35 +200,46 @@ class Aron:
         einkunn =0
         EG =0
         # Þú velur hvort þú lærir og síðan er 50/50 hvort kemur á prófinu sem 20% spurning
-        print('Þú ert að læra fyrir endurtektarpróf í Línulegri algebru. Þú hefur ekki mikinn tíma þar sem þú varst upptekinn í boltanum.')
-        print('Þú verður að velja hvort þú viljir læra Gauss eyðingu eða Fylkja margföldun.')
-        gf= str(input('Gauss eyðingu =G eða Fylka margföldun =F'))
+        print('Þú ert að læra fyrir endurtektarpróf í Línulegri algebru. Þú hefur ekki mikinn tíma þar sem þú varst upptekinn í boltanum.\n'
+        'Þú verður að velja hvort þú viljir læra Gauss eyðingu eða Fylkja margföldun.\n')
+        time.sleep(1)
+        gf= input('Gauss eyðingu = G eða Fylka margföldun = F: ')
         #Hérna fær maður að velja hversu mikið maður ætlar að sofa fyrir prófið, það fer eftir hvernig próf kennarinn gerir hvort það gagnist manni að sofa mikið
-        svefn = int(input('Þú ert illa undirbúinn en veist að svefn getur gert gott fyrir þig, hvað ætlar þú að sofa mikið nóttinni fyrir prófið?'))
+        if gf.lower() != "g" and gf.lower() != "f":
+            time.sleep(1)
+            print("\nÞað mistókst hjá þér að velja svo þú gerðir hvorugt.\n")
+        time.sleep(1)
+        svefn = int(input('\nÞú ert illa undirbúinn en veist að svefn getur gert gott fyrir þig, hvað ætlar þú að sofa mikið nóttinni fyrir prófið? '))
         # Maður verður að græða eitthvað á að læra frameftir. Í þessu tilfelli er það að geta leyst dæmi með eigin gildum
         if svefn<4.5:
-            print('Þú fórst svo seint að sofa að þú hafðir tíma til að læra um Eigin gildi, vonandi kemur það á prófinu')
+            time.sleep(1)
+            print('\nÞú fórst svo seint að sofa að þú hafðir tíma til að læra um Eigin gildi, vonandi kemur það á prófinu.\n')
             EG =1
         # Hér er valið tilviljanakennt hvort gauss eyðing eða fylkja margföldun komi á prófinu
         GF=random.randint(0,1)
         if GF==1:
+            time.sleep(1)
             print('Nú ertu mættur í prófið, fyrsta spurningin er um Gauss eyðingu.')
-            if gf == 'D':
+            if gf.lower() == 'f':
+                time.sleep(1)
                 print('Þú ert heppinn, þú lærðir Gauss eyðingu og hún kom á prófinu, einkunin þín hækkar um 2')
                 einkunn = einkunn +2
-            if gf == 'H':
+            if gf.lower() == 'g':
+                time.sleep(1)
                 print('Þú valdir vitlaust, þú lærðir ekki Gauss eyðingu og hún var 20% af prófinu, þú getur í mesta lagi fengið 8.')
         if GF==0:
+            time.sleep(1)
             print('Nú ertu mættur í prófið, fyrsta spurningin er um fylkja margföldun.')
-            if gf == 'H':
+            if gf.lower() == 'g':
                 print('Þú ert heppinn, þú lærðir fylkja margföldun og hún kom á prófinu, einkunin þín hækkar um 2')
                 einkunn = einkunn +2
-            if gf == 'D':
+            if gf.lower() == 'f':
                 print('Þú valdir vitlaust, þú lærðir ekki fylkja margföldun og hún var 20% af prófinu, þú getur í mesta lagi fengið 8.')
         # Hérna er valið tilviljanakennt hvort eigin gildi sem sumir lærðu komi á prófinu
         # Ef maður lærði um eigin gildin fær maður +2 í einkunn
         if random.randint(0,1)==1:
             print('Eigin gildi komu á prófinu')
+            time.sleep(1)
             if EG == 0:
                 print('Þú hefðir kannski átt að vaka lengur til að læra Eigin gildi, þær voru 20% af prófinu')
             if EG == 1:
@@ -201,12 +249,13 @@ class Aron:
             print('Þarna varstu óheppinn í staðinn fyrir eigin gildis dæmi komu 20% skilgreiningar sem þú bullaðir eitthvað í.')
             print('Röggi Möll sá í gegnum bullið þitt og gaf þér 0 stig fyrir dæmið')
         print('20% spurning hvort að fall sé línulegt')
+        time.sleep(1)
         print('Er það ekki bara já og nei spurning, eða 50/50')
         # Hérna er 50/50 spurning hvort fallið sé línulegt
         # Gætum bætt við mynd af falli í næsta sprett til að hafa smá raunverulega línulega algebru í þessu
-        svar = str(input('Er fallið línulegt eða ekki? J fyrir Já, N fyrir nei'))
+        svar = input('Er fallið línulegt eða ekki? J fyrir Já, N fyrir nei')
         if random.randint(0,1)==0:
-            rsvar= 'J'
+            rsvar = 'j'
             if svar == rsvar:
                 print('Vel gert, þú giskaðir rétt')
                 print('Útskýringin þín var samt ekki nægilega góð svo þú færð bara helmingin af dæminu rétt')
@@ -214,7 +263,7 @@ class Aron:
             else:
                 print('Þú giskaðir vitlaust og kunnir ekki nóg um efnið til að búa þér til stig')
         else:
-            rsvar= 'N'
+            rsvar = 'n'
             if svar == rsvar:
                 print('Vel gert, þú giskaðir rétt')
                 print('Útskýringin þín var samt ekki nægilega góð svo þú færð bara helmingin af dæminu rétt')
@@ -223,7 +272,7 @@ class Aron:
                 print('Þú giskaðir vitlaust og kunnir ekki nóg um efnið til að búa þér til stig')
         print('Einföld spurning, sem gildir 10%. Wu-hu.')
         #Hérna á að svara með Ákveða
-        akveda=str(input('Hvað kallast Det(A) á Íslensku?'))
+        akveda=input('Hvað kallast Det(A) á Íslensku?')
         if akveda=='Ákveða' or akveda=='ákveða' or akveda=='Akveda' or akveda=='akveda':
             print('Var þetta gisk? Það breytir engu, þetta var allavega rétt')
             einkunn=einkunn+1
@@ -245,18 +294,22 @@ class Aron:
         print('Verkmenntaskólanum á Akureyri')
         print('Trúðaskólanum í Nauthólsvík')
         skrifa=str(input('VÍ, MR, MS, VMA eða HR?'))
-        if skrifa == 'VÍ':
+        if skrifa.lower() == "ví" or skrifa.lower() == "vi":
             einkunn= einkunn +1
+            time.sleep(1)
             print('Vel gert. Þú veist að bræðurnir Möller myndu alltaf bara kenna í bestu menntastofnunum landsins')
         else:
+            time.sleep(1)
             print('Ekki nógu gott, þú hefðir átt að vita að bræðurnir Möller myndu alltaf bara kenna í bestu menntastofnunum landsins.')
             print('Verzló er rétt svar')
         #Hérna prentast síðan niðurstöðurnar úr prófinu
         print('Þú fékkst '+ str(einkunn) +'á prófinu')
         if einkunn>4:
+            time.sleep(1)
             print('Vel gert að ná prófinu, þú færð 6 einingar')
             StadFall=1
         if einkunn<5:
+            time.sleep(1)
             print('Þú náðir ekki prófinu og ert kominn ennþá meira aftur úr í náminu')
         return StadFall
 
