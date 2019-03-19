@@ -43,7 +43,7 @@ class Hrolfur:
             counter += self.option_Verzl()
         else:
             print ("A, B eða C takk fyrir")
-            intro()
+            self.intro()
         return counter
 
     def option_Flens(self):
@@ -191,20 +191,20 @@ class Hrolfur:
         print("C - Aðeins eldri en skemmtilega skvísu úr Hafnarfirðinum"+"\n")
         choice2 = input(">>> ")
         time.sleep(1)
-        if choice2 in A:
+        if choice2 in svar_A:
             print("Þetta gengur vel en auðvitað eru einhverjir hnökkrar og Hrólfur missir samtals 5 hár")
             counter += 5
-        if choice2 in B:
+        if choice2 in svar_B:
             print("Þetta gengur vel en auðvitað eru einhverjir hnökkrar og Hrólfur missir samtals 5 hár")
             counter += 5
-        if choice2 in C:
+        if choice2 in svar_C:
             print("Þetta gengur vel en auðvitað eru einhverjir hnökkrar og Hrólfur missir samtals 5 hár")
             counter += 5
         print("Á önn númer þrjú eru 4 auðveldir áfangar sem Hrólfur þarf ekki að hafa neinar áhyggjur af"+"\n")
         time.sleep(1)
         print("Hrólfur þarf samt líka að taka áfangann Verkefnastjórnun, áfanginn er gríðarlega erfiður og þarf mikla vinnu til að ná honum"+"\n")
         print("Hvaða einkunn stefnir Hrólfur á að fá í áfanganum, því meiri vinnu sem hann leggur í áfangann því meira hár missir hann"+"\n")
-        verk = input()
+        verk = int(input())
         counter += (verk-5)*4
         print("Það var stressandi að fá góða einkunn í verkefnastjórnun, Hrólfur missti 4 hár fyrir hverja einkunn sem hann fékk yfir 5"+"\n")
         time.sleep(1)
@@ -217,7 +217,7 @@ class Hrolfur:
         counter +=10
         return counter
 
-    def HaskoliA(self):
+    def HaskoliB(self):
         counter=0
         svar_A = ["A", "a"]
         svar_B = ["B", "b"]
@@ -248,7 +248,7 @@ class Hrolfur:
         time.sleep(1)
         print("Hrólfur þarf samt líka að taka áfangann Verkefnastjórnun, áfanginn er gríðarlega erfiður og þarf mikla vinnu til að ná honum"+"\n")
         print("Hvaða einkunn stefnir Hrólfur á að fá í áfanganum, því meiri vinnu sem hann leggur í áfangann því meira hár missir hann"+"\n")
-        verk = input()
+        verk = int(input())
         counter += (verk-5)*4
         print("Það var stressandi að fá góða einkunn í verkefnastjórnun, Hrólfur missti 4 hár fyrir hverja einkunn sem hann fékk yfir 5"+"\n")
         time.sleep(1)

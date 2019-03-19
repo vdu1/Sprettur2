@@ -27,9 +27,11 @@ def main():
     leikur1.spurningar()
     leikur2 = Vikingur()
     leikur2.inngangur()
-    leikur3 = Aron()
-    leikur3.Velja1()
-    leikur3.Velja2(namskeid1)
+    leikur4 = Hrolfur()
+    Leikur4.Intro()
+    leikur4 = Aron()
+    leikur4.Velja1()
+    leikur4.Velja2(namskeid1)
 
 if __name__ == "__main__":
     main()
