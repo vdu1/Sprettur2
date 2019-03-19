@@ -5,6 +5,9 @@ import time #Importum module til að að hafa smá biðtíma milli spurninga
 
 class Aron:
 
+    afangar = ["s", "l", "e"]
+
+
     def __init__(self):
         pass
 
@@ -16,7 +19,11 @@ class Aron:
         'Nú verður þú að velja tvö námskeið til að taka í endurtekt.')
         time.sleep(1)
         namskeid1 = str(input('\nS fyrir Stærðfræði greiningu, L fyrir Línulega Algebru eða E fyrir Eðlisfræði: '))
-        return namskeid1
+        if namskeid1.lower() in self.afangar:
+            return namskeid1
+        else:
+            print("Það fór eitthvað úrskeiðis hjá þér reyndu aftur að velja námskeið")
+            self.Velja1()
 
     # Fall til að velja seinna endurtektarprófið
     time.sleep(1)
@@ -24,16 +31,19 @@ class Aron:
         time.sleep(1)
         print('\nNú ertu búinn að velja eitt námskeið til að taka í endurtekt, próftaflan er heppileg svo þú getur tekið eitt endurtektarpróf í viðbót.\n')
         # Það er ekki hægt að velja sama endurtektarprófið tvisvar
-        if namskeid1=='S':
+        if namskeid1.lower() =='s':
             namskeid2= str(input('L fyrir Línulega Algebru eða E fyrir Eðlisfræði: '))
-        elif namskeid1=='L':
+        elif namskeid1.lower() =='l':
             namskeid2= str(input('S fyrir Stærðfræði greiningu eða E fyrir Eðlisfræði: '))
-        elif namskeid1=='E':
+        elif namskeid1.lower() =='e':
             namskeid2=str(input('S fyrir Stærðfræði greiningu eða L fyrir Línulega Algebru: '))
+
+        if namskeid2.lower() in self.afangar:
+            return namskeid2
         else:
-            print('Þú náðir ekki einu sinni að velja námskeiðin rétt, þú ert fallinn úr skólanum á fyrstu önn')
-            end()
-        return namskeid2
+            print("Það fór eitthvað úrskeiðis hjá þér reyndu aftur að velja námskeið")
+            self.Velja2()
+
     # Fall sem er endurtektarpróf í Stærðfræðigreiningu 1
     time.sleep(1)
     def S1Prof(self):
@@ -257,16 +267,16 @@ def main():
     kall = Aron()
     namskeid1 = kall.Velja1()
     namskeid2 = kall.Velja2(namskeid1)
-    if namskeid1 == 'S' or namskeid2 == 'S':
+    if namskeid1.lower() == 's' or namskeid2.lower() == 's':
         einingar = einingar+6*kall.S1Prof()
     # Til að spara forritun átti maður ekki séns á að ná eðlisfræðinni
     # Bætum mögulega við prófi í eðlisfræði fyrir næsta sprett
-    if namskeid1 == 'E' or namskeid2 == 'E':
+    if namskeid1.lower() == 'e' or namskeid2.lower() == 'e':
         print('Aldeilis mistök sem þú gerðir að velja Eðlisfræði prófið.')
         print('Þú áttir aldrei séns og fékkst núll í prófinu')
-    if namskeid1 == 'L' or namskeid2 =='L':
+    if namskeid1.lower() == 'l' or namskeid2.lower() =='l':
         einingar = einingar+6*kall.Lprof()
-    print('Þú endaðir með '+ str(einingar) + " , til hamingju! Hjálpaðu næsta nemanda að útskrifast")
+    print('Þú endaðir með '+ str(einingar) + " einingar, til hamingju! Hjálpaðu næsta nemanda að útskrifast")
 
 if __name__ == "__main__":
     main()
