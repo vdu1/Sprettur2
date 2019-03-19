@@ -79,10 +79,10 @@ class Hrolfur:
         choice = input(">>> ")
         if choice in svar_A:
             print("Ekki vera svona heimskur, maður græðir ekkert á að vera Dúx, spurðu bara Erni Jónsson"+"\n")
-            print("-10 hár fyrir óþarfan metnað í námi")
+            print("-10 hár fyrir óþarfa metnað í námi")
             counter += 10
         elif choice in svar_B:
-            print ("Geggjuð ákvörðun. Hrólfur skemmtir sér konunglega með félögunum í Passion League, einn stóran Tuborg takk."+"\n")
+            print ("Hrólfur nýtur sín vel í náminu þar sem hann var ekki að eltast við einkunnir. Hann lærir efnið vel og missir ekkert hár."+"\n")
         else:
             print ("A eða B koma svo")
         print("Hrólfur útskrifaðist úr Flensborg og stefnir núna á Iðnaðarverkfræði við Háskóla Íslands")
@@ -118,7 +118,7 @@ class Hrolfur:
             print ("Geggjuð ákvörðun. Hrólfur skemmtir sér konunglega með félögunum í Passion League, einn stóran Tuborg takk."+"\n")
         else:
             print ("A eða B koma svo")
-        print("Námið í Verzló er erfitt fyrir Hrólfur. Hann er að velta því fyrir sér hvort hann eigi að halda áfram eða hætta bara í skólanum."+"\n")
+        print("Námið í Verzló er erfitt fyrir Hrólf. Hann er að velta því fyrir sér hvort hann eigi að halda áfram eða hætta bara í skólanum."+"\n")
         print("Hann gæti átt erfitt með að halda sér í Verzló en það gæti verið að hann flosni úr skóla ef hann fer í Flensborg"+"\n")
         print("A fyrir að halda áfram eða B fyrir Flensborg")
         time.sleep(1)
@@ -188,25 +188,36 @@ class Hrolfur:
         print("Þrjár stelpur reyna við hann, allar eru með frábæran hlátur en hverja á hann að velja?"+"\n")
         print("A - Hressa sveitastelpu sem hatar ekki sopann"+"\n")
         print("B - Verzló skvísu af nesinu"+"\n")
-        print("C - Aðeins eldri en skemmtilega skvísu úr Hafnarfirðinum"+"\n")
+        print("C - Hávaxinn fótboltatöffara úr Hlíðunum"+"\n")
         choice2 = input(">>> ")
         time.sleep(1)
         if choice2 in A:
-            print("Þetta gengur vel en auðvitað eru einhverjir hnökkrar og Hrólfur missir samtals 5 hár")
-            counter += 5
+            print("Þið djammið mikið saman og skemmtið ykkur vel"+"\n")
+            print("Of mikið myndu sumir segja og hann missir 10 hár"+"\n")
+            counter += 10
         if choice2 in B:
-            print("Þetta gengur vel en auðvitað eru einhverjir hnökkrar og Hrólfur missir samtals 5 hár")
+            print("Einbeitingin hverfur smá frá náminu og það veldur einhverjum áhyggjum"+"\n")
+            time.sleep(1)
+            print("Í staðinn fær Hrólfur að sofa aðeins lengur því nú fær hann nesti tilbúið af Nesinu"+"\n")
+            print("Mínus 5 hár samt fyrir að missa einbeitingu frá náminu")
             counter += 5
         if choice2 in C:
-            print("Þetta gengur vel en auðvitað eru einhverjir hnökkrar og Hrólfur missir samtals 5 hár")
-            counter += 5
+            print("Fótboltatöffararnir njóta sín vel. Það þarf oftar að skipta um kodda en áhyggjurnar á heimilinu er almennt litlar"+"\n")
+            counter += 0
         print("Á önn númer þrjú eru 4 auðveldir áfangar sem Hrólfur þarf ekki að hafa neinar áhyggjur af"+"\n")
         time.sleep(1)
         print("Hrólfur þarf samt líka að taka áfangann Verkefnastjórnun, áfanginn er gríðarlega erfiður og þarf mikla vinnu til að ná honum"+"\n")
-        print("Hvaða einkunn stefnir Hrólfur á að fá í áfanganum, því meiri vinnu sem hann leggur í áfangann því meira hár missir hann"+"\n")
-        verk = input()
-        counter += (verk-5)*4
-        print("Það var stressandi að fá góða einkunn í verkefnastjórnun, Hrólfur missti 4 hár fyrir hverja einkunn sem hann fékk yfir 5"+"\n")
+        print("Hvaða einkunn stefnir Hrólfur á að fá í áfanganum, því meiri vinnu sem hann leggur í áfangann því hærri einkunn en hármissir í staðin."+"\n")
+        verk = int(input(">>>"))
+        time.sleep(1)
+        if verk*0==0:
+            counter += (verk-5)*5
+        else:
+            print("Reyndu aftur"+"\n")
+            print("Þú þarft að slá inn tölu"+"\n")
+            verk = int(input(">>>"))
+            cou
+        print("Það var stressandi að fá góða einkunn í verkefnastjórnun, Hrólfur missti 5 hár fyrir hverja einkunn sem hann fékk yfir 5"+"\n")
         time.sleep(1)
         print("Hrólfur fer hlægjandi í gegnum önn 4 og 5"+"\n")
         time.sleep(2)
@@ -217,7 +228,7 @@ class Hrolfur:
         counter +=10
         return counter
 
-    def HaskoliA(self):
+    def HaskoliB(self):
         counter=0
         svar_A = ["A", "a"]
         svar_B = ["B", "b"]
@@ -249,7 +260,7 @@ class Hrolfur:
         print("Hrólfur þarf samt líka að taka áfangann Verkefnastjórnun, áfanginn er gríðarlega erfiður og þarf mikla vinnu til að ná honum"+"\n")
         print("Hvaða einkunn stefnir Hrólfur á að fá í áfanganum, því meiri vinnu sem hann leggur í áfangann því meira hár missir hann"+"\n")
         verk = input()
-        counter += (verk-5)*4
+        counter += (verk-5)*5
         print("Það var stressandi að fá góða einkunn í verkefnastjórnun, Hrólfur missti 4 hár fyrir hverja einkunn sem hann fékk yfir 5"+"\n")
         time.sleep(1)
         print("Hrólfur fer hlægjandi í gegnum önn 4 og 5"+"\n")
@@ -265,9 +276,9 @@ class Hrolfur:
     def Nidurstada(self, x):
         print("Nú er Hrólfur búinn með skólann")
         print("Hann endaði með "+str(x)+"hár eftir á kollinum")
-        if x>20:
+        if x>50:
             print("Þarf sem Hrólfur átti meira en 20 hár eftir á hausnum þá hafði hann nóg sjálfstraust til að klára dæmið"+"\n")
-        if x <= 20:
+        if x <= 50:
             print("Þarf sem Hrólfur missti of mikið hár gat hann ekki náð að klára dæmið, þú náðir ekki að útskrifa Hrólf")
 
 
@@ -276,7 +287,8 @@ def main():
     kall = Hrolfur()
     har = 100
     har -= kall.intro()
-    har -= kall.HaskoliStart()
+    if har>20:
+        har -= kall.HaskoliStart()
     kall.Nidurstada(har)
 
 if __name__ == "__main__":
