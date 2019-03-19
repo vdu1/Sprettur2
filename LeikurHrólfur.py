@@ -192,7 +192,6 @@ class Hrolfur:
         choice2 = input(">>> ")
         time.sleep(1)
         if choice2 in svar_A:
-<<<<<<< HEAD
             print("Þið djammið mikið saman og skemmtið ykkur vel"+"\n")
             print("Of mikið myndu sumir segja og hann missir 10 hár"+"\n")
             counter += 10
@@ -201,7 +200,6 @@ class Hrolfur:
             time.sleep(1)
             print("Í staðinn fær Hrólfur að sofa aðeins lengur því nú fær hann nesti tilbúið af Nesinu"+"\n")
             print("Mínus 5 hár samt fyrir að missa einbeitingu frá náminu")
-=======
             print("Þetta gengur vel en auðvitað eru einhverjir hnökkrar og Hrólfur missir samtals 5 hár")
             counter += 5
         if choice2 in svar_B:
@@ -209,7 +207,6 @@ class Hrolfur:
             counter += 5
         if choice2 in svar_C:
             print("Þetta gengur vel en auðvitað eru einhverjir hnökkrar og Hrólfur missir samtals 5 hár")
->>>>>>> 62f6daad2997304c86153246fe1e93cefb94e9b1
             counter += 5
         if choice2 in svar_C:
             print("Fótboltatöffararnir njóta sín vel. Það þarf oftar að skipta um kodda en áhyggjurnar á heimilinu er almennt litlar"+"\n")
@@ -217,7 +214,6 @@ class Hrolfur:
         print("Á önn númer þrjú eru 4 auðveldir áfangar sem Hrólfur þarf ekki að hafa neinar áhyggjur af"+"\n")
         time.sleep(1)
         print("Hrólfur þarf samt líka að taka áfangann Verkefnastjórnun, áfanginn er gríðarlega erfiður og þarf mikla vinnu til að ná honum"+"\n")
-<<<<<<< HEAD
         print("Hvaða einkunn stefnir Hrólfur á að fá í áfanganum, því meiri vinnu sem hann leggur í áfangann því hærri einkunn en hármissir í staðin."+"\n")
         verk = int(input(">>>"))
         time.sleep(1)
@@ -229,12 +225,10 @@ class Hrolfur:
             verk = int(input(">>>"))
             counter += (verk-5)*5
         print("Það var stressandi að fá góða einkunn í verkefnastjórnun, Hrólfur missti 5 hár fyrir hverja einkunn sem hann fékk yfir 5"+"\n")
-=======
         print("Hvaða einkunn stefnir Hrólfur á að fá í áfanganum, því meiri vinnu sem hann leggur í áfangann því meira hár missir hann"+"\n")
         verk = int(input())
         counter += (verk-5)*4
         print("Það var stressandi að fá góða einkunn í verkefnastjórnun, Hrólfur missti 4 hár fyrir hverja einkunn sem hann fékk yfir 5"+"\n")
->>>>>>> 62f6daad2997304c86153246fe1e93cefb94e9b1
         time.sleep(1)
         print("Hrólfur fer hlægjandi í gegnum önn 4 og 5"+"\n")
         time.sleep(2)
@@ -276,13 +270,10 @@ class Hrolfur:
         time.sleep(1)
         print("Hrólfur þarf samt líka að taka áfangann Verkefnastjórnun, áfanginn er gríðarlega erfiður og þarf mikla vinnu til að ná honum"+"\n")
         print("Hvaða einkunn stefnir Hrólfur á að fá í áfanganum, því meiri vinnu sem hann leggur í áfangann því meira hár missir hann"+"\n")
-<<<<<<< HEAD
         verk = int(input(">>>"))
         counter += (verk-5)*5
-=======
         verk = int(input())
         counter += (verk-5)*4
->>>>>>> 62f6daad2997304c86153246fe1e93cefb94e9b1
         print("Það var stressandi að fá góða einkunn í verkefnastjórnun, Hrólfur missti 4 hár fyrir hverja einkunn sem hann fékk yfir 5"+"\n")
         time.sleep(1)
         print("Hrólfur fer hlægjandi í gegnum önn 4 og 5"+"\n")
@@ -302,8 +293,6 @@ class Hrolfur:
             print("Þarf sem Hrólfur átti meira en 20 hár eftir á hausnum þá hafði hann nóg sjálfstraust til að klára dæmið og útskrifaðist"+"\n")
         if x <= 50:
             print("Þarf sem Hrólfur missti of mikið hár gat hann ekki náð að klára dæmið, þú náðir ekki að útskrifa Hrólf")
-
-
 
 def main():
     kall = Hrolfur()
