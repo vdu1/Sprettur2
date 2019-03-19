@@ -43,7 +43,7 @@ class Hrolfur:
             counter += self.option_Verzl()
         else:
             print ("A, B eða C takk fyrir")
-            intro()
+            self.intro()
         return counter
 
     def option_Flens(self):
@@ -191,17 +191,17 @@ class Hrolfur:
         print("C - Hávaxinn fótboltatöffara úr Hlíðunum"+"\n")
         choice2 = input(">>> ")
         time.sleep(1)
-        if choice2 in A:
+        if choice2 in svar_A:
             print("Þið djammið mikið saman og skemmtið ykkur vel"+"\n")
             print("Of mikið myndu sumir segja og hann missir 10 hár"+"\n")
             counter += 10
-        if choice2 in B:
+        if choice2 in svar_B:
             print("Einbeitingin hverfur smá frá náminu og það veldur einhverjum áhyggjum"+"\n")
             time.sleep(1)
             print("Í staðinn fær Hrólfur að sofa aðeins lengur því nú fær hann nesti tilbúið af Nesinu"+"\n")
             print("Mínus 5 hár samt fyrir að missa einbeitingu frá náminu")
             counter += 5
-        if choice2 in C:
+        if choice2 in svar_C:
             print("Fótboltatöffararnir njóta sín vel. Það þarf oftar að skipta um kodda en áhyggjurnar á heimilinu er almennt litlar"+"\n")
             counter += 0
         print("Á önn númer þrjú eru 4 auðveldir áfangar sem Hrólfur þarf ekki að hafa neinar áhyggjur af"+"\n")
@@ -216,7 +216,7 @@ class Hrolfur:
             print("Reyndu aftur"+"\n")
             print("Þú þarft að slá inn tölu"+"\n")
             verk = int(input(">>>"))
-            cou
+            counter += (verk-5)*5
         print("Það var stressandi að fá góða einkunn í verkefnastjórnun, Hrólfur missti 5 hár fyrir hverja einkunn sem hann fékk yfir 5"+"\n")
         time.sleep(1)
         print("Hrólfur fer hlægjandi í gegnum önn 4 og 5"+"\n")
@@ -277,7 +277,7 @@ class Hrolfur:
         print("Nú er Hrólfur búinn með skólann")
         print("Hann endaði með "+str(x)+"hár eftir á kollinum")
         if x>50:
-            print("Þarf sem Hrólfur átti meira en 20 hár eftir á hausnum þá hafði hann nóg sjálfstraust til að klára dæmið"+"\n")
+            print("Þarf sem Hrólfur átti meira en 20 hár eftir á hausnum þá hafði hann nóg sjálfstraust til að klára dæmið og útskrifaðist"+"\n")
         if x <= 50:
             print("Þarf sem Hrólfur missti of mikið hár gat hann ekki náð að klára dæmið, þú náðir ekki að útskrifa Hrólf")
 
