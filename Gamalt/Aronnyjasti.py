@@ -339,10 +339,13 @@ class Aron:
 #_main_
 #Einingarnar byrja sem núll en ef maður nær tveimur prófum maður 12 einingar
 def main():
+    #Kallið
     einingar=0
     kall = Aron()
     namskeid1 = kall.Velja1()
     namskeid2 = kall.Velja2(namskeid1)
+
+    #Stærðfræðigreining
     if namskeid1.lower() == 's' or namskeid2.lower() == 's':
         einingar = einingar+6*kall.S1Prof()
 
@@ -352,9 +355,11 @@ def main():
         print('Aldeilis mistök sem þú gerðir að velja Eðlisfræði prófið.')
         print('Þú áttir aldrei séns og fékkst núll í prófinu')
 
+    #Línuleg Algebra
     if namskeid1.lower() == 'l' or namskeid2.lower() =='l':
         einingar = einingar+6*kall.Lprof()
-        
+
+    #Lokaniðurstaða
     print('Þú endaðir með '+ str(einingar) + " einingar, til hamingju! Hjálpaðu næsta nemanda að útskrifast")
 
 if __name__ == "__main__":
