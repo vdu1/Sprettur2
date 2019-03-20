@@ -2,6 +2,7 @@ import unittest #Importum module til að að geta framkvæmd einingaprófanir
 import time #Importum module til að að hafa smá biðtíma milli falla og skipana
 from Viktornyjasti import Viktor #Importum Viktor úr Viktornyjasti til að geta kallað á leikinn í inngangsforritinu
 from Vikingurnyjasti import Vikingur #Importum Vikingur úr Vikingurnyjasti til að geta kallað á leikinn í inngangsforritinu
+from LeikurHrólfur import Hrolfur #Importum Hrolfur úr LeikurHrólfur til að geta kallað á leikinn í inngangsforritinu
 from Aronnyjasti import Aron #Importum Aron úr Aronnyjasti til að geta kallað á leikinn í inngangsforritinu
 class Inngangur: #Klasinn
 
@@ -19,19 +20,18 @@ class Inngangur: #Klasinn
         print("\nJæja " + val + ", þitt fyrsta verkefni er Viktor!")
     inngangur()
 
-
 #__main__
 def main():
+    leikur3 = Aron()
+    leikur3.Velja1()
+    leikur3.Velja2(namskeid1)
     leikur1 = Viktor()
     leikur1.kynning()
     leikur1.spurningar()
     leikur2 = Vikingur()
     leikur2.inngangur()
     leikur4 = Hrolfur()
-    Leikur4.Intro()
-    leikur4 = Aron()
-    leikur4.Velja1()
-    leikur4.Velja2(namskeid1)
+    leikur4.intro()
 
 if __name__ == "__main__":
     main()

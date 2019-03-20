@@ -12,6 +12,7 @@ class Aron:
         pass
 
     # Fall til að velja fyrsta endurtektarprófið
+
     time.sleep(1)
     def Velja1(self):
         time.sleep(1)
@@ -27,6 +28,7 @@ class Aron:
             self.Velja1()
 
     # Fall til að velja seinna endurtektarprófið
+
     time.sleep(1)
     def Velja2(self, namskeid1):
         time.sleep(1)
@@ -47,6 +49,7 @@ class Aron:
             self.Velja2()
 
     # Fall sem er endurtektarpróf í Stærðfræðigreiningu 1
+
     time.sleep(1)
     def S1Prof(self):
         time.sleep(1)
@@ -71,6 +74,7 @@ class Aron:
             print("\nÞú fórst svo seint að sofa að þú hafðir tíma til að læra"
             " Taylor margliður, vonandi kemur það á prófinu.\n")
             TM =1
+
         # 50/50 hvort það komi diffrun eða heildun, spurningin sem kemur verður 20% af prófinu
         DH=random.randint(0,1)
         time.sleep(1)
@@ -103,6 +107,7 @@ class Aron:
             else:
                 time.sleep(1)
                 print("Þar sem þú valdir þú hvorugt áðan varst þú jafn týndur þegar þessi spurning kom og VD á B5.\n")
+
         # 50/50 hvort Taylor margliður komi á prófinu. Ef maður lærði frameftir nær maður spurningunni rétt annars fær maður 0 stig.
         if random.randint(0,1)==1:
             time.sleep(1)
@@ -117,6 +122,7 @@ class Aron:
         else:
             time.sleep(2)
             print('Taylor margliður komu ekki. Það kom fáranlegt markgildisdæmi sem þú áttir aldrei séns í. Óheppinn.\n')
+
         # Já eða nei spurning um hvort fall sé samfell
         # Gætum bætt við mynd af falli í næsta sprett til að hafa smá raunverulega stærðfræðigreiningu í þessu
         time.sleep(1)
@@ -142,6 +148,7 @@ class Aron:
             else:
                 time.sleep(2)
                 print('Þú giskaðir vitlaust og kunnir ekki nóg um efnið til að búa þér til stig.')
+
         # Hérna á að svara með tölustafnum 1
         time.sleep(2)
         print('Einfalt einingahringsdæmi, sem gildir 10%. Wu-hu.\n')
@@ -154,6 +161,7 @@ class Aron:
         else:
             time.sleep(2)
             print('Svona á að vita, þarna misstir þú dýrmætt stig úr pokanum.\n')
+
         # Hérna kemur svefninn inn. Ef maður fékk nægan svefn nær maður flóknu dæmi. Það er tilviljanakennt hversu mikinn svefn maður þarf.
         svefnkrafa = random.randint(0,9)
         if svefnkrafa >svefn:
@@ -164,6 +172,7 @@ class Aron:
             einkunn= einkunn+2
             time.sleep(2)
             print('Vel gert, þú varst vel sofinn og fattaðir trixið í svæsnu 20% dæmi frá Benna.\n')
+
         # Það stendur á hverri blaðsíðu á EdBook quote eftir Douglas Adams
         time.sleep(2)
         print('Þetta er nú fáranleg 10% spurning.'
@@ -182,6 +191,7 @@ class Aron:
         else:
             time.sleep(1)
             print('Það þarf að lesa EdBook til að ná svona prófum.')
+
         #Prentum í lokin út lokaeinkunn og hvort viðkomandi hafi náð prófinu eða ekki
         time.sleep(2)
         print('Þú fékkst '+ str(einkunn) +' á prófinu.\n')
@@ -193,28 +203,35 @@ class Aron:
             time.sleep(2)
             print('Þú náðir ekki prófinu og ert kominn ennþá meira aftur úr í náminu.\n')
         return StadFall
-    # Fall sem er endurtektarpróf í Línulegri algebru
+
+# Fall sem er endurtektarpróf í Línulegri algebru
+
     def Lprof(self):
+
         #Skilgreini þessar breytur hér til að geta notað þær seinna í forritinu
         StadFall =0
         einkunn =0
         EG =0
+
         # Þú velur hvort þú lærir og síðan er 50/50 hvort kemur á prófinu sem 20% spurning
         print('Þú ert að læra fyrir endurtektarpróf í Línulegri algebru. Þú hefur ekki mikinn tíma þar sem þú varst upptekinn í boltanum.\n'
         'Þú verður að velja hvort þú viljir læra Gauss eyðingu eða Fylkja margföldun.\n')
         time.sleep(1)
         gf= input('Gauss eyðingu = G eða Fylka margföldun = F: ')
+
         #Hérna fær maður að velja hversu mikið maður ætlar að sofa fyrir prófið, það fer eftir hvernig próf kennarinn gerir hvort það gagnist manni að sofa mikið
         if gf.lower() != "g" and gf.lower() != "f":
             time.sleep(1)
             print("\nÞað mistókst hjá þér að velja svo þú gerðir hvorugt.\n")
         time.sleep(1)
         svefn = int(input('\nÞú ert illa undirbúinn en veist að svefn getur gert gott fyrir þig, hvað ætlar þú að sofa mikið nóttinni fyrir prófið? '))
+
         # Maður verður að græða eitthvað á að læra frameftir. Í þessu tilfelli er það að geta leyst dæmi með eigin gildum
         if svefn<4.5:
             time.sleep(1)
             print('\nÞú fórst svo seint að sofa að þú hafðir tíma til að læra um Eigin gildi, vonandi kemur það á prófinu.\n')
             EG =1
+
         # Hér er valið tilviljanakennt hvort gauss eyðing eða fylkja margföldun komi á prófinu
         GF=random.randint(0,1)
         if GF==1:
@@ -235,6 +252,7 @@ class Aron:
                 einkunn = einkunn +2
             if gf.lower() == 'f':
                 print('Þú valdir vitlaust, þú lærðir ekki fylkja margföldun og hún var 20% af prófinu, þú getur í mesta lagi fengið 8.')
+
         # Hérna er valið tilviljanakennt hvort eigin gildi sem sumir lærðu komi á prófinu
         # Ef maður lærði um eigin gildin fær maður +2 í einkunn
         if random.randint(0,1)==1:
@@ -251,6 +269,7 @@ class Aron:
         print('20% spurning hvort að fall sé línulegt')
         time.sleep(1)
         print('Er það ekki bara já og nei spurning, eða 50/50')
+
         # Hérna er 50/50 spurning hvort fallið sé línulegt
         # Gætum bætt við mynd af falli í næsta sprett til að hafa smá raunverulega línulega algebru í þessu
         svar = input('Er fallið línulegt eða ekki? J fyrir Já, N fyrir nei')
@@ -271,6 +290,7 @@ class Aron:
             else:
                 print('Þú giskaðir vitlaust og kunnir ekki nóg um efnið til að búa þér til stig')
         print('Einföld spurning, sem gildir 10%. Wu-hu.')
+
         #Hérna á að svara með Ákveða
         akveda=input('Hvað kallast Det(A) á Íslensku?')
         if akveda=='Ákveða' or akveda=='ákveða' or akveda=='Akveda' or akveda=='akveda':
@@ -278,6 +298,7 @@ class Aron:
             einkunn=einkunn+1
         else:
             print('Svona á að vita, þarna misstir þú dýrmætt stig úr pokanum')
+
         # Hérna kemur svefninn inn. Ef maður fékk nægan svefn nær maður flóknu dæmi. Það er tilviljanakennt hversu mikinn svefn maður þarf.
         svefnkrafa = random.randint(0,9)
         if svefnkrafa >svefn:
@@ -285,6 +306,7 @@ class Aron:
         if svefn >= svefnkrafa:
             einkunn= einkunn+2
             print('Vel gert, þú varst vel sofinn og fattaðir trixið í svæsnu 20% dæmi frá Rögga')
+
         #Þórður bróðir Rögnvalds kenndi okkur í Verzlunarskólanum svo okkur fannst tilvalið að hafa spurningu um hann
         print('Þetta er nú fáranleg spurning 10% spurning')
         print('Í hvaða framhaldsskóla kennir Þórður bróðir Rögnvalds stærðfræði?')
@@ -302,6 +324,7 @@ class Aron:
             time.sleep(1)
             print('Ekki nógu gott, þú hefðir átt að vita að bræðurnir Möller myndu alltaf bara kenna í bestu menntastofnunum landsins.')
             print('Verzló er rétt svar')
+
         #Hérna prentast síðan niðurstöðurnar úr prófinu
         print('Þú fékkst '+ str(einkunn) +'á prófinu')
         if einkunn>4:
@@ -322,13 +345,16 @@ def main():
     namskeid2 = kall.Velja2(namskeid1)
     if namskeid1.lower() == 's' or namskeid2.lower() == 's':
         einingar = einingar+6*kall.S1Prof()
+
     # Til að spara forritun átti maður ekki séns á að ná eðlisfræðinni
     # Bætum mögulega við prófi í eðlisfræði fyrir næsta sprett
     if namskeid1.lower() == 'e' or namskeid2.lower() == 'e':
         print('Aldeilis mistök sem þú gerðir að velja Eðlisfræði prófið.')
         print('Þú áttir aldrei séns og fékkst núll í prófinu')
+
     if namskeid1.lower() == 'l' or namskeid2.lower() =='l':
         einingar = einingar+6*kall.Lprof()
+        
     print('Þú endaðir með '+ str(einingar) + " einingar, til hamingju! Hjálpaðu næsta nemanda að útskrifast")
 
 if __name__ == "__main__":
