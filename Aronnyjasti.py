@@ -1,3 +1,4 @@
+#updated 2.0
 # This Python file uses the following encoding: utf-8
 import math
 import random
