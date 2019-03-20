@@ -1,3 +1,4 @@
+# This Python file uses the following encoding: utf-8
 import unittest #Importum module til að að geta framkvæmd einingaprófanir
 import time #Importum module til að að hafa smá biðtíma milli falla og skipana
 from Viktornyjasti import Viktor #Importum Viktor úr Viktornyjasti til að geta kallað á leikinn í inngangsforritinu
