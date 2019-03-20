@@ -3,12 +3,8 @@ import unittest #Importum module til að að geta framkvæmd einingaprófanir
 import time #Importum module til að að hafa smá biðtíma milli falla og skipana
 from Viktornyjasti import Viktor #Importum Viktor úr Viktornyjasti til að geta kallað á leikinn í inngangsforritinu
 from Vikingurnyjasti import Vikingur #Importum Vikingur úr Vikingurnyjasti til að geta kallað á leikinn í inngangsforritinu
-<<<<<<< HEAD:Gamalt/Inngangurnyjasti.py
 from LeikurHrólfur import Hrolfur #Importum Hrolfur úr LeikurHrólfur til að geta kallað á leikinn í inngangsforritinu
 from AronnyjastiFyrirHrólfur import Aron #Importum Aron úr Aronnyjasti til að geta kallað á leikinn í inngangsforritinu
-=======
-from Aronnyjasti import Aron #Importum Aron úr Aronnyjasti til að geta kallað á leikinn í inngangsforritinu
->>>>>>> d43f6f8afe983c5a593a16af7aaf7779c28980ef:Inngangurnyjasti.py
 class Inngangur: #Klasinn
 
     def __init__(self): #Smiðurinn, notum engan "smið" eins og er, eða hvað?
