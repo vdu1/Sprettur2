@@ -3,13 +3,16 @@ from random import shuffle
 
 
 def Kynning():
-    print()
-    print("Viktor er dularfullar og hljóðlátur maður og hefur ýmis leyndarmál að geyma. Það fer ekki mikið fyrir honum og vita fáir að það eina sem Viktor þráir í raun er ást, umhyggja og smá athygli.")
-    print()
-    print("Verkefni þitt er að svara 8 laufléttum spurningum um Viktor og svara að lágmarki 5 af þeim rétt til þess að sýna Viktori að þú þekkir hann og kunnir að meta. Ef þetta tekst mun Viktor brjótast út úr skelinni, blómstra í námi sínu og útskrifast úr HÍ, ef ekki, mun hann falla úr skólanum!")
-    print()
-
-
+    time.sleep(1)
+    print("\nViktor er dularfullar og hljóðlátur maður og hefur ýmis"
+    " leyndarmál að geyma. Það fer ekki mikið fyrir honum og vita fáir að"
+    " það eina sem Viktor þráir í raun er ást, umhyggja og smá athygli.\n")
+    time.sleep(1)
+    print("Verkefni þitt er að svara 10 laufléttum spurningum um Viktor"
+    " og svara að lágmarki 5 af þeim rétt til þess að sýna Viktori að"
+    " þú þekkir hann og kunnir að meta. Ef þetta tekst mun Viktor brjótast"
+    " út úr skelinni, blómstra í námi sínu og útskrifast úr HÍ, ef ekki,"
+    " mun hann falla úr skólanum!\n")
 
 def spyrja(spurning, rsvar, i):
         rettrangt=0

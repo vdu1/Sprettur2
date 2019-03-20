@@ -24,13 +24,15 @@ class Aron:
     def __init__(self):
         pass
 
-    # Fall til að velja fyrsta endurtektarprófið
+# Fall til að velja fyrsta endurtektarprófið
+
     time.sleep(1)
     def Velja1(self):
         namskeid1 = None
         time.sleep(1)
-        print('Þú féllst í þremur lokaprófum á fyrstu önninni þinni.\n'
-        'Nú verður þú að velja tvö námskeið til að taka í endurtekt.')
+        print("Jæja komið að Aroni!\n")
+        print("Þú féllst í þremur lokaprófum á fyrstu önninni þinni.\n"
+        ' Nú verður þú að velja tvö námskeið til að taka í endurtekt.')
         time.sleep(1)
 
         while namskeid1 not in self.afangar:
@@ -43,7 +45,8 @@ class Aron:
                 print("Það fór eitthvað úrskeiðis hjá þér reyndu aftur að velja námskeið")
                 namskeid1 = None
 
-    # Fall til að velja seinna endurtektarprófið
+# Fall til að velja seinna endurtektarprófið
+
     time.sleep(1)
     def Velja2(self, namskeid1):
         time.sleep(1)
@@ -67,7 +70,8 @@ class Aron:
                 print("Það fór eitthvað úrskeiðis hjá þér reyndu aftur að velja námskeið")
                 namskeid2 = None
 
-    # Fall sem er endurtektarpróf í Stærðfræðigreiningu 1
+# Fall sem er endurtektarpróf í Stærðfræðigreiningu 1
+
     time.sleep(1)
     def S1Prof(self):
         time.sleep(1)
@@ -75,7 +79,8 @@ class Aron:
         StadFall =0
         einkunn =0
         TM =0
-        print('\nÞú ert að læra fyrir endurtektarpróf í Stærðfræðigreiningu. Þú hefur ekki mikinn tíma þar sem þú ert haugur.\n'
+        print("\nÞú ert að læra fyrir endurtektarpróf í Stærðfræðigreiningu."
+        " Þú hefur ekki mikinn tíma þar sem þú ert haugur.\n"
         'Þú verður að velja hvort þú viljir læra diffrun eða heildun fyrir prófið.\n')
         time.sleep(1)
         #Maður lærir hvort maður eyði tímanum sínum í að læra diffrun eða heildun, það er 50/50 hvort kemur.
@@ -111,7 +116,7 @@ class Aron:
                 " 20% af prófinu, þú getur í mesta lagi fengið 8.\n")
             else:
                 time.sleep(1)
-                print("Þar sem þú valdir þú hvorugt áðan varst þú jafn týndur þegar þessi spurning kom og VD á b5.\n")
+                print("Þar sem þú valdir þú hvorugt áðan varst þú jafn týndur þegar þessi spurning kom og VD á B5.\n")
 
         if DH==0:
             time.sleep(1)
@@ -158,7 +163,7 @@ class Aron:
                 einkunn = einkunn + 1
             else:
                 time.sleep(2)
-                print('Þú giskaðir vitlaust og kunnir ekki nóg um efnið til að búa þér til stig.\n')
+                print('\nÞú giskaðir vitlaust og kunnir ekki nóg um efnið til að búa þér til stig.\n')
         else:
             rsvar= 'n'
             if svar.lower() == rsvar:
@@ -168,7 +173,7 @@ class Aron:
                 einkunn = einkunn + 1
             else:
                 time.sleep(2)
-                print('Þú giskaðir vitlaust og kunnir ekki nóg um efnið til að búa þér til stig.')
+                print('\nÞú giskaðir vitlaust og kunnir ekki nóg um efnið til að búa þér til stig.\n')
         # Hérna á að svara með tölustafnum 1
         time.sleep(2)
         print('Einfalt einingahringsdæmi, sem gildir 10%. Wu-hu.\n')
@@ -222,7 +227,10 @@ class Aron:
             time.sleep(2)
             print('Þú náðir ekki prófinu og ert kominn ennþá meira aftur úr í náminu.\n')
         return StadFall
-    # Fall sem er endurtektarpróf í Línulegri algebru
+
+# Fall sem er endurtektarpróf í Línulegri algebru
+
+    #Setja mögulega 3 gæsa til að laga
     def Lprof(self):
         #Skilgreini þessar breytur hér til að geta notað þær seinna í forritinu
         StadFall =0
@@ -349,21 +357,25 @@ class Aron:
             time.sleep(1)
             print('Þú náðir ekki prófinu og ert kominn ennþá meira aftur úr í náminu')
         return StadFall
+        #Setja mögulega 3 gæsa til að laga
 
 #_main_
 #Einingarnar byrja sem núll en ef maður nær tveimur prófum maður 12 einingar
 def main():
+    #Kallið
     einingar=0
     kall = Aron()
     namskeid1 = kall.Velja1()
     namskeid2 = kall.Velja2(namskeid1)
     if namskeid1.lower() == 's' or namskeid2.lower() == 's':
         einingar = einingar+6*kall.S1Prof()
+
     # Til að spara forritun átti maður ekki séns á að ná eðlisfræðinni
     # Bætum mögulega við prófi í eðlisfræði fyrir næsta sprett
     if namskeid1.lower() == 'e' or namskeid2.lower() == 'e':
         print('Aldeilis mistök sem þú gerðir að velja Eðlisfræði prófið.')
         print('Þú áttir aldrei séns og fékkst núll í prófinu')
+
     if namskeid1.lower() == 'l' or namskeid2.lower() =='l':
         einingar = einingar+6*kall.Lprof()
     print('Þú endaðir með '+ str(einingar) + " einingar, til hamingju! Hjálpaðu næsta nemanda að útskrifast")
