@@ -1,9 +1,14 @@
+# This Python file uses the following encoding: utf-8
 import unittest #Importum module til að að geta framkvæmd einingaprófanir
 import time #Importum module til að að hafa smá biðtíma milli falla og skipana
 from Viktornyjasti import Viktor #Importum Viktor úr Viktornyjasti til að geta kallað á leikinn í inngangsforritinu
 from Vikingurnyjasti import Vikingur #Importum Vikingur úr Vikingurnyjasti til að geta kallað á leikinn í inngangsforritinu
+<<<<<<< HEAD:Gamalt/Inngangurnyjasti.py
 from LeikurHrólfur import Hrolfur #Importum Hrolfur úr LeikurHrólfur til að geta kallað á leikinn í inngangsforritinu
 from AronnyjastiFyrirHrólfur import Aron #Importum Aron úr Aronnyjasti til að geta kallað á leikinn í inngangsforritinu
+=======
+from Aronnyjasti import Aron #Importum Aron úr Aronnyjasti til að geta kallað á leikinn í inngangsforritinu
+>>>>>>> d43f6f8afe983c5a593a16af7aaf7779c28980ef:Inngangurnyjasti.py
 class Inngangur: #Klasinn
 
     def __init__(self): #Smiðurinn, notum engan "smið" eins og er, eða hvað?
@@ -20,6 +25,7 @@ class Inngangur: #Klasinn
         time.sleep(2)
         print("\nJæja " + val + ", þitt fyrsta verkefni er Viktor!")
     inngangur()
+
 
 #__main__
 def main():
@@ -49,10 +55,17 @@ def main():
     print('Þú endaðir með '+ str(einingar) + " einingar, til hamingju! Hjálpaðu næsta nemanda að útskrifast")
 
     leikur4 = Hrolfur()
+<<<<<<< HEAD:Gamalt/Inngangurnyjasti.py
     leikur4.intro()
     """
 
     print(utskrifadir2)
+=======
+    Leikur4.Intro()
+    leikur4 = Aron()
+    leikur4.Velja1()
+    leikur4.Velja2(namskeid1)
+>>>>>>> d43f6f8afe983c5a593a16af7aaf7779c28980ef:Inngangurnyjasti.py
 
 if __name__ == "__main__":
     main()
