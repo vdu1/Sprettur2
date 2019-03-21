@@ -1,7 +1,7 @@
 # This Python file uses the following encoding: utf-8
 from random import shuffle
 
-class Viktor2:
+class Viktor:
 
 
     def __init__(self):
@@ -30,9 +30,10 @@ class Viktor2:
         print( "Þú náðir " + str(fjoldirett) + " rétt og " + str(fjoldirangt) + " rangt.")
         if fjoldirett >= 5:
             print("Þú náðir að svara " + str(fjoldirett) + " spurningum af " + str(heildarspurn) + ", til hamingju, Viktor er kominn með BS-gráðu og fer hlæjandi út í atvinnulífið, hjálpaðu næsta nemanda að útskrifast.")
+            return 1
         else:
             print("Þú skeist á þig og varst með " + str(fjoldirangt) + " spurningar rangar af " + str(heildarspurn) + ", Viktor hefur því miður fallið úr skólanum.")
-
+            return 0
 def main():
     kall = Viktor2()
     kall.Kynning()
@@ -47,13 +48,12 @@ def main():
         ("Bjó Vikki D til iPad gryfjuna? (Já/Nei/Ekki Lexi):", "Já"),
         ("Hvað er prófælmyndin hans Viktors gömul? (2 vikna/3 mánaða/6 ára/Á ekki facebook):", "6 ára")
         ]
-    shuffle(spurningar)
     i=0
     counter =0
     for spurning, rettsvar in spurningar:
         i += 1
         if kall.spyrja(spurning, rettsvar, i)is True:
-        counter += 1
+            counter += 1
 
     kall.nidurstada(counter, len(spurningar))
 

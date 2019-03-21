@@ -1,32 +1,20 @@
 # This Python file uses the following encoding: utf-8
-import unittest #Importum module til að að geta framkvæmd einingaprófanir
 import time #Importum module til að að hafa smá biðtíma milli falla og skipana
-from ViktorVikingsutgafa import Viktor2 #Importum Viktor úr Viktornyjasti til að geta kallað á leikinn í inngangsforritinu
-from Vikingurnyjasti import Vikingur #Importum Vikingur úr Vikingurnyjasti til að geta kallað á leikinn í inngangsforritinu
-from LeikurHrolfur import Hrolfur #Importum Hrolfur úr LeikurHrólfur til að geta kallað á leikinn í inngangsforritinu
-from AronnyjastiFyrirHrolfur import Aron #Importum Aron úr Aronnyjasti til að geta kallað á leikinn í inngangsforritinu
-class Inngangur: #Klasinn
-
-    def __init__(self): #Smiðurinn, notum engan "smið" eins og er, eða hvað?
-        pass
-
-    def inngangur(): #Fallið sem byrjar leikinn
-        #time.sleep(1)
-        print("\nAllir nemendur við Háskóla Íslands glíma við sín eigin vandamál og þurfa þeir að leysa þau ef"
-        " þeir ætla að útskrifast með sæmd úr\nháskólanum. Þitt verkefni er að komast í gegnum þrautir leiksins og ná að brautskrá sem flesta nemendur.")
-        #time.sleep(5)
-        print("\nHefjumst handa!")
-        #time.sleep(1)
-        nafn = input("\nNafnið þitt er? ")
-        #time.sleep(2)
-        print("\nJæja " + nafn + ", þitt fyrsta verkefni er Viktor!")
-    inngangur()
+from Viktor import Viktor #Importum Viktor úr Viktornyjasti til að geta kallað á leikinn í inngangsforritinu
+from Vikingur import Vikingur #Importum Vikingur úr Vikingurnyjasti til að geta kallað á leikinn í inngangsforritinu
+from Hrolfur import Hrolfur #Importum Hrolfur úr LeikurHrólfur til að geta kallað á leikinn í inngangsforritinu
+from Aron import Aron #Importum Aron úr Aronnyjasti til að geta kallað á leikinn í inngangsforritinu
+from Inngangur import Inngangur
 
 #__main__
 def main():
+    Teljari = 0
+
+    kall = Inngangur()
+    nafn1=kall.inngangur()
 
 #Kallið fyrir leikur1
-    kall = Viktor2()
+    kall = Viktor()
     kall.Kynning()
     spurningar = [("Fílar Viktor hávaða? (Já/Nei):", "Nei"),
         ("Fílar Viktor að tala? (Já/Nei):", "Nei"),
@@ -39,17 +27,18 @@ def main():
         ("Bjó Vikki D til iPad gryfjuna? (Já/Nei/Ekki Lexi):", "Já"),
         ("Hvað er prófælmyndin hans Viktors gömul? (2 vikna/3 mánaða/6 ára/Á ekki facebook):", "6 ára")
         ]
-    shuffle(spurningar)
     i=0
     counter =0
     for spurning, rettsvar in spurningar:
         i += 1
-        counter =counter + kall.spyrja(spurning, rettsvar, i)
-    kall.nidurstada(counter, len(spurningar))
+        if kall.spyrja(spurning, rettsvar, i)is True:
+            counter += 1
+
+    Teljari += kall.nidurstada(counter, len(spurningar))
 
     #Kallið fyrir leikur2
     kall = Vikingur()
-    inngangur = kall.inngangur()
+    Teljari += kall.inngangur()
 
     #Kallið fyrir leikur3
     einingar=0
@@ -68,6 +57,8 @@ def main():
     if namskeid1.lower() == 'l' or namskeid2.lower() =='l':
         einingar = einingar+6*kall.Lprof()
     print('Þú endaðir með '+ str(einingar) + " einingar, til hamingju! Hjálpaðu næsta nemanda að útskrifast")
+    if einingar == 12:
+        Teljari += 1
 
     #Kallið fyrir leikur4
     kall = Hrolfur()
@@ -75,10 +66,10 @@ def main():
     har -= kall.intro()
     if har>20:
         har -= kall.HaskoliStart()
-    kall.Nidurstada(har)
+    Teljari += kall.Nidurstada(har)
 
     #Nú viljum við taka allt saman til að birta niðurstöður leikjanna
-
+    print(nafn1 + " Þú útskrifaðir " + str(Teljari) + " af 4 nemendum")
 
 if __name__ == "__main__":
     main()

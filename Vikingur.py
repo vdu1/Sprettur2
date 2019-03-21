@@ -21,6 +21,7 @@ class Vikingur:
     #Það þarf að laga byrjunina
     #time.sleep(1)
     def inngangur(self):
+      teljari =0
       #time.sleep(5)
       print("Jæja, komið að Víkingi!")
       #time.sleep(2)
@@ -44,22 +45,24 @@ class Vikingur:
         #time.sleep(1)
         print ("\nGlæsilegt þú gast ekki klúðrað þessari spurningu því Stægrein II"
         " var svo létt fyrir Víking. Nú er Víkingur mættur í prófið.\nHvernig tekst hann á við prófið?\n")
-        self.prof()
+        teljari = self.prof()
       elif choice in self.answer_B:
         #time.sleep(1)
         print ("\nGlæsilegt þú gast ekki klúðrað þessari spurningu því Stægrein II"
         " var svo létt fyrir Víking. Nú er Víkingur mættur í prófið.\nHvernig tekst hann á við prófið?\n")
-        self.prof()
+        teljari = self.prof()
       elif choice in self.answer_C:
         #time.sleep(1)
         print ("\nGlæsilegt þú gast ekki klúðrað þessari spurningu því Stægrein II"
         " var svo létt fyrir Víking. Nú er Víkingur mættur í prófið.\nHvernig tekst hann á við prófið?\n")
-        self.prof()
+        teljari = self.prof()
       else:
         print (self.rettinntak)
         self.inngangur()
+      return teljari
 
     def prof(self):
+      teljari = 0
       #time.sleep(1)
       print ("""      A. Biður um krassblað til að geta fínskrifað svörin sín
       B. Dritar niður á blað einhverju gáfulegu og fer út án þess að fara yfir
@@ -68,21 +71,23 @@ class Vikingur:
       if choice in self.answer_A:
         #time.sleep(1)
         print ("\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur skepnan þín!\n")
-        self.prof()
+        teljari = self.prof()
       elif choice in self.answer_B:
         #time.sleep(1)
         print ("\nVíkingi leið ágætlega með prófið og langar að fagna. Leiðin liggur beint"
         " á Stúdentakjallarann.\nHvað fær Víkingur sér að borða?\n")
-        self.matur()
+        teljari = self.matur()
       elif choice in self.answer_C:
         #time.sleep(1)
         print ("\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur skepnan þín!\n")
-        self.prof()
+        teljari = self.prof()
       else:
         print (self.rettinntak)
-        self.prof()
+        teljari = self.prof()
+      return teljari
 
     def matur(self):
+      counter = 0
       #time.sleep(1)
       print ("""      A. Burger og bjór
       B. Grænmetislasagna
@@ -96,19 +101,21 @@ class Vikingur:
         " vekjaraklukkuna aðeins eftir 3 tíma." #Henda time gæa hingað?
         " Tíminn líður, vekjaraklukkan hringir og Víkingi dauðbregður. Hann þarf nú að taka stóra ákvörðun."
         " Ýtir Víkingur á snooze.\nJá eða nei?")
-        self.logn()
+        counter = self.logn()
       elif choice in self.answer_B:
         print ("\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur skepnan þín!\n")
-        self.matur()
+        counter = self.matur()
       elif choice in self.answer_C:
         print ("\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur skepnan þín!\n")
-        self.matur()
+        counter = self.matur()
       else:
         print (self.rettinntak)
-        self.matur()
+        counter = self.matur()
+      return counter
 
     #Það þarf að laga if setningar þannig að það komi ekki bull ef notandi slær inn vitlaust
     def logn(self):
+      utskrifadir2 = 0
       #time.sleep(1)
       choice = input("\n>>> ")
       if choice in self.yes:
@@ -117,7 +124,7 @@ class Vikingur:
         snooz = 0 #Snoozar ekki
       else:
         print (self.jn)
-        self.logn()
+        utskrifadir2 = self.logn()
       #time.sleep(1)
       print ("\nHvað gerir Víkingur eftir það?\n")
       #time.sleep(1)
@@ -132,7 +139,7 @@ class Vikingur:
               " hins vegar of lengi en ekki nógu lengi til að geta ekki lært fyrir prófið."
               " Víkingur lærir uppí VR-II í alla nótt sem verður til þess að hann"
               " mætir of seint í tölvuteikningar lokaprófið daginn eftir.")
-              self.lokaprof()
+              utskrifadir2 = self.lokaprof()
           else:
               utskrifadir2 = 0
               #time.sleep(1)
@@ -153,6 +160,7 @@ class Vikingur:
       else:
           print (self.rettinntak)
           self.logn()
+      return utskrifadir2
 
     def lokaprof(self):
       #time.sleep(1)
@@ -187,6 +195,7 @@ class Vikingur:
       else:
         print (self.rettinntak)
         self.lokaprof()
+      return utskrifadir2
 
 def main():
 

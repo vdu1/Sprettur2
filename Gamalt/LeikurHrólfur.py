@@ -292,7 +292,7 @@ class Hrolfur:
         if x>50:
             print("Þarf sem Hrólfur átti meira en 20 hár eftir á hausnum þá hafði hann nóg sjálfstraust til að klára dæmið og útskrifaðist"+"\n")
         if x <= 50:
-            print("Þarf sem Hrólfur missti of mikið hár gat hann ekki náð að klára dæmið, þú náðir ekki að útskrifa Hrólf")
+            print("Þarf sem Hrólfur missti of mikið hár gat hann ekki náð að klára dæmið, þú náðir ekki að útskrifa Hrólf\n")
 
 def main():
     kall = Hrolfur()
