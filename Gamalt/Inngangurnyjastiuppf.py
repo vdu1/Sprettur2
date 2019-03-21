@@ -24,6 +24,7 @@ class Inngangur: #Klasinn
 
 #__main__
 def main():
+    Teljari = 0
 
 #Kallið fyrir leikur1
     kall = Viktor2()
@@ -39,17 +40,18 @@ def main():
         ("Bjó Vikki D til iPad gryfjuna? (Já/Nei/Ekki Lexi):", "Já"),
         ("Hvað er prófælmyndin hans Viktors gömul? (2 vikna/3 mánaða/6 ára/Á ekki facebook):", "6 ára")
         ]
-    shuffle(spurningar)
     i=0
     counter =0
     for spurning, rettsvar in spurningar:
         i += 1
-        counter =counter + kall.spyrja(spurning, rettsvar, i)
-    kall.nidurstada(counter, len(spurningar))
+        if kall.spyrja(spurning, rettsvar, i)is True:
+            counter += 1
+
+    Teljari += kall.nidurstada(counter, len(spurningar))
 
     #Kallið fyrir leikur2
     kall = Vikingur()
-    inngangur = kall.inngangur()
+    Teljari += kall.inngangur()
 
     #Kallið fyrir leikur3
     einingar=0
@@ -68,6 +70,8 @@ def main():
     if namskeid1.lower() == 'l' or namskeid2.lower() =='l':
         einingar = einingar+6*kall.Lprof()
     print('Þú endaðir með '+ str(einingar) + " einingar, til hamingju! Hjálpaðu næsta nemanda að útskrifast")
+    if einingar == 12:
+        Teljari += 1
 
     #Kallið fyrir leikur4
     kall = Hrolfur()
@@ -75,9 +79,10 @@ def main():
     har -= kall.intro()
     if har>20:
         har -= kall.HaskoliStart()
-    kall.Nidurstada(har)
+    Teljari += kall.Nidurstada(har)
 
     #Nú viljum við taka allt saman til að birta niðurstöður leikjanna
+    print(nafn + "Þú útskrifaðir " + Teljari + " af 4 nemendum")
 
 
 if __name__ == "__main__":
