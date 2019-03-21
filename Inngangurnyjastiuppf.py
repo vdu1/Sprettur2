@@ -1,6 +1,7 @@
+# This Python file uses the following encoding: utf-8
 import unittest #Importum module til að að geta framkvæmd einingaprófanir
 import time #Importum module til að að hafa smá biðtíma milli falla og skipana
-from Viktornyjasti import Viktor #Importum Viktor úr Viktornyjasti til að geta kallað á leikinn í inngangsforritinu
+from ViktorVikingsutgafa import Viktor2 #Importum Viktor úr Viktornyjasti til að geta kallað á leikinn í inngangsforritinu
 from Vikingurnyjasti import Vikingur #Importum Vikingur úr Vikingurnyjasti til að geta kallað á leikinn í inngangsforritinu
 from LeikurHrólfur import Hrolfur #Importum Hrolfur úr LeikurHrólfur til að geta kallað á leikinn í inngangsforritinu
 from AronnyjastiFyrirHrólfur import Aron #Importum Aron úr Aronnyjasti til að geta kallað á leikinn í inngangsforritinu
@@ -25,9 +26,26 @@ class Inngangur: #Klasinn
 def main():
 
 #Kallið fyrir leikur1
-    kall = Viktor()
-    kynning = kall.kynning()
-    spurningar = kall.spurningar()
+    kall = Viktor2()
+    kall.Kynning()
+    spurningar = [("Fílar Viktor hávaða? (Já/Nei):", "Nei"),
+        ("Fílar Viktor að tala? (Já/Nei):", "Nei"),
+        ("Elskar Viktor þögnina? (Já/Nei):", "Já"),
+        ("Hvað er uppáhaldsdrykkurinn hans Viktors? (Coke Zero/Peru Nocco/Hvítur GoGo/Pepsi Max):", "Pepsi Max"),
+        ("Hvernig bíl á Vikki D? (Trabant/Lada Sport/Audi/Passat)", "Audi"),
+        ("Hvað á Viktor margar klippingar eftir? (0/3 max/1/∞):", "3 max"),
+        ("Hvað er uppáhalds tækjavörumerkið hans Viktors? (Apple/Dell/HP/Denver):", "Apple"),
+        ("Hver er besti hópfélagi Viktors? (Hrólfur/Aron/Þorgeir/Víkingur):", "Þorgeir"),
+        ("Bjó Vikki D til iPad gryfjuna? (Já/Nei/Ekki Lexi):", "Já"),
+        ("Hvað er prófælmyndin hans Viktors gömul? (2 vikna/3 mánaða/6 ára/Á ekki facebook):", "6 ára")
+        ]
+    shuffle(spurningar)
+    i=0
+    counter =0
+    for spurning, rettsvar in spurningar:
+        i += 1
+        counter =counter + kall.spyrja(spurning, rettsvar, i)
+    kall.nidurstada(counter, len(spurningar))
 
     #Kallið fyrir leikur2
     kall = Vikingur()
