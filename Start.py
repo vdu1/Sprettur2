@@ -69,7 +69,7 @@ def main():
     Teljari += kall.Nidurstada(har)
 
     #Nú viljum við taka allt saman til að birta niðurstöður leikjanna
-    print(nafn1 + " Þú útskrifaðir " + str(Teljari) + " af 4 nemendum")
+    print(nafn1 + " þú útskrifaðir " + str(Teljari) + " af 4 nemendum")
 
 if __name__ == "__main__":
     main()
