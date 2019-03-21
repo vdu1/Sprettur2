@@ -16,15 +16,13 @@ class Viktor2:
 
 
     def spyrja(self, spurning, rsvar, i):
-            rettrangt=0
             svar = input(str(i) + ". " + spurning + " ")
             if svar.lower() == rsvar.lower():
                 print("Rétt")
-                rettrangt=1
+                return True
             else:
                 print("Rangt, svarið er: " + rsvar)
-            print()
-            return rettrangt
+            return False
 
 
     def nidurstada(self, fjoldirett, heildarspurn):
@@ -54,7 +52,9 @@ def main():
     counter =0
     for spurning, rettsvar in spurningar:
         i += 1
-        counter =counter + kall.spyrja(spurning, rettsvar, i)
+        if kall.spyrja(spurning, rettsvar, i)is True:
+        counter += 1
+
     kall.nidurstada(counter, len(spurningar))
 
 
