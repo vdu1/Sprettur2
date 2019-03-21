@@ -17,9 +17,9 @@ class Inngangur: #Klasinn
         #time.sleep(5)
         print("\nHefjumst handa!")
         #time.sleep(1)
-        val = input("\nNafnið þitt er? ")
+        nafn = input("\nNafnið þitt er? ")
         #time.sleep(2)
-        print("\nJæja " + val + ", þitt fyrsta verkefni er Viktor!")
+        print("\nJæja " + nafn + ", þitt fyrsta verkefni er Viktor!")
     inngangur()
 
 #__main__
@@ -76,6 +76,9 @@ def main():
     if har>20:
         har -= kall.HaskoliStart()
     kall.Nidurstada(har)
+
+    #Nú viljum við taka allt saman til að birta niðurstöður leikjanna
+
 
 if __name__ == "__main__":
     main()
