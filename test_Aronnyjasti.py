@@ -1,6 +1,6 @@
 # This Python file uses the following encoding: utf-8
 
-from Aronnyjasti import Aron, stor
+from AronnyjastiFyrirHrólfur import Aron, stor
 import unittest
 from unittest.mock import patch
 
@@ -8,7 +8,7 @@ class TestAronnyjasti(unittest.TestCase):
 
     @patch('Aronnyjasti.get_input', return_value="12")
     def test_stor_returns_True_when_larger_than_10(self, m):
-        self.assertTru(stor("hversu hátt"))
+        self.assertTrue(stor("hversu hátt"))
 
 #    def test_stor_returns_False_when_smaller_than_10(self):
 #        self.assertFalse(stor(""))

@@ -10,9 +10,9 @@ def get_input(output):
 def stor(spurning):
     tala = int(get_input(spurning))
     if tala >= 10:
-        return 100
+        return True
     else:
-        return 50
+        return False
 
 
 class Aron:
