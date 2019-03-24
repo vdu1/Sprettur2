@@ -8,8 +8,6 @@ class Hrolfur:
     def __init__(self):
         pass
 
-
-
     def intro(self):
         counter =0
         svar_A = ["A", "a"]

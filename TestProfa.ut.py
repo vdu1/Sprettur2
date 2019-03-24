@@ -1,15 +1,14 @@
 # This Python file uses the following encoding: utf-8
-from ViktorVikingsutgafa import Viktor2
-from AronnyjastiFyrirHrolfur import Aron
+from Viktor import Viktor
+from Aron import Aron
 import unittest
 from unittest.mock import patch
-import ViktorVikingsutgafa
 
 class TestProfa(unittest.TestCase):
 
   def setUp(self):
     self.b=0
-    self.Vikt =Viktor2()
+    self.Vikt =Viktor()
     self.Ronny =Aron()
 
   def test_1(self):
