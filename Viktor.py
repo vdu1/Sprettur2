@@ -9,7 +9,7 @@ class Viktor:
         pass
     def Kynning(self):
         time.sleep(1)
-        print1 ="Viktor er dularfullur og hljóðlátur maður og hefur ýmis leyndarmál "
+        print1 ="\nViktor er dularfullur og hljóðlátur maður og hefur ýmis leyndarmál "
         print12="að geyma. Það fer ekki mikið fyrir honum og vita fáir að það eina sem "
         print13=" Viktor þráir í raun er ást, umhyggja og smá athygli."
         for char in print1:
@@ -26,10 +26,10 @@ class Viktor:
             time.sleep(.050)
         time.sleep(1)
 
-        print2 ="\nVerkefni þitt er að svara 10 laufléttum spurningum um Viktor og "
-        print21=" svara að lágmarki 5 af þeim rétt til þess að sýna Viktori að þú þekkir "
-        print22=" hann og kunnir að meta. Ef þetta tekst mun Viktor brjótast út úr "
-        print23=" skelinni, blómstra í námi sínu og útskrifast úr HÍ, ef ekki, mun hann falla úr skólanum!"
+        print2 ="\n\nVerkefni þitt er að svara 10 laufléttum spurningum um Viktor og "
+        print21="svara að lágmarki 5 af þeim rétt til þess að sýna Viktori að þú þekkir "
+        print22="hann og kunnir að meta. Ef þetta tekst mun Viktor brjótast út úr "
+        print23="skelinni, blómstra í námi sínu og útskrifast úr HÍ, ef ekki, mun hann falla úr skólanum!"
         for char in print2:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -49,13 +49,13 @@ class Viktor:
 
 
     def spyrja(self, spurning, rsvar, i):
-            time.sleep(2)
-            print3 = str(i) + ". "+ spurning
+            time.sleep(1)
+            print3 = "\n" + str(i) + ". "+ spurning
             for char in print3:
                 sys.stdout.write(char)
                 sys.stdout.flush()
                 time.sleep(.050)
-            svar = input(">>>")
+            svar = input("")
             if svar.lower() == rsvar.lower():
                 time.sleep(1)
                 print("Rétt\n")
@@ -97,7 +97,7 @@ def main():
     kall.Kynning()
     spurningar = [("Fílar Viktor hávaða? (Já/Nei):", "Nei"),
         ("Hvað er uppáhaldsdrykkurinn hans Viktors? (Coke Zero/Peru Nocco/Hvítur GoGo/Pepsi Max):", "Pepsi Max"),
-        ("Hvernig bíl á Vikki D? (Trabant/Lada Sport/Audi/Passat)", "Audi"),
+        ("Hvernig bíl á Vikki D? (Trabant/Lada Sport/Audi/Passat):", "Audi"),
         ("Hvað á Viktor margar klippingar eftir? (0/3 max/1/∞):", "3 max"),
         ("Fílar Viktor að tala? (Já/Nei):", "Nei"),
         ("Hvað er uppáhalds tækjavörumerkið hans Viktors? (Apple/Dell/HP/Denver):", "Apple"),
@@ -108,14 +108,14 @@ def main():
         ]
     i=0
     counter =0
-    time.sleep(9)
-    print7 = "\nSpurningarnar (mundu að vera með bil og kommur réttar):\n"
+    time.sleep(1)
+    print7 = "\n\nSpurningarnar (mundu að vera með bil og kommur réttar):\n"
     for char in print7:
         sys.stdout.write(char)
         sys.stdout.flush()
         time.sleep(.050)
     #Náum að virkja shuffle inní for-lykkjunni eins og er
-    #shuffle(spurningar)
+    shuffle(spurningar)
     for spurning, rettsvar in spurningar:
         i += 1
         if kall.spyrja(spurning, rettsvar, i)is True:

@@ -6,6 +6,7 @@ from Vikingur import Vikingur #Importum Vikingur úr Vikingurnyjasti til að get
 from Hrolfur import Hrolfur #Importum Hrolfur úr LeikurHrólfur til að geta kallað á leikinn í inngangsforritinu
 from Aron import Aron #Importum Aron úr Aronnyjasti til að geta kallað á leikinn í inngangsforritinu
 from Inngangur import Inngangur
+import sys
 
 #__main__
 def main():
@@ -18,18 +19,26 @@ def main():
     kall = Viktor()
     kall.Kynning()
     spurningar = [("Fílar Viktor hávaða? (Já/Nei):", "Nei"),
-        ("Fílar Viktor að tala? (Já/Nei):", "Nei"),
-        ("Elskar Viktor þögnina? (Já/Nei):", "Já"),
         ("Hvað er uppáhaldsdrykkurinn hans Viktors? (Coke Zero/Peru Nocco/Hvítur GoGo/Pepsi Max):", "Pepsi Max"),
-        ("Hvernig bíl á Vikki D? (Trabant/Lada Sport/Audi/Passat)", "Audi"),
+        ("Hvernig bíl á Vikki D? (Trabant/Lada Sport/Audi/Passat):", "Audi"),
         ("Hvað á Viktor margar klippingar eftir? (0/3 max/1/∞):", "3 max"),
+        ("Fílar Viktor að tala? (Já/Nei):", "Nei"),
         ("Hvað er uppáhalds tækjavörumerkið hans Viktors? (Apple/Dell/HP/Denver):", "Apple"),
         ("Hver er besti hópfélagi Viktors? (Hrólfur/Aron/Þorgeir/Víkingur):", "Þorgeir"),
+        ("Elskar Viktor þögnina? (Já/Nei):", "Já"),
         ("Bjó Vikki D til iPad gryfjuna? (Já/Nei/Ekki Lexi):", "Já"),
         ("Hvað er prófælmyndin hans Viktors gömul? (2 vikna/3 mánaða/6 ára/Á ekki facebook):", "6 ára")
         ]
     i=0
     counter =0
+    time.sleep(1)
+    print7 = "\n\nSpurningarnar (mundu að vera með bil og kommur réttar):\n"
+    for char in print7:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(.050)
+    #Náum að virkja shuffle inní for-lykkjunni eins og er
+    shuffle(spurningar)
     for spurning, rettsvar in spurningar:
         i += 1
         if kall.spyrja(spurning, rettsvar, i)is True:
