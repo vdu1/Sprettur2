@@ -9,7 +9,7 @@ class Viktor:
         pass
     def Kynning(self):
         time.sleep(1)
-        print1 ="Viktor er dularfullar og hljóðlátur maður og hefur ýmis leyndarmál "
+        print1 ="Viktor er dularfullur og hljóðlátur maður og hefur ýmis leyndarmál "
         print12="að geyma. Það fer ekki mikið fyrir honum og vita fáir að það eina sem "
         print13=" Viktor þráir í raun er ást, umhyggja og smá athygli."
         for char in print1:
