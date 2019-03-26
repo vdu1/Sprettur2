@@ -1,5 +1,6 @@
 # This Python file uses the following encoding: utf-8
 import time #Importum module til að að hafa smá biðtíma milli falla og skipana
+from random import shuffle
 from Viktor import Viktor #Importum Viktor úr Viktornyjasti til að geta kallað á leikinn í inngangsforritinu
 from Vikingur import Vikingur #Importum Vikingur úr Vikingurnyjasti til að geta kallað á leikinn í inngangsforritinu
 from Hrolfur import Hrolfur #Importum Hrolfur úr LeikurHrólfur til að geta kallað á leikinn í inngangsforritinu
