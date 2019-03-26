@@ -126,7 +126,7 @@ class Vikingur:
       return teljari
 
     def prof(self):
-      teljari = 0
+      teljari2 = 0
       time.sleep(1)
       print("\n")
       print71="""      A. Biður um krassblað til að geta fínskrifað svörin sín
@@ -144,7 +144,7 @@ class Vikingur:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(.050)
-        teljari = self.prof()
+        teljari2 = self.prof()
       elif choice in self.answer_B:
         time.sleep(1)
         print73= "\nVíkingi leið ágætlega með prófið og langar að fagna. Leiðin liggur beint"
@@ -157,7 +157,7 @@ class Vikingur:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(.050)
-        teljari = self.matur()
+        teljari2 = self.matur()
       elif choice in self.answer_C:
         time.sleep(1)
         print8 ="\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur skepnan þín!\n"
@@ -165,11 +165,11 @@ class Vikingur:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(.050)
-        teljari = self.prof()
+        teljari2 = self.prof()
       else:
         print (self.rettinntak)
         teljari = self.prof()
-      return teljari
+      return teljari2
 
     def matur(self):
       counter = 0
@@ -351,6 +351,7 @@ class Vikingur:
       return utskrifadir2
 
     def lokaprof(self):
+      utskrifadir3
       time.sleep(1)
       print120="\nVíkingur er mættur í prófið en þar sem að hann svaf svo yfir sig þá gleymdi hann T-stikunni heima."
       print121= " Víkingur er í klípu, hvað gerir hann nú?\n"
@@ -373,7 +374,7 @@ class Vikingur:
 
       choice = input("\n>>> ")
       if choice in self.answer_A:
-        utskrifadir2 = 1
+        utskrifadir3 = 1
         time.sleep(1)
         print123="\nVíkinur fékk lánað teikniborðið og rúllaði lokaprófinu upp."
         for char in print123:
@@ -389,7 +390,7 @@ class Vikingur:
             sys.stdout.flush()
             time.sleep(.050)
       elif choice in self.answer_B:
-        utskrifadir2 = 0
+        utskrifadir3 = 0
         time.sleep(1)
         print125= "\nVíkingur er því miður skelfilegur að teikna fríhendis."
         for char in print125:
@@ -408,7 +409,7 @@ class Vikingur:
             sys.stdout.flush()
             time.sleep(.050)
       elif choice in self.answer_C:
-        utskrifadir2 = 1
+        utskrifadir3 = 1
         time.sleep(1)
         print128= "\nVíkinur er frábær í Autocad og rúllar prófinu upp."
         for char in print129:
@@ -429,7 +430,7 @@ class Vikingur:
       else:
         print (self.rettinntak)
         self.lokaprof()
-      return utskrifadir2
+      return utskrifadir3
 
 def main():
 
