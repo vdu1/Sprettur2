@@ -1,5 +1,6 @@
 import time #Importum module til að að hafa smá biðtíma milli falla og skipana
 from random import shuffle
+import sys
 
 class Viktor:
 
@@ -7,39 +8,89 @@ class Viktor:
     def __init__(self):
         pass
     def Kynning(self):
-        time.sleep(3)
-        print("Viktor er dularfullar og hljóðlátur maður og hefur ýmis leyndarmál"
-        " að geyma. Það fer ekki mikið fyrir honum og vita fáir að það eina sem"
-        " Viktor þráir í raun er ást, umhyggja og smá athygli.")
-        time.sleep(5)
-        print("\nVerkefni þitt er að svara 10 laufléttum spurningum um Viktor og"
-        " svara að lágmarki 5 af þeim rétt til þess að sýna Viktori að þú þekkir"
-        " hann og kunnir að meta. Ef þetta tekst mun Viktor brjótast út úr"
-        " skelinni, blómstra í námi sínu og útskrifast úr HÍ, ef ekki, mun hann falla úr skólanum!")
+        time.sleep(1)
+        print1 ="Viktor er dularfullar og hljóðlátur maður og hefur ýmis leyndarmál "
+        print12="að geyma. Það fer ekki mikið fyrir honum og vita fáir að það eina sem "
+        print13=" Viktor þráir í raun er ást, umhyggja og smá athygli."
+        for char in print1:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(.050)
+        for char in print12:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(.050)
+        for char in print13:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(.050)
+        time.sleep(1)
 
+        print2 ="\nVerkefni þitt er að svara 10 laufléttum spurningum um Viktor og "
+        print21=" svara að lágmarki 5 af þeim rétt til þess að sýna Viktori að þú þekkir "
+        print22=" hann og kunnir að meta. Ef þetta tekst mun Viktor brjótast út úr "
+        print23=" skelinni, blómstra í námi sínu og útskrifast úr HÍ, ef ekki, mun hann falla úr skólanum!"
+        for char in print2:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(.050)
+        for char in print21:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(.050)
+        for char in print22:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(.050)
+        for char in print23:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(.050)
 
 
     def spyrja(self, spurning, rsvar, i):
             time.sleep(2)
-            svar = input(str(i) + ". " + spurning + " ")
+            print3 = str(i) + ". "+ spurning
+            for char in print3:
+                sys.stdout.write(char)
+                sys.stdout.flush()
+                time.sleep(.050)
+            svar = input(">>>")
             if svar.lower() == rsvar.lower():
                 time.sleep(1)
                 print("Rétt\n")
                 return True
             else:
                 time.sleep(1)
-                print("Rangt, svarið er: \n" + rsvar)
+                print4 =  "Rangt, svarið er: \n" + rsvar
+                for char in print4:
+                    sys.stdout.write(char)
+                    sys.stdout.flush()
+                    time.sleep(.050)
+                print("\n")
             return False
 
 
     def nidurstada(self, fjoldirett, heildarspurn):
         fjoldirangt= heildarspurn - fjoldirett
-        print( "Þú náðir " + str(fjoldirett) + " rétt og " + str(fjoldirangt) + " rangt.")
+        print4= "Þú náðir " + str(fjoldirett) + " rétt og " + str(fjoldirangt) + " rangt."
+        for char in print4:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(.050)
         if fjoldirett >= 5:
-            print("Þú náðir að svara " + str(fjoldirett) + " spurningum af " + str(heildarspurn) + ", til hamingju, Viktor er kominn með BS-gráðu og fer hlæjandi út í atvinnulífið, hjálpaðu næsta nemanda að útskrifast.")
-            return 1
+            print5 ="Þú náðir að svara " + str(fjoldirett) + " spurningum af " + str(heildarspurn) + ", til hamingju, Viktor er kominn með BS-gráðu og fer hlæjandi út í atvinnulífið, hjálpaðu næsta nemanda að útskrifast."
+            for char in print5:
+                sys.stdout.write(char)
+                sys.stdout.flush()
+                time.sleep(.050)
+                return 1
         else:
-            print("Þú skeist á þig og varst með " + str(fjoldirangt) + " spurningar rangar af " + str(heildarspurn) + ", Viktor hefur því miður fallið úr skólanum.")
+            print6 ="Þú skeist á þig og varst með " + str(fjoldirangt) + " spurningar rangar af " + str(heildarspurn) + ", Viktor hefur því miður fallið úr skólanum."
+            for char in print6s:
+                sys.stdout.write(char)
+                sys.stdout.flush()
+                time.sleep(.050)
             return 0
 def main():
     kall = Viktor()
@@ -58,7 +109,11 @@ def main():
     i=0
     counter =0
     time.sleep(9)
-    print("\nSpurningarnar (mundu að vera með bil og kommur réttar):\n")
+    print7 = "\nSpurningarnar (mundu að vera með bil og kommur réttar):\n"
+    for char in print7:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(.050)
     #Náum að virkja shuffle inní for-lykkjunni eins og er
     #shuffle(spurningar)
     for spurning, rettsvar in spurningar:
