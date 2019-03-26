@@ -15,11 +15,18 @@ class Inngangur: #Klasinn
 
         print("\n")
         #time.sleep(5)
-        print("\nHefjumst handa!")
-        #time.sleep(1)
+        hefjumst = "\nHefjumst handa!"
+        for char in hefjumst:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(.050)
         nafn = input("\nNafnið þitt er? ")
         #time.sleep(2)
-        print("\nJæja " + nafn + ", þitt fyrsta verkefni er Viktor!\n")
+        print2 = "\nJæja " + nafn + ", þitt fyrsta verkefni er Viktor!\n"
+        for char in print2:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(.050)
         return nafn
 def main():
     kall = Inngangur()
