@@ -27,10 +27,10 @@ class Aron:
 
 # Fall til að velja fyrsta endurtektarprófið
 
-    time.sleep(1)
+    time.sleep(5)
     def Velja1(self):
         namskeid1 = None
-        Byrjun = "Jæja komið að Aroni!\n"
+        Byrjun = "\n\nJæja komið að Aroni!\n"
         for char in Byrjun:
             sys.stdout.write(char)
             sys.stdout.flush()

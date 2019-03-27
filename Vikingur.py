@@ -70,14 +70,14 @@ class Vikingur:
           time.sleep(.050)
       time.sleep(1)
       print("\n")
-      print4="Hvað gerir Víkingur næst?\n\n"
+      print4="Hvað gerir Víkingur næst?\n"
       for char in print4:
           sys.stdout.write(char)
           sys.stdout.flush()
           time.sleep(.050)
 
       #time.sleep(4)
-      print5= """      A. Fer að spila surviv.io
+      print5= """\n      A. Fer að spila surviv.io
       B. Fer að spila Fifa
       C. Hugsar með sér að það nægi að mæta vel seint í prófið"""
       for char in print5:
@@ -128,7 +128,7 @@ class Vikingur:
     def prof(self):
       teljari2 = 0
       time.sleep(1)
-      print71="""      A. Biður um krassblað til að geta fínskrifað svörin sín
+      print71="""\n      A. Biður um krassblað til að geta fínskrifað svörin sín
       B. Dritar niður á blað einhverju gáfulegu og fer út án þess að fara yfir
       C. Notar allan próftímann og reynir að krafsa í öll möguleg stig"""
       for char in print71:
@@ -173,7 +173,7 @@ class Vikingur:
     def matur(self):
       counter = 0
       time.sleep(1)
-      print9 ="""      A. Burger og bjór
+      print9 ="""\n      A. Burger og bjór
       B. Grænmetislasagna
       C. Hnetusteik"""
       for char in print9:
@@ -339,7 +339,7 @@ class Vikingur:
             time.sleep(.050)
         time.sleep(1)
         print117= "\nTil hamingju þú hefur náð að útskrifa Víking Goða!\n\nHjálpaðu næsta"
-        " nemanda að útskrifast\n"
+        " nemanda að útskrifast.\n"
         for char in print117:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -350,7 +350,7 @@ class Vikingur:
       return utskrifadir2
 
     def lokaprof(self):
-      utskrifadir3
+      utskrifadir3=0
       time.sleep(1)
       print120="\nVíkingur er mættur í prófið en þar sem að hann svaf svo yfir sig þá gleymdi hann T-stikunni heima."
       print121= " Víkingur er í klípu, hvað gerir hann nú?\n"
@@ -382,8 +382,7 @@ class Vikingur:
             time.sleep(.050)
 
         time.sleep(1)
-        print124="\nTil hamingju, þú náðir að útskrifa Víking Goða! Hjálpaðu næsta"
-        " nemanda að útskrifast\n"
+        print124="\nTil hamingju, þú náðir að útskrifa Víking Goða! Hjálpaðu næsta nemanda að útskrifast.\n"
         for char in print124:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -398,7 +397,7 @@ class Vikingur:
             time.sleep(.050)
         #time.sleep(1)
         print126= "\nHann féll á prófinu og þar af leiðandi úr skólanum, því miður"
-        print127= " náður þú ekki að útskrifa Víking Goða!\n\nHjálpaðu næsta nemanda að útskrifast\n"
+        print127= " náður þú ekki að útskrifa Víking Goða!\n\nHjálpaðu næsta nemanda að útskrifast.\n"
         for char in print126:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -416,13 +415,8 @@ class Vikingur:
             sys.stdout.flush()
             time.sleep(.050)
         time.sleep(1)
-        print130="\nTil hamingju, þú náðir að útskrifa Víking Goða! Hjálpaðu næsta"
-        print131=" nemanda að útskrifast\n"
+        print130="\nTil hamingju, þú náðir að útskrifa Víking Goða! Hjálpaðu næsta nemanda að útskrifast.\n"
         for char in print130:
-            sys.stdout.write(char)
-            sys.stdout.flush()
-            time.sleep(.050)
-        for char in print131:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(.050)
