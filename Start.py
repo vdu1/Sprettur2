@@ -18,21 +18,21 @@ def main():
 #Kallið fyrir leikur1
     kall = Viktor()
     kall.Kynning()
-    spurningar = [("Fílar Viktor hávaða? (Já/Nei):", "Nei"),
-        ("Hvað er uppáhaldsdrykkurinn hans Viktors? (Coke Zero/Peru Nocco/Hvítur GoGo/Pepsi Max):", "Pepsi Max"),
-        ("Hvernig bíl á Vikki D? (Trabant/Lada Sport/Audi/Passat):", "Audi"),
-        ("Hvað á Viktor margar klippingar eftir? (0/3 max/1/∞):", "3 max"),
-        ("Fílar Viktor að tala? (Já/Nei):", "Nei"),
-        ("Hvað er uppáhalds tækjavörumerkið hans Viktors? (Apple/Dell/HP/Denver):", "Apple"),
-        ("Hver er besti hópfélagi Viktors? (Hrólfur/Aron/Þorgeir/Víkingur):", "Þorgeir"),
-        ("Elskar Viktor þögnina? (Já/Nei):", "Já"),
-        ("Bjó Vikki D til iPad gryfjuna? (Já/Nei/Ekki Lexi):", "Já"),
-        ("Hvað er prófælmyndin hans Viktors gömul? (2 vikna/3 mánaða/6 ára/Á ekki facebook):", "6 ára")
+    spurningar = [("Fílar Viktor hávaða? (Já/Nei): ", "Nei"),
+        ("Hvað er uppáhaldsdrykkurinn hans Viktors? (Coke Zero/Peru Nocco/Hvítur GoGo/Pepsi Max): ", "Pepsi Max"),
+        ("Hvernig bíl á Vikki D? (Trabant/Lada Sport/Audi/Passat): ", "Audi"),
+        ("Hvað á Viktor margar klippingar eftir? (0/3 max/1/∞): ", "3 max"),
+        ("Fílar Viktor að tala? (Já/Nei): ", "Nei"),
+        ("Hvað er uppáhalds tækjavörumerkið hans Viktors? (Apple/Dell/HP/Denver): ", "Apple"),
+        ("Hver er besti hópfélagi Viktors? (Hrólfur/Aron/Þorgeir/Víkingur): ", "Þorgeir"),
+        ("Elskar Viktor þögnina? (Já/Nei): ", "Já"),
+        ("Bjó Vikki D til iPad gryfjuna? (Já/Nei/Ekki Lexi): ", "Já"),
+        ("Hvað er prófælmyndin hans Viktors gömul? (2 vikna/3 mánaða/6 ára/Á ekki facebook): ", "6 ára")
         ]
     i=0
     counter =0
     time.sleep(1)
-    print7 = "\n\nSpurningarnar (mundu að vera með bil og kommur réttar):\n"
+    print7 = "\n\nSpurningarnar (mundu að vera með bil og kommur réttar):\n\n"
     for char in print7:
         sys.stdout.write(char)
         sys.stdout.flush()

@@ -23,15 +23,15 @@ class Vikingur:
     #time.sleep(1)
     def inngangur(self):
       teljari =0
-      #time.sleep(5)
-      print1="Jæja, komið að Víkingi!"
+      time.sleep(5)
+      print1="Jæja, komið að Víkingi!\n"
       for char in print1:
           sys.stdout.write(char)
           sys.stdout.flush()
           time.sleep(.050)
       time.sleep(2)
       print2= "\nÞitt verkefni er að vinna þig upp í gegnum lokaprófssögu Víkings og koma honum í gegnum prófin."
-      print21=" Passaðu þig að velja rétt, annars fellur Víkingur úr skólanum!"
+      print21=" Passaðu þig að velja rétt, annars fellur Víkingur úr skólanum!\n"
       for char in print2:
           sys.stdout.write(char)
           sys.stdout.flush()
@@ -48,7 +48,7 @@ class Vikingur:
           time.sleep(.050)
       time.sleep(1)
       print("\n")
-      print31="\nÞað er próf á morgun í Stærðfræðigreiningu II. Víkingur Goði var handviss um að hann gæti"
+      print31="Það er próf á morgun í Stærðfræðigreiningu II. Víkingur Goði var handviss um að hann gæti"
       print32=" tekið þetta próf með bundið fyrir augun. Þess vegna mætti hann ekki fyrr en eftir miðnætti á"
       print33=" næturvakt í VR-II. Þegar Víkingur sér hvað þetta er létt námsefni þá hugsar hann með sér að"
       print34=" hann geti nú alveg eins sleppt því að læra."
@@ -70,7 +70,7 @@ class Vikingur:
           time.sleep(.050)
       time.sleep(1)
       print("\n")
-      print4="\nHvað gerir Víkingur næst?\n"
+      print4="Hvað gerir Víkingur næst?\n\n"
       for char in print4:
           sys.stdout.write(char)
           sys.stdout.flush()
@@ -128,7 +128,6 @@ class Vikingur:
     def prof(self):
       teljari2 = 0
       time.sleep(1)
-      print("\n")
       print71="""      A. Biður um krassblað til að geta fínskrifað svörin sín
       B. Dritar niður á blað einhverju gáfulegu og fer út án þess að fara yfir
       C. Notar allan próftímann og reynir að krafsa í öll möguleg stig"""
@@ -148,7 +147,7 @@ class Vikingur:
       elif choice in self.answer_B:
         time.sleep(1)
         print73= "\nVíkingi leið ágætlega með prófið og langar að fagna. Leiðin liggur beint"
-        print74= " á Stúdentakjallarann.\nHvað fær Víkingur sér að borða?\n"
+        print74= " á Stúdentakjallarann.\nHvað fær Víkingur sér að borða?\n\n"
         for char in print73:
             sys.stdout.write(char)
             sys.stdout.flush()

@@ -50,7 +50,7 @@ class Viktor:
 
     def spyrja(self, spurning, rsvar, i):
             time.sleep(1)
-            print3 = "\n" + str(i) + ". "+ spurning
+            print3 = str(i) + ". "+ spurning
             for char in print3:
                 sys.stdout.write(char)
                 sys.stdout.flush()
@@ -58,36 +58,42 @@ class Viktor:
             svar = input("")
             if svar.lower() == rsvar.lower():
                 time.sleep(1)
-                print("Rétt\n")
+                printr = "Rétt\n\n"
+                for char in printr:
+                    sys.stdout.write(char)
+                    sys.stdout.flush()
+                    time.sleep(.050)
                 return True
             else:
                 time.sleep(1)
-                print4 =  "Rangt, svarið er: \n" + rsvar
+                print4 =  "Rangt, svarið er: " + rsvar +"\n\n"
                 for char in print4:
                     sys.stdout.write(char)
                     sys.stdout.flush()
                     time.sleep(.050)
-                print("\n")
-            return False
+                return False
 
 
     def nidurstada(self, fjoldirett, heildarspurn):
         fjoldirangt= heildarspurn - fjoldirett
-        print4= "Þú náðir " + str(fjoldirett) + " rétt og " + str(fjoldirangt) + " rangt."
-        for char in print4:
-            sys.stdout.write(char)
-            sys.stdout.flush()
-            time.sleep(.050)
+        #time.sleep(1)
+        #print17= "Þú náðir " + str(fjoldirett) + " rétt og " + str(fjoldirangt) + " rangt."
+        #for char in print17:
+            #sys.stdout.write(char)
+            #sys.stdout.flush()
+            #time.sleep(.050)
         if fjoldirett >= 5:
-            print5 ="Þú náðir að svara " + str(fjoldirett) + " spurningum af " + str(heildarspurn) + ", til hamingju, Viktor er kominn með BS-gráðu og fer hlæjandi út í atvinnulífið, hjálpaðu næsta nemanda að útskrifast."
-            for char in print5:
+            time.sleep(1)
+            print17 ="Þú náðir að svara " + str(fjoldirett) + " spurningum af " + str(heildarspurn) + ", til hamingju, Viktor er kominn með BS-gráðu og fer hlæjandi út í atvinnulífið, hjálpaðu næsta nemanda að útskrifast.\n\n"
+            for char in print17:
                 sys.stdout.write(char)
                 sys.stdout.flush()
                 time.sleep(.050)
-                return 1
+            return 1
         else:
-            print6 ="Þú skeist á þig og varst með " + str(fjoldirangt) + " spurningar rangar af " + str(heildarspurn) + ", Viktor hefur því miður fallið úr skólanum."
-            for char in print6s:
+            time.sleep(1)
+            print6 ="Þú skeist á þig og varst með " + str(fjoldirangt) + " spurningar rangar af " + str(heildarspurn) + ", Viktor hefur því miður fallið úr skólanum, hjálpaðu næsta nemanda að útskrifast.\n\n"
+            for char in print6:
                 sys.stdout.write(char)
                 sys.stdout.flush()
                 time.sleep(.050)
@@ -95,25 +101,26 @@ class Viktor:
 def main():
     kall = Viktor()
     kall.Kynning()
-    spurningar = [("Fílar Viktor hávaða? (Já/Nei):", "Nei"),
-        ("Hvað er uppáhaldsdrykkurinn hans Viktors? (Coke Zero/Peru Nocco/Hvítur GoGo/Pepsi Max):", "Pepsi Max"),
-        ("Hvernig bíl á Vikki D? (Trabant/Lada Sport/Audi/Passat):", "Audi"),
-        ("Hvað á Viktor margar klippingar eftir? (0/3 max/1/∞):", "3 max"),
-        ("Fílar Viktor að tala? (Já/Nei):", "Nei"),
-        ("Hvað er uppáhalds tækjavörumerkið hans Viktors? (Apple/Dell/HP/Denver):", "Apple"),
-        ("Hver er besti hópfélagi Viktors? (Hrólfur/Aron/Þorgeir/Víkingur):", "Þorgeir"),
-        ("Elskar Viktor þögnina? (Já/Nei):", "Já"),
-        ("Bjó Vikki D til iPad gryfjuna? (Já/Nei/Ekki Lexi):", "Já"),
-        ("Hvað er prófælmyndin hans Viktors gömul? (2 vikna/3 mánaða/6 ára/Á ekki facebook):", "6 ára")
+    spurningar = [("Fílar Viktor hávaða? (Já/Nei): ", "Nei"),
+        ("Hvað er uppáhaldsdrykkurinn hans Viktors? (Coke Zero/Peru Nocco/Hvítur GoGo/Pepsi Max): ", "Pepsi Max"),
+        ("Hvernig bíl á Vikki D? (Trabant/Lada Sport/Audi/Passat): ", "Audi"),
+        ("Hvað á Viktor margar klippingar eftir? (0/3 max/1/∞): ", "3 max"),
+        ("Fílar Viktor að tala? (Já/Nei): ", "Nei"),
+        ("Hvað er uppáhalds tækjavörumerkið hans Viktors? (Apple/Dell/HP/Denver): ", "Apple"),
+        ("Hver er besti hópfélagi Viktors? (Hrólfur/Aron/Þorgeir/Víkingur): ", "Þorgeir"),
+        ("Elskar Viktor þögnina? (Já/Nei): ", "Já"),
+        ("Bjó Vikki D til iPad gryfjuna? (Já/Nei/Ekki Lexi): ", "Já"),
+        ("Hvað er prófælmyndin hans Viktors gömul? (2 vikna/3 mánaða/6 ára/Á ekki facebook): ", "6 ára")
         ]
     i=0
     counter =0
     time.sleep(1)
-    print7 = "\n\nSpurningarnar (mundu að vera með bil og kommur réttar):\n"
+    print7 = "\n\nSpurningarnar (mundu að vera með bil og kommur réttar):\n\n"
     for char in print7:
         sys.stdout.write(char)
         sys.stdout.flush()
         time.sleep(.050)
+    time.sleep(1)
     #Náum að virkja shuffle inní for-lykkjunni eins og er
     shuffle(spurningar)
     for spurning, rettsvar in spurningar:
