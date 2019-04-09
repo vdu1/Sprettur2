@@ -7,6 +7,7 @@ from Hrolfur import Hrolfur #Importum Hrolfur úr LeikurHrólfur til að geta ka
 from Aron import Aron #Importum Aron úr Aronnyjasti til að geta kallað á leikinn í inngangsforritinu
 from Inngangur import Inngangur
 import sys
+import subprocess as sp
 
 #__main__
 def main():
@@ -14,37 +15,41 @@ def main():
 
     kall = Inngangur()
     nafn1=kall.inngangur()
+    time.sleep(2)
+    tmp = sp.call('cls',shell=True)
 
 # #Kallið fyrir leikur1
-#     kall = Viktor()
-#     kall.Kynning()
-#     spurningar = [("Fílar Viktor hávaða? (Já/Nei): ", "Nei"),
-#         ("Hvað er uppáhaldsdrykkurinn hans Viktors? (Coke Zero/Peru Nocco/Hvítur GoGo/Pepsi Max): ", "Pepsi Max"),
-#         ("Hvernig bíl á Vikki D? (Trabant/Lada Sport/Audi/Passat): ", "Audi"),
-#         ("Hvað á Viktor margar klippingar eftir? (0/3 max/1/∞): ", "3 max"),
-#         ("Fílar Viktor að tala? (Já/Nei): ", "Nei"),
-#         ("Hvað er uppáhalds tækjavörumerkið hans Viktors? (Apple/Dell/HP/Denver): ", "Apple"),
-#         ("Hver er besti hópfélagi Viktors? (Hrólfur/Aron/Þorgeir/Víkingur): ", "Þorgeir"),
-#         ("Elskar Viktor þögnina? (Já/Nei): ", "Já"),
-#         ("Bjó Vikki D til iPad gryfjuna? (Já/Nei/Ekki Lexi): ", "Já"),
-#         ("Hvað er prófælmyndin hans Viktors gömul? (2 vikna/3 mánaða/6 ára/Á ekki facebook): ", "6 ára")
-#         ]
-#     i=0
-#     counter =0
-#     time.sleep(1)
-#     print7 = "\n\nSpurningarnar (mundu að vera með bil og kommur réttar):\n\n"
-#     for char in print7:
-#         sys.stdout.write(char)
-#         sys.stdout.flush()
-#         time.sleep(.050)
-#     #Náum að virkja shuffle inní for-lykkjunni eins og er
-#     shuffle(spurningar)
-#     for spurning, rettsvar in spurningar:
-#         i += 1
-#         if kall.spyrja(spurning, rettsvar, i)is True:
-#             counter += 1
-#
-#     Teljari += kall.nidurstada(counter, len(spurningar))
+    kall = Viktor()
+    kall.Kynning()
+    spurningar = [("Fílar Viktor hávaða?\n      A. Já\n      B. Nei", "B"),
+        ("Hvað er uppáhaldsdrykkurinn hans Viktors?\n      A. Coke Zero\n      B. Peru Nocco\n      C. Hvítur GoGo\n      D. Pepsi Max", "D"),
+        ("Hvernig bíl á Vikki D?\n      A. Trabant\n      B. Lada Sport\n      C. Audi\n      D. Passat", "C"),
+        ("Hvað á Viktor margar klippingar eftir?\n      A. 0\n      B. 3 max\n      C. 1\n      D. ∞", "B"),
+        ("Fílar Viktor að tala?\n      A. Já\n      B. Nei", "B"),
+        ("Hvað er uppáhalds tækjavörumerkið hans Viktors?\n      A. Apple\n      B. Dell\n      C. HP\n      D. Denver", "A"),
+        ("Hver er besti hópfélagi Viktors?\n      A. Hrólfur\n      B. Aron\n      C. Þorgeir\n      D. Víkingur", "C"),
+        ("Elskar Viktor þögnina?\n      A. Já\n      B. Nei", "A"),
+        ("Bjó Vikki D til iPad gryfjuna?\n      A. Já\n      B. Nei\n      C. Ekki Lexi", "A"),
+        ("Hvað er prófælmyndin hans Viktors gömul?\n      A. 2 vikna\n      B. 3 mánaða\n      C. 6 ára\n      D. Á ekki facebook", "C")
+        ]
+    i=0
+    counter=0
+    time.sleep(1)
+    print7 = "\n\nSpurningarnar (mundu að svara aðeins A, B, C eða D):\n\n"
+    for char in print7:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(.050)
+    time.sleep(1)
+    shuffle(spurningar)
+    for spurning, rettsvar in spurningar:
+        i += 1
+        if kall.spyrja(spurning, rettsvar, i)is True:
+            counter += 1
+
+    kall.nidurstada(counter, len(spurningar))
+    time.sleep(2)
+    tmp = sp.call('cls',shell=True)
 
     #Kallið fyrir leikur2
     kall = Vikingur()
