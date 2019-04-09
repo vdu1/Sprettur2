@@ -4,6 +4,9 @@ import sys
 
 class Viktor:
 
+    rettinntak = ["A", "a", "B", "b", "C", "c", "D", "d"]
+    rettinntakprint = ("\nNotaðu aðeins A, B, eða C") #Til að koma í veg fyrir misskilning
+
     def __init__(self):
         pass
     # def Kynning(self):
@@ -55,26 +58,35 @@ class Viktor:
                 sys.stdout.flush()
                 time.sleep(.050)
             time.sleep(1)
-            svar = input("\n>>> ")
+            svar = None
 
             #Henda inn try/except hér?
-
-            if svar.lower() == rsvar.lower():
-                time.sleep(1)
-                printr = "Rétt\n\n"
-                for char in printr:
-                    sys.stdout.write(char)
-                    sys.stdout.flush()
-                    time.sleep(.050)
-                return True
-            else:
-                time.sleep(1)
-                print4 =  "Rangt, svarið er: " + rsvar + "\n\n"
-                for char in print4:
-                    sys.stdout.write(char)
-                    sys.stdout.flush()
-                    time.sleep(.050)
-                return False
+            while svar not in self.rettinntak:
+                svar = input("\n>>> ")
+                if svar in self.rettinntak:
+                    if svar.lower() == rsvar.lower():
+                        time.sleep(1)
+                        printr = "Rétt\n\n"
+                        for char in printr:
+                            sys.stdout.write(char)
+                            sys.stdout.flush()
+                            time.sleep(.050)
+                        return True
+                    elif svar in self.rettinntak:
+                        time.sleep(1)
+                        print4 =  "Rangt, svarið er: " + rsvar + "\n\n"
+                        for char in print4:
+                            sys.stdout.write(char)
+                            sys.stdout.flush()
+                            time.sleep(.050)
+                        return False
+                else:
+                    printrettinntak = self.rettinntakprint
+                    for char in printrettinntak:
+                        sys.stdout.write(char)
+                        sys.stdout.flush()
+                        time.sleep(.050)
+                    time.sleep(1)
 
     def nidurstada(self, fjoldirett, heildarspurn):
         fjoldirangt= heildarspurn - fjoldirett
@@ -109,7 +121,7 @@ def main():
         ("Hvað er prófælmyndin hans Viktors gömul?\n      A. 2 vikna\n      B. 3 mánaða\n      C. 6 ára\n      D. Á ekki facebook", "C")
         ]
     i=0
-    counter =0
+    counter=0
     time.sleep(1)
     print7 = "\n\nSpurningarnar (mundu að svara aðeins A, B, C eða D):\n\n"
     for char in print7:
