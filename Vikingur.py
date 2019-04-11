@@ -27,24 +27,24 @@ class Vikingur:
       for char in print1:
           sys.stdout.write(char)
           sys.stdout.flush()
-          time.sleep(0.0000000001)
+          time.sleep(0.05)
       time.sleep(2)
       print2= "\nÞitt verkefni er að vinna þig upp í gegnum lokaprófssögu Víkings og koma honum í gegnum prófin."
       print21=" Passaðu þig að velja rétt, annars fellur Víkingur úr skólanum!\n"
       for char in print2:
           sys.stdout.write(char)
           sys.stdout.flush()
-          time.sleep(0.0000000001)
+          time.sleep(0.05)
       for char in print21:
           sys.stdout.write(char)
           sys.stdout.flush()
-          time.sleep(0.0000000001)
+          time.sleep(0.05)
       time.sleep(1)
       print3="\nNú byrjar ballið!\n"
       for char in print3:
           sys.stdout.write(char)
           sys.stdout.flush()
-          time.sleep(0.0000000001)
+          time.sleep(0.05)
       time.sleep(1)
       print31="\nÞað er próf á morgun í Stærðfræðigreiningu II. Víkingur Goði var handviss um að hann gæti"
       print32=" tekið þetta próf með bundið fyrir augun. Þess vegna mætti hann ekki fyrr en eftir miðnætti á"
@@ -53,25 +53,25 @@ class Vikingur:
       for char in print31:
           sys.stdout.write(char)
           sys.stdout.flush()
-          time.sleep(0.0000000001)
+          time.sleep(0.05)
       for char in print32:
           sys.stdout.write(char)
           sys.stdout.flush()
-          time.sleep(0.0000000001)
+          time.sleep(0.05)
       for char in print33:
           sys.stdout.write(char)
           sys.stdout.flush()
-          time.sleep(0.0000000001)
+          time.sleep(0.05)
       for char in print34:
           sys.stdout.write(char)
           sys.stdout.flush()
-          time.sleep(0.0000000001)
+          time.sleep(0.05)
       time.sleep(1)
       print4="\nHvað gerir Víkingur næst?\n"
       for char in print4:
           sys.stdout.write(char)
           sys.stdout.flush()
-          time.sleep(0.0000000001)
+          time.sleep(0.05)
 
       print5= """      A. Fer að spila surviv.io
       B. Fer að spila Fifa
@@ -79,7 +79,7 @@ class Vikingur:
       for char in print5:
           sys.stdout.write(char)
           sys.stdout.flush()
-          time.sleep(0.0000000001)
+          time.sleep(0.05)
       time.sleep(1)
       choice = input("\n>>> ") #Here is your first choice.
       if choice in self.answer_A:
@@ -89,7 +89,7 @@ class Vikingur:
         for char in print6:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
 
       elif choice in self.answer_B:
         time.sleep(1)
@@ -98,11 +98,11 @@ class Vikingur:
         for char in print61:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         for char in print62:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
 
       elif choice in self.answer_C:
         time.sleep(1)
@@ -111,11 +111,11 @@ class Vikingur:
         for char in print63:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         for char in print64:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
 
       else:
         while (choice not in self.answer_A and choice not in self.answer_B and choice not in self.answer_C):
@@ -124,7 +124,7 @@ class Vikingur:
             for char in printrettinntak:
                 sys.stdout.write(char)
                 sys.stdout.flush()
-                time.sleep(0.0000000001)
+                time.sleep(0.05)
             time.sleep(1)
             choice = input("\n>>> ") #Here is your first choice.
             if choice in self.answer_A:
@@ -134,11 +134,11 @@ class Vikingur:
               for char in print6:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print7:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
 
             elif choice in self.answer_B:
               time.sleep(1)
@@ -147,11 +147,11 @@ class Vikingur:
               for char in print61:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print62:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
 
             elif choice in self.answer_C:
               time.sleep(1)
@@ -160,11 +160,11 @@ class Vikingur:
               for char in print63:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print64:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
 
 
 
@@ -177,7 +177,7 @@ class Vikingur:
       for char in print71:
           sys.stdout.write(char)
           sys.stdout.flush()
-          time.sleep(0.0000000001)
+          time.sleep(0.05)
       choice = input("\n>>> ")
       if choice in self.answer_A:
         time.sleep(1)
@@ -185,7 +185,7 @@ class Vikingur:
         for char in print72:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         self.prof()
       elif choice in self.answer_B:
         time.sleep(1)
@@ -194,18 +194,18 @@ class Vikingur:
         for char in print73:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         for char in print74:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
       elif choice in self.answer_C:
         time.sleep(1)
         print8 ="\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur skepnan þín!\n\n"
         for char in print8:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         self.prof()
       else:
         while (choice not in self.answer_A and choice not in self.answer_B and choice not in self.answer_C):
@@ -213,7 +213,7 @@ class Vikingur:
             for char in printrettinntak:
                 sys.stdout.write(char)
                 sys.stdout.flush()
-                time.sleep(0.0000000001)
+                time.sleep(0.05)
             time.sleep(1)
             choice = input("\n>>> ")
             if choice in self.answer_A:
@@ -222,7 +222,7 @@ class Vikingur:
               for char in print72:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               self.prof()
             elif choice in self.answer_B:
               time.sleep(1)
@@ -231,18 +231,18 @@ class Vikingur:
               for char in print73:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print74:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
             elif choice in self.answer_C:
               time.sleep(1)
               print8 ="\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur skepnan þín!\n\n"
               for char in print8:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               self.prof()
 
 
@@ -254,7 +254,7 @@ class Vikingur:
       for char in print9:
           sys.stdout.write(char)
           sys.stdout.flush()
-          time.sleep(0.0000000001)
+          time.sleep(0.05)
 
       time.sleep(1)
       choice = input("\n>>> ")
@@ -271,44 +271,44 @@ class Vikingur:
         for char in print91:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         for char in print92:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         for char in print93:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         for char in print94:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         for char in print95:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         for char in print96:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         for char in print966:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
       elif choice in self.answer_B:
         print100 ="\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur skepnan þín!\n\n"
         for char in print100:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         self.matur()
       elif choice in self.answer_C:
         print101 ="\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur skepnan þín!\n\n"
         for char in print101:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         self.matur()
       else:
         while (choice not in self.answer_A and choice not in self.answer_B and choice not in self.answer_C):
@@ -316,7 +316,7 @@ class Vikingur:
             for char in printrettinntak:
                 sys.stdout.write(char)
                 sys.stdout.flush()
-                time.sleep(0.0000000001)
+                time.sleep(0.05)
             time.sleep(1)
             choice = input("\n>>> ")
             if choice in self.answer_A:
@@ -332,45 +332,45 @@ class Vikingur:
               for char in print91:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print92:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print93:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print94:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print95:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print96:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print966:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
 
             elif choice in self.answer_B:
               print100 ="\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur skepnan þín!\n\n"
               for char in print100:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               self.matur()
             elif choice in self.answer_C:
               print101 ="\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur skepnan þín!\n\n"
               for char in print101:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               self.matur()
 
 
@@ -388,7 +388,7 @@ class Vikingur:
               for char in printrettinntakjn:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               choice = input("\n>>> ")
               if choice in self.yes:
                 snooz = 1 #Snoozar
@@ -400,14 +400,14 @@ class Vikingur:
       for char in print102:
           sys.stdout.write(char)
           sys.stdout.flush()
-          time.sleep(0.0000000001)
+          time.sleep(0.05)
       time.sleep(1)
       print103= """      A. Hann fer aftur að sofa
       B. Hann vaknar"""
       for char in print103:
           sys.stdout.write(char)
           sys.stdout.flush()
-          time.sleep(0.0000000001)
+          time.sleep(0.05)
       choice = input("\n>>> ")
       if choice in self.answer_A:
           if snooz > 0:
@@ -420,23 +420,23 @@ class Vikingur:
               for char in print104:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print105:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print106:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print107:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print108:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
 
               svar = "P"
           else:
@@ -453,27 +453,27 @@ class Vikingur:
               for char in print109:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print110:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print111:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print112:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print113:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print114:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
 
       elif choice in self.answer_B:
         svar = "Ú"
@@ -483,29 +483,29 @@ class Vikingur:
         for char in print115:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         for char in print116:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         time.sleep(1)
         print117 = "\nTil hamingju þú hefur náð að útskrifa Víking Goða!\n"
         print1177 = "\nHjálpaðu næsta nemanda að útskrifast.\n\n"
         for char in print117:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         for char in print1177:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
       else:
           while (choice not in self.answer_A and choice not in self.answer_B):
               printrettinntak = self.rettinntak
               for char in printrettinntak:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               time.sleep(1)
               choice = input("\n>>> ")
               if choice in self.answer_A:
@@ -519,23 +519,23 @@ class Vikingur:
                       for char in print104:
                           sys.stdout.write(char)
                           sys.stdout.flush()
-                          time.sleep(0.0000000001)
+                          time.sleep(0.05)
                       for char in print105:
                           sys.stdout.write(char)
                           sys.stdout.flush()
-                          time.sleep(0.0000000001)
+                          time.sleep(0.05)
                       for char in print106:
                           sys.stdout.write(char)
                           sys.stdout.flush()
-                          time.sleep(0.0000000001)
+                          time.sleep(0.05)
                       for char in print107:
                           sys.stdout.write(char)
                           sys.stdout.flush()
-                          time.sleep(0.0000000001)
+                          time.sleep(0.05)
                       for char in print108:
                           sys.stdout.write(char)
                           sys.stdout.flush()
-                          time.sleep(0.0000000001)
+                          time.sleep(0.05)
 
                       svar = "P"
                   else:
@@ -552,27 +552,27 @@ class Vikingur:
                       for char in print109:
                           sys.stdout.write(char)
                           sys.stdout.flush()
-                          time.sleep(0.0000000001)
+                          time.sleep(0.05)
                       for char in print110:
                           sys.stdout.write(char)
                           sys.stdout.flush()
-                          time.sleep(0.0000000001)
+                          time.sleep(0.05)
                       for char in print111:
                           sys.stdout.write(char)
                           sys.stdout.flush()
-                          time.sleep(0.0000000001)
+                          time.sleep(0.05)
                       for char in print112:
                           sys.stdout.write(char)
                           sys.stdout.flush()
-                          time.sleep(0.0000000001)
+                          time.sleep(0.05)
                       for char in print113:
                           sys.stdout.write(char)
                           sys.stdout.flush()
-                          time.sleep(0.0000000001)
+                          time.sleep(0.05)
                       for char in print114:
                           sys.stdout.write(char)
                           sys.stdout.flush()
-                          time.sleep(0.0000000001)
+                          time.sleep(0.05)
 
               elif choice in self.answer_B:
                 svar = "Ú"
@@ -582,22 +582,22 @@ class Vikingur:
                 for char in print115:
                     sys.stdout.write(char)
                     sys.stdout.flush()
-                    time.sleep(0.0000000001)
+                    time.sleep(0.05)
                 for char in print116:
                     sys.stdout.write(char)
                     sys.stdout.flush()
-                    time.sleep(0.0000000001)
+                    time.sleep(0.05)
                 time.sleep(1)
                 print117 = "\nTil hamingju þú hefur náð að útskrifa Víking Goða!\n"
                 print1177 = "\nHjálpaðu næsta nemanda að útskrifast.\n\n"
                 for char in print117:
                     sys.stdout.write(char)
                     sys.stdout.flush()
-                    time.sleep(0.0000000001)
+                    time.sleep(0.05)
                 for char in print1177:
                     sys.stdout.write(char)
                     sys.stdout.flush()
-                    time.sleep(0.0000000001)
+                    time.sleep(0.05)
       return svar
 
     def lokaprof(self):
@@ -609,11 +609,11 @@ class Vikingur:
       for char in print120:
           sys.stdout.write(char)
           sys.stdout.flush()
-          time.sleep(0.0000000001)
+          time.sleep(0.05)
       for char in print121:
           sys.stdout.write(char)
           sys.stdout.flush()
-          time.sleep(0.0000000001)
+          time.sleep(0.05)
       time.sleep(1)
       print122= """      A. Hann fær lánað teikniborð frá Ara
       B. Hann ákveður að taka prófið fríhendis
@@ -621,7 +621,7 @@ class Vikingur:
       for char in print122:
           sys.stdout.write(char)
           sys.stdout.flush()
-          time.sleep(0.0000000001)
+          time.sleep(0.05)
 
       choice = input("\n>>> ")
       if choice in self.answer_A:
@@ -631,7 +631,7 @@ class Vikingur:
         for char in print123:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         time.sleep(1)
         print124="\nTil hamingju, þú náðir að útskrifa Víking Goða!\n"
         time.sleep(1)
@@ -639,11 +639,11 @@ class Vikingur:
         for char in print124:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         for char in print1244:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
       elif choice in self.answer_B:
         Svar2 = False
         time.sleep(1)
@@ -651,7 +651,7 @@ class Vikingur:
         for char in print125:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         time.sleep(1)
         print126= "\nHann féll á prófinu og þar af leiðandi úr skólanum, því miður náður þú ekki að útskrifa Víking Goða!\n"
         time.sleep(1)
@@ -659,11 +659,11 @@ class Vikingur:
         for char in print126:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         for char in print127:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
       elif choice in self.answer_C:
         Svar2 = True
         time.sleep(1)
@@ -671,7 +671,7 @@ class Vikingur:
         for char in print128:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         time.sleep(1)
         print130="\nTil hamingju, þú náðir að útskrifa Víking Goða!\n"
         time.sleep(1)
@@ -679,18 +679,18 @@ class Vikingur:
         for char in print130:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
         for char in print131:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.0000000001)
+            time.sleep(0.05)
       else:
         while choice not in self.answer_A and choice not in self.answer_B and choice not in self.answer_C:
             printrettinntak = self.rettinntak
             for char in printrettinntak:
                 sys.stdout.write(char)
                 sys.stdout.flush()
-                time.sleep(0.0000000001)
+                time.sleep(0.05)
             time.sleep(1)
             choice = input("\n>>> ")
             if choice in self.answer_A:
@@ -700,7 +700,7 @@ class Vikingur:
               for char in print123:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               time.sleep(1)
               print124="\nTil hamingju, þú náðir að útskrifa Víking Goða!\n"
               time.sleep(1)
@@ -708,11 +708,11 @@ class Vikingur:
               for char in print124:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print1244:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
             elif choice in self.answer_B:
               Svar2 = False
               time.sleep(1)
@@ -720,7 +720,7 @@ class Vikingur:
               for char in print125:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               time.sleep(1)
               print126= "\nHann féll á prófinu og þar af leiðandi úr skólanum, því miður náður þú ekki að útskrifa Víking Goða!\n"
               time.sleep(1)
@@ -728,11 +728,11 @@ class Vikingur:
               for char in print126:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print127:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
             elif choice in self.answer_C:
               Svar2 = True
               time.sleep(1)
@@ -740,7 +740,7 @@ class Vikingur:
               for char in print128:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               time.sleep(1)
               print130="\nTil hamingju, þú náðir að útskrifa Víking Goða!\n"
               time.sleep(1)
@@ -748,11 +748,11 @@ class Vikingur:
               for char in print130:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
               for char in print131:
                   sys.stdout.write(char)
                   sys.stdout.flush()
-                  time.sleep(0.0000000001)
+                  time.sleep(0.05)
       return Svar2
 
 def main():
