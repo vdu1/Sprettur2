@@ -1,6 +1,8 @@
 # This Python file uses the following encoding: utf-8
 from Viktor import Viktor
 from Aron import Aron
+from Hrolfur import Hrolfur
+from Vikingur import Vikingur
 import unittest
 from unittest.mock import patch
 
@@ -10,6 +12,8 @@ class TestProfa(unittest.TestCase):
     self.b=0
     self.Vikt =Viktor()
     self.Ronny =Aron()
+    self.Hrolli = Hrolfur()
+    self.Meistarinn = Vikingur()
 
   def test_1(self):
     self.assertTrue(True)
@@ -22,6 +26,14 @@ class TestProfa(unittest.TestCase):
 
   def test_spyrja_returns_false(self ):
       self.assertFalse(self.Vikt.spyrja("Fílar Viktor hávaða? (Já/Nei):", "Nei", 1))
+
+  def test_intro1_returns_100(self):
+      self.assertEqual(self.Hrolli.intro1(), 100)
+
+  def test_logn_returns_F(self):
+      self.assertEqual(self.Meistarinn.logn(), "F")
+
+
 
 
 
