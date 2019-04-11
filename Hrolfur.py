@@ -62,7 +62,8 @@ class Hrolfur:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(.050)
-        self.intro()
+        harin = self.intro()
+        return harin
 
 
     def intro(self):
