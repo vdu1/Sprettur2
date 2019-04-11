@@ -482,7 +482,7 @@ class Vikingur:
             sys.stdout.flush()
             time.sleep(.050)
       else:
-          while choice not in self.answer_A and choice not in self.answer_B and choice not in self.answer_C:
+          while (choice not in self.answer_A and choice not in self.answer_B):
               printrettinntak = self.rettinntak
               for char in printrettinntak:
                   sys.stdout.write(char)
@@ -716,15 +716,15 @@ class Vikingur:
 def main():
     Útskrift= False
     kall = Vikingur()
-    kall.inngangur()
-    kall.prof()
-    kall.matur()
+    #kall.inngangur()
+    #kall.prof()
+    #kall.matur()
     nidurstada1 = kall.logn()
     if nidurstada1 == "P":
         Útskrift = kall.lokaprof()
     elif nidurstada1 == "Ú":
         Útskrift = True
-
+# 
 
 if __name__ == "__main__":
     main()
