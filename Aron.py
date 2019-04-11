@@ -148,7 +148,7 @@ class Aron:
         svefn = None
         while svefn is None:
             try:
-                svefn = int(input(>>))
+                svefn = int(input(">>"))
             except ValueError:
                 svefn = None
         #Til þess að maður græði eitthvað á að læra fram eftir þá nær maður að læra um Taylor margliður ef maður lærir frameftir
