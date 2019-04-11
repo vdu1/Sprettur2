@@ -2,7 +2,7 @@
 import time #Importum module til að að hafa smá biðtíma milli falla og skipana
 from random import shuffle
 from Viktor import Viktor #Importum Viktor úr Viktornyjasti til að geta kallað á leikinn í inngangsforritinu
-from Vikingur import Vikingur2 #Importum Vikingur úr Vikingurnyjasti til að geta kallað á leikinn í inngangsforritinu
+from Vikingur import Vikingur #Importum Vikingur úr Vikingurnyjasti til að geta kallað á leikinn í inngangsforritinu
 from Hrolfur import Hrolfur #Importum Hrolfur úr LeikurHrólfur til að geta kallað á leikinn í inngangsforritinu
 from Aron import Aron #Importum Aron úr Aronnyjasti til að geta kallað á leikinn í inngangsforritinu
 from Inngangur import Inngangur
@@ -51,7 +51,7 @@ def main():
     #Kallið fyrir leikur2
     print("\n" * get_terminal_size().lines, end='')
     Útskrift= False
-    kall = Vikingur2()
+    kall = Vikingur()
     kall.inngangur()
     kall.prof()
     kall.matur()
