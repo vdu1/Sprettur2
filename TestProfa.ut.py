@@ -28,10 +28,10 @@ class TestProfa(unittest.TestCase):
       self.assertFalse(self.Vikt.spyrja("Fílar Viktor hávaða? (Já/Nei):", "Nei", 1))
 
   def test_intro1_returns_100(self):
-      self.assertEqual(self.Hrolli.intro1(), "F")
+      self.assertEqual(self.Hrolli.intro1(), 100)
 
   def test_logn_returns_F(self):
-      self.assertEqual(self.Meistarinn.logn(), 100)
+      self.assertEqual(self.Meistarinn.logn(), "F")
 
 
 
