@@ -6,8 +6,8 @@ class Vikingur:
     answer_A = ["A", "a"]
     answer_B = ["B", "b"]
     answer_C = ["C", "c"]
-    yes = ["J", "j", "Já", "já"]
-    no = ["N", "n", "Nei", "nei"]
+    yes = ["Já", "já"]
+    no = ["Nei", "nei"]
 
     #Hlutir sem notendur geta notfært sér
     snooz = 0
@@ -186,7 +186,7 @@ class Vikingur:
       choice = input("\n>>> ")
       if choice in self.answer_A:
         time.sleep(1)
-        print72= "\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur skepnan þín!\n\n"
+        print72= "\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur!\n\n"
         for char in print72:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -206,7 +206,7 @@ class Vikingur:
             time.sleep(0.050)
       elif choice in self.answer_C:
         time.sleep(1)
-        print8 ="\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur skepnan þín!\n\n"
+        print8 ="\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur!\n\n"
         for char in print8:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -223,7 +223,7 @@ class Vikingur:
             choice = input("\n>>> ")
             if choice in self.answer_A:
               time.sleep(1)
-              print72= "\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur skepnan þín!\n\n"
+              print72= "\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur!\n\n"
               for char in print72:
                   sys.stdout.write(char)
                   sys.stdout.flush()
@@ -243,7 +243,7 @@ class Vikingur:
                   time.sleep(0.050)
             elif choice in self.answer_C:
               time.sleep(1)
-              print8 ="\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur skepnan þín!\n\n"
+              print8 ="\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur!\n\n"
               for char in print8:
                   sys.stdout.write(char)
                   sys.stdout.flush()
@@ -302,14 +302,14 @@ class Vikingur:
             sys.stdout.flush()
             time.sleep(0.050)
       elif choice in self.answer_B:
-        print100 ="\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur skepnan þín!\n\n"
+        print100 ="\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur!\n\n"
         for char in print100:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(0.050)
         self.matur()
       elif choice in self.answer_C:
-        print101 ="\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur skepnan þín!\n\n"
+        print101 ="\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur!\n\n"
         for char in print101:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -364,14 +364,14 @@ class Vikingur:
                   time.sleep(0.050)
 
             elif choice in self.answer_B:
-              print100 ="\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur skepnan þín!\n\n"
+              print100 ="\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur!\n\n"
               for char in print100:
                   sys.stdout.write(char)
                   sys.stdout.flush()
                   time.sleep(0.050)
               self.matur()
             elif choice in self.answer_C:
-              print101 ="\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur skepnan þín!\n\n"
+              print101 ="\nRangt, þú þekkir Víking greinilega ekki nógu vel. Reyndu aftur!\n\n"
               for char in print101:
                   sys.stdout.write(char)
                   sys.stdout.flush()

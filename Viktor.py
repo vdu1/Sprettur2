@@ -74,7 +74,7 @@ class Viktor:
                         return True
                     elif svar in self.rettinntak:
                         time.sleep(1)
-                        print4 =  "Rangt, svarið er: " + rsvar + "\n\n"
+                        print4 =  "\nRangt, svarið er: " + rsvar + "\n\n"
                         for char in print4:
                             sys.stdout.write(char)
                             sys.stdout.flush()
