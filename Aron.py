@@ -452,7 +452,7 @@ class Aron:
         svefn = None
         while svefn is None:
             try:
-                svefn = int(input(>>))
+                svefn = int(input(">>>"))
             except ValueError:
                 svefn = None
         if svefn<4.5:
