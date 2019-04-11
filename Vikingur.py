@@ -263,9 +263,11 @@ class Vikingur:
         print91 ="\nÚff hvað burgerinn og bjórinn var góður! Víkingur er nú saddur"
         print92 =" og fer heim og leggur sig. Hann veit að síðasta lokaprófið er á morgun"
         print93 =" og það í tölvuteikningu. Hann er því harður við sjálfan sig og stillir"
-        print94 =" vekjaraklukkuna aðeins eftir 3 tíma." #Henda time gæa hingað?
+        print94 =" vekjaraklukkuna aðeins eftir 3 tíma."
         print95 =" Tíminn líður, vekjaraklukkan hringir og Víkingi dauðbregður. Hann þarf nú að taka stóra ákvörðun."
-        print96 =" Ýtir Víkingur á snooze.\n\nJá eða nei?"
+        print96 =" Ýtir Víkingur á snooze?"
+        time.sleep(1)
+        print966 = "\n\nJá eða nei?"
         for char in print91:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -287,6 +289,10 @@ class Vikingur:
             sys.stdout.flush()
             time.sleep(.050)
         for char in print96:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(.050)
+        for char in print966:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(.050)
@@ -320,7 +326,7 @@ class Vikingur:
               print93 =" og það í tölvuteikningu. Hann er því harður við sjálfan sig og stillir"
               print94 =" vekjaraklukkuna aðeins eftir 3 tíma."
               print95 =" Tíminn líður, vekjaraklukkan hringir og Víkingi dauðbregður. Hann þarf nú að taka stóra ákvörðun."
-              print96 =" Ýtir Víkingur á snooze."
+              print96 =" Ýtir Víkingur á snooze?"
               time.sleep(1)
               print966 = "\n\nJá eða nei?"
               for char in print91:
@@ -405,7 +411,7 @@ class Vikingur:
               print105= " EN sem betur fer ýtti hann á snooze, hann snoozar"
               print106= " hins vegar of lengi en ekki nógu lengi til að geta ekki lært fyrir prófið."
               print107= " Víkingur lærir uppí VR-II í alla nótt sem verður til þess að hann"
-              print108= " mætir of seint í tölvuteikningar lokaprófið daginn eftir."
+              print108= " mætir of seint í tölvuteikningar lokaprófið daginn eftir.\n"
               for char in print104:
                   sys.stdout.write(char)
                   sys.stdout.flush()
@@ -431,12 +437,14 @@ class Vikingur:
           else:
               svar = "F"
               time.sleep(1)
-              print109 = "\nÞað er rétt, Víkingur fór aftur að sofa."
-              print110 =" Því miður gleymdi hann hins vegar að ýta á snooze og náði ekki"
+              print109 = "\nÞað er rétt, Víkingur fór aftur að sofa.\n"
+              time.sleep(1)
+              print110 ="\nÞví miður gleymdi hann hins vegar að ýta á snooze og náði ekki"
               print111 =" að læra nóg fyrir tölvuteikningar lokaprófið."
               print112 =" Eins og svo oft áður þá varð svefninn Víkingi að falli"
-              print113= " og í þetta sinn sá svefninn til þess að Víkingur útskrifast ekki úr háskólanum! Hjálpaðu næsta"
-              print114= " nemanda að útskrifast\n"
+              print113= " og í þetta sinn sá svefninn til þess að Víkingur útskrifast ekki úr háskólanum!\n"
+              time.sleep(1)
+              print114= "\nHjálpaðu næsta nemanda að útskrifast.\n\n"
               for char in print109:
                   sys.stdout.write(char)
                   sys.stdout.flush()
@@ -476,13 +484,18 @@ class Vikingur:
             sys.stdout.flush()
             time.sleep(.050)
         time.sleep(1)
-        print117= "\nTil hamingju þú hefur náð að útskrifa Víking Goða!\n\nHjálpaðu næsta nemanda að útskrifast\n"
+        print117 = "\nTil hamingju þú hefur náð að útskrifa Víking Goða!\n"
+        print1177 = "\nHjálpaðu næsta nemanda að útskrifast.\n\n"
         for char in print117:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(.050)
+        for char in print1177:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(.050)
       else:
-          while choice not in self.answer_A and choice not in self.answer_B and choice not in self.answer_C:
+          while choice not in self.answer_A and choice not in self.answer_B:
               printrettinntak = self.rettinntak
               for char in printrettinntak:
                   sys.stdout.write(char)
@@ -579,8 +592,9 @@ class Vikingur:
     def lokaprof(self):
       Svar2 = False
       time.sleep(1)
-      print120="\nVíkingur er mættur í prófið en þar sem að hann svaf svo yfir sig þá gleymdi hann T-stikunni heima."
-      print121= " Víkingur er í klípu, hvað gerir hann nú?\n"
+      print120="\nVíkingur er mættur í prófið en þar sem að hann svaf svo yfir sig þá gleymdi hann T-stikunni heima.\n"
+      time.sleep(1)
+      print121= "\nVíkingur er í klípu, hvað gerir hann nú?\n"
       for char in print120:
           sys.stdout.write(char)
           sys.stdout.flush()
@@ -602,30 +616,35 @@ class Vikingur:
       if choice in self.answer_A:
         Svar2 = True
         time.sleep(1)
-        print123="\nVíkinur fékk lánað teikniborðið og rúllaði lokaprófinu upp."
+        print123="\nVíkinur fékk lánað teikniborðið og rúllaði lokaprófinu upp.\n"
         for char in print123:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(.050)
-
         time.sleep(1)
-        print124="\nTil hamingju, þú náðir að útskrifa Víking Goða! Hjálpaðu næsta"
-        " nemanda að útskrifast\n"
+        print124="\nTil hamingju, þú náðir að útskrifa Víking Goða!\n"
+        time.sleep(1)
+        print1244 = "\nHjálpaðu næsta nemanda að útskrifast.\n\n"
         for char in print124:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(.050)
+        for char in print1244:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(.050)
       elif choice in self.answer_B:
         Svar2 = False
         time.sleep(1)
-        print125= "\nVíkingur er því miður skelfilegur að teikna fríhendis."
+        print125= "\nVíkingur er því miður skelfilegur að teikna fríhendis.\n"
         for char in print125:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(.050)
-        #time.sleep(1)
-        print126= "\nHann féll á prófinu og þar af leiðandi úr skólanum, því miður"
-        print127= " náður þú ekki að útskrifa Víking Goða!\n\nHjálpaðu næsta nemanda að útskrifast\n"
+        time.sleep(1)
+        print126= "\nHann féll á prófinu og þar af leiðandi úr skólanum, því miður náður þú ekki að útskrifa Víking Goða!\n"
+        time.sleep(1)
+        print127 = "\nHjálpaðu næsta nemanda að útskrifast.\n\n"
         for char in print126:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -637,14 +656,15 @@ class Vikingur:
       elif choice in self.answer_C:
         Svar2 = True
         time.sleep(1)
-        print128= "\nVíkinur er frábær í Autocad og rúllar prófinu upp."
-        for char in print129:
+        print128= "\nVíkinur er frábær í Autocad og rúllar prófinu upp.\n"
+        for char in print128:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(.050)
         time.sleep(1)
-        print130="\nTil hamingju, þú náðir að útskrifa Víking Goða! Hjálpaðu næsta"
-        print131=" nemanda að útskrifast\n"
+        print130="\nTil hamingju, þú náðir að útskrifa Víking Goða!\n"
+        time.sleep(1)
+        print131="\nHjálpaðu næsta nemanda að útskrifast.\n\n"
         for char in print130:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -696,7 +716,7 @@ class Vikingur:
               Svar2 = True
               time.sleep(1)
               print128= "\nVíkinur er frábær í Autocad og rúllar prófinu upp."
-              for char in print129:
+              for char in print128:
                   sys.stdout.write(char)
                   sys.stdout.flush()
                   time.sleep(.050)

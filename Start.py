@@ -51,7 +51,7 @@ def main():
     #Kallið fyrir leikur2
     print("\n" * get_terminal_size().lines, end='')
     Útskrift= False
-    kall = Vikingur2()
+    kall = Vikingur()
     kall.inngangur()
     kall.prof()
     kall.matur()
