@@ -662,7 +662,7 @@ class Hrolfur:
         verk = None
         while tala is None:
             try:
-                tala = int(input(láðu inn heiltölu á milli 5 og 10>>>))
+                tala = int(input("láðu inn heiltölu á milli 5 og 10>>>")
             except ValueError:
                 tala = None
         counter += (verk-5)*5
