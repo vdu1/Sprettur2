@@ -139,13 +139,18 @@ class Aron:
             dh = dh.lower()
         #Hérna fær maður að velja hversu mikið maður ætlar að sofa fyrir prófið, það fer eftir hvernig próf kennarinn gerir hvort það gagnist manni að sofa mikið
         time.sleep(1)
-        svefn = int()
+
         svefninn = "\nÞú ert illa undirbúinn en veist að svefn getur gert gott fyrir þig, hvað ætlar þú að sofa mikið nóttinni fyrir prófið? "
         for char in svefninn:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(.050)
-        svefn = int(input(""))
+        svefn = None
+        while svefn is None:
+            try:
+                svefn = int(input(>>))
+            except ValueError:
+                svefn = None
         #Til þess að maður græði eitthvað á að læra fram eftir þá nær maður að læra um Taylor margliður ef maður lærir frameftir
         if svefn<4.5:
             time.sleep(1)
@@ -432,19 +437,24 @@ class Aron:
             gf= gf.lower()
         #Hérna fær maður að velja hversu mikið maður ætlar að sofa fyrir prófið, það fer eftir hvernig próf kennarinn gerir hvort það gagnist manni að sofa mikið
         time.sleep(1)
-        svefn = 0
-        while svefn <0.01:
-            print25="\nÞú ert illa undirbúinn en veist að svefn getur"
-            print26=" gert gott fyrir þig, hvað ætlar þú að sofa mikið nóttinni fyrir prófið? "
-            for char in print25:
-                sys.stdout.write(char)
-                sys.stdout.flush()
-                time.sleep(.050)
-            for char in print26:
-                sys.stdout.write(char)
-                sys.stdout.flush()
-                time.sleep(.050)
-            svefn = int(input(">>> "))# Maður verður að græða eitthvað á að læra frameftir. Í þessu tilfelli er það að geta leyst dæmi með eigin gildum
+        svefn = None
+        print25="\nÞú ert illa undirbúinn en veist að svefn getur"
+        print26=" gert gott fyrir þig, hvað ætlar þú að sofa mikið nóttinni fyrir prófið? "
+        for char in print25:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(.050)
+        for char in print26:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(.050)
+        # Maður verður að græða eitthvað á að læra frameftir. Í þessu tilfelli er það að geta leyst dæmi með eigin gildum
+        svefn = None
+        while svefn is None:
+            try:
+                svefn = int(input(>>))
+            except ValueError:
+                svefn = None
         if svefn<4.5:
             time.sleep(1)
             print27='\nÞú fórst svo seint að sofa að þú hafðir tíma til að læra um Eigin gildi, vonandi kemur það á prófinu.\n'
