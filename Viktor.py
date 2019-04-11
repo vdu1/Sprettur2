@@ -5,7 +5,7 @@ import sys
 class Viktor:
 
     rettinntak = ["A", "a", "B", "b", "C", "c", "D", "d"]
-    rettinntakprint = ("\nNotaðu aðeins A, B, C eða D") #Til að koma í veg fyrir misskilning
+    rettinntakprint = ("\nEitthvað fór úrskeiðis hjá þér, mundu að nota rétta stafi\n") #Til að koma í veg fyrir misskilning
 
     def __init__(self):
         pass
@@ -17,15 +17,15 @@ class Viktor:
         for char in print1:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(.050)
+            time.sleep(0.050)
         for char in print12:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(.050)
+            time.sleep(0.050)
         for char in print13:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(.050)
+            time.sleep(0.050)
         time.sleep(1)
 
         print2 ="\n\nVerkefni þitt er að svara 10 laufléttum spurningum um Viktor og "
@@ -35,19 +35,19 @@ class Viktor:
         for char in print2:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(.050)
+            time.sleep(0.050)
         for char in print21:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(.050)
+            time.sleep(0.050)
         for char in print22:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(.050)
+            time.sleep(0.050)
         for char in print23:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(.050)
+            time.sleep(0.050)
 
 
     def spyrja(self, spurning, rsvar, i):
@@ -56,7 +56,7 @@ class Viktor:
             for char in print3:
                 sys.stdout.write(char)
                 sys.stdout.flush()
-                time.sleep(.050)
+                time.sleep(0.050)
             time.sleep(1)
             svar = None
 
@@ -66,11 +66,11 @@ class Viktor:
                 if svar in self.rettinntak:
                     if svar.lower() == rsvar.lower():
                         time.sleep(1)
-                        printr = "Rétt\n\n"
+                        printr = "\nRétt\n\n"
                         for char in printr:
                             sys.stdout.write(char)
                             sys.stdout.flush()
-                            time.sleep(.050)
+                            time.sleep(0.050)
                         return True
                     elif svar in self.rettinntak:
                         time.sleep(1)
@@ -78,14 +78,14 @@ class Viktor:
                         for char in print4:
                             sys.stdout.write(char)
                             sys.stdout.flush()
-                            time.sleep(.050)
+                            time.sleep(0.050)
                         return False
                 else:
                     printrettinntak = self.rettinntakprint
                     for char in printrettinntak:
                         sys.stdout.write(char)
                         sys.stdout.flush()
-                        time.sleep(.050)
+                        time.sleep(0.050)
                     time.sleep(1)
 
     def nidurstada(self, fjoldirett, heildarspurn):
@@ -96,7 +96,7 @@ class Viktor:
             for char in print17:
                 sys.stdout.write(char)
                 sys.stdout.flush()
-                time.sleep(.050)
+                time.sleep(0.050)
             return 1
         else:
             time.sleep(1)
@@ -104,7 +104,7 @@ class Viktor:
             for char in print6:
                 sys.stdout.write(char)
                 sys.stdout.flush()
-                time.sleep(.050)
+                time.sleep(0.050)
             return 0
 def main():
     kall = Viktor()
@@ -123,11 +123,11 @@ def main():
     i=0
     counter=0
     time.sleep(1)
-    print7 = "\n\nSpurningarnar (mundu að svara aðeins A, B, C eða D):\n\n"
+    print7 = "\n\nSpurningarnar (mundu að svara aðeins A, B, C eða D eftir því sem við á):\n\n"
     for char in print7:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(.050)
+        time.sleep(0.050)
     time.sleep(1)
     shuffle(spurningar)
     for spurning, rettsvar in spurningar:
