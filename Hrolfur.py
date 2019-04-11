@@ -659,7 +659,12 @@ class Hrolfur:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(.050)
-        verk = int(input("Sláðu inn heiltölu á milli 5 og 10>>>"))
+        verk = None
+        while tala is None:
+            try:
+                tala = int(input(láðu inn heiltölu á milli 5 og 10>>>))
+            except ValueError:
+                tala = None
         counter += (verk-5)*5
         if verk > 7:
             print90="Það var stressandi að fá góða einkunn í verkefnastjórnun, Hrólfur missti 5 hár fyrir hverja einkunn sem hann fékk yfir 5"+"\n"
