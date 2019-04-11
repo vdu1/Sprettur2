@@ -402,6 +402,8 @@ class Hrolfur:
 
     def HaskoliStart(self):
         counter=0
+        svar_A = ["A", "a"]
+        svar_B = ["B", "b"]
         choice = input(">>> ")
         if choice in svar_A:
             counter += self.HaskoliA()
@@ -633,13 +635,6 @@ class Hrolfur:
                         sys.stdout.flush()
                         time.sleep(.050)
                     counter += 5
-                if choice2 in svar_B:
-                    print64="Þetta gengur vel en auðvitað eru einhverjir hnökkrar og Hrólfur missir samtals 5 hár"
-                    for char in print64:
-                        sys.stdout.write(char)
-                        sys.stdout.flush()
-                        time.sleep(.050)
-                    counter += 5
                 if choice2 in svar_C:
                     print66="Fótboltatöffararnir njóta sín vel. Það þarf oftar að skipta um kodda en áhyggjurnar á heimilinu er almennt litlar"+"\n"
                     for char in print66:
@@ -655,16 +650,20 @@ class Hrolfur:
         time.sleep(1)
         print68="Hrólfur þarf samt líka að taka áfangann Verkefnastjórnun, áfanginn er gríðarlega erfiður og þarf mikla vinnu til að ná honum"+"\n"
         print89="Hvaða einkunn stefnir Hrólfur á að fá í áfanganum, því meiri vinnu sem hann leggur í áfangann því meira hár missir hann"+"\n"
+        for char in print68:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(.050)
         for char in print89:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(.050)
         verk = None
-        while tala is None:
+        while verk is None:
             try:
-                tala = int(input("láðu inn heiltölu á milli 5 og 10>>>"))
+                verk = int(input("láðu inn heiltölu á milli 5 og 10>>>"))
             except ValueError:
-                tala = None
+                verk = None
         counter += (verk-5)*5
         if verk > 7:
             print90="Það var stressandi að fá góða einkunn í verkefnastjórnun, Hrólfur missti 5 hár fyrir hverja einkunn sem hann fékk yfir 5"+"\n"
