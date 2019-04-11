@@ -1,6 +1,7 @@
 import time #Importum module til að að hafa smá biðtíma milli falla og skipana
 from random import shuffle
 import sys
+from shutil import get_terminal_size
 
 class Viktor:
 
@@ -107,6 +108,7 @@ class Viktor:
                 time.sleep(0.050)
             return 0
 def main():
+    print("\n" * get_terminal_size().lines, end='')
     kall = Viktor()
     kall.Kynning()
     spurningar = [("Fílar Viktor hávaða?\n      A. Já\n      B. Nei", "B"),

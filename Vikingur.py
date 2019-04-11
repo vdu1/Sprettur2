@@ -761,6 +761,7 @@ class Vikingur:
       return Svar2
 
 def main():
+    print("\n" * get_terminal_size().lines, end='')
     Útskrift= False
     kall = Vikingur()
     kall.inngangur()
