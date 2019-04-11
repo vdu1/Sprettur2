@@ -17,7 +17,6 @@ def main():
     nafn1=kall.inngangur()
 
 #Kallið fyrir leikur1
-    print("\n" * get_terminal_size().lines, end='')
     kall = Viktor()
     kall.Kynning()
     spurningar = [("Fílar Viktor hávaða?\n      A. Já\n      B. Nei", "B"),
@@ -34,11 +33,11 @@ def main():
     i=0
     counter=0
     time.sleep(1)
-    print7 = "\n\nSpurningarnar (mundu að svara aðeins A, B, C eða D):\n\n"
+    print7 = "\n\nSpurningarnar (mundu að svara aðeins A, B, C eða D eftir því sem við á):\n\n"
     for char in print7:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(.050)
+        time.sleep(0.00000000000001)
     time.sleep(1)
     shuffle(spurningar)
     for spurning, rettsvar in spurningar:
