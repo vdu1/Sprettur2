@@ -2,23 +2,22 @@
 import time #Importum module til að að hafa smá biðtíma milli falla og skipana
 from random import shuffle
 from Viktor import Viktor #Importum Viktor úr Viktornyjasti til að geta kallað á leikinn í inngangsforritinu
-from Vikingur import Vikingur #Importum Vikingur úr Vikingurnyjasti til að geta kallað á leikinn í inngangsforritinu
+from Vikingur import Vikingur2 #Importum Vikingur úr Vikingurnyjasti til að geta kallað á leikinn í inngangsforritinu
 from Hrolfur import Hrolfur #Importum Hrolfur úr LeikurHrólfur til að geta kallað á leikinn í inngangsforritinu
 from Aron import Aron #Importum Aron úr Aronnyjasti til að geta kallað á leikinn í inngangsforritinu
 from Inngangur import Inngangur
+from shutil import get_terminal_size
 import sys
-import subprocess as sp
 
 #__main__
 def main():
     Teljari = 0
-
+    print("\n" * get_terminal_size().lines, end='')
     kall = Inngangur()
     nafn1=kall.inngangur()
-    time.sleep(2)
-    tmp = sp.call('cls',shell=True)
 
-# #Kallið fyrir leikur1
+#Kallið fyrir leikur1
+    print("\n" * get_terminal_size().lines, end='')
     kall = Viktor()
     kall.Kynning()
     spurningar = [("Fílar Viktor hávaða?\n      A. Já\n      B. Nei", "B"),
@@ -47,44 +46,56 @@ def main():
         if kall.spyrja(spurning, rettsvar, i)is True:
             counter += 1
 
-    kall.nidurstada(counter, len(spurningar))
-    time.sleep(2)
-    tmp = sp.call('cls',shell=True)
+    Teljari += kall.nidurstada(counter, len(spurningar))
 
     #Kallið fyrir leikur2
-    kall = Vikingur()
-    Teljari += kall.inngangur()
+    print("\n" * get_terminal_size().lines, end='')
+    Útskrift= False
+    kall = Vikingur2()
+    kall.inngangur()
+    kall.prof()
+    kall.matur()
+    nidurstada1 = kall.logn()
+    if nidurstada1 == "P":
+        Útskrift = kall.lokaprof()
+    elif nidurstada1 == "Ú":
+        Útskrift = True
+    if Útskrift is True:
+        Teljari += 1
 
-    # #Kallið fyrir leikur3
-    # einingar=0
-    # kall = Aron()
-    # namskeid1 = kall.Velja1()
-    # namskeid2 = kall.Velja2(namskeid1)
-    # if namskeid1.lower() == 's' or namskeid2.lower() == 's':
-    #     einingar = einingar+6*kall.S1Prof()
-    #
-    # # Til að spara forritun átti maður ekki séns á að ná eðlisfræðinni
-    # # Bætum mögulega við prófi í eðlisfræði fyrir næsta sprett
-    # if namskeid1.lower() == 'e' or namskeid2.lower() == 'e':
-    #     print('Aldeilis mistök sem þú gerðir að velja Eðlisfræði prófið.')
-    #     print('Þú áttir aldrei séns og fékkst núll í prófinu')
-    #
-    # if namskeid1.lower() == 'l' or namskeid2.lower() =='l':
-    #     einingar = einingar+6*kall.Lprof()
-    # print('Þú endaðir með '+ str(einingar) + " einingar, til hamingju! Hjálpaðu næsta nemanda að útskrifast")
-    # if einingar == 12:
-    #     Teljari += 1
+    #Kallið fyrir leikur3
+    print("\n" * get_terminal_size().lines, end='')
+    einingar=0
+    kall = Aron()
+    namskeid1 = kall.Velja1()
+    namskeid2 = kall.Velja2(namskeid1)
+    if namskeid1.lower() == 's' or namskeid2.lower() == 's':
+        einingar = einingar+6*kall.S1Prof()
 
-    # #Kallið fyrir leikur4
-    # kall = Hrolfur()
-    # har = 100
-    # har -= kall.intro()
-    # if har>20:
-    #     har -= kall.HaskoliStart()
-    # Teljari += kall.Nidurstada(har)
-    #
-    # #Nú viljum við taka allt saman til að birta niðurstöður leikjanna
-    # print(nafn1 + " þú útskrifaðir " + str(Teljari) + " af 4 nemendum")
+    # Til að spara forritun átti maður ekki séns á að ná eðlisfræðinni
+    # Bætum mögulega við prófi í eðlisfræði fyrir næsta sprett
+    if namskeid1.lower() == 'e' or namskeid2.lower() == 'e':
+        print('Aldeilis mistök sem þú gerðir að velja Eðlisfræði prófið.')
+        print('Þú áttir aldrei séns og fékkst núll í prófinu')
+
+    if namskeid1.lower() == 'l' or namskeid2.lower() =='l':
+        einingar = einingar+6*kall.Lprof()
+    print('Þú endaðir með '+ str(einingar) + " einingar, til hamingju! Hjálpaðu næsta nemanda að útskrifast")
+    if einingar == 12:
+        Teljari += 1
+
+    #Kallið fyrir leikur4
+    print("\n" * get_terminal_size().lines, end='')
+    kall = Hrolfur()
+    har = 100
+    har -= kall.intro1()
+    if har>20:
+        har -= kall.HaskoliStartintro()
+    kall.Nidurstada(har)
+
+    #Nú viljum við taka allt saman til að birta niðurstöður leikjanna
+    print("\n" * get_terminal_size().lines, end='')
+    print(nafn1 + " þú útskrifaðir " + str(Teljari) + " af 4 nemendum")
 
 if __name__ == "__main__":
     main()

@@ -5,7 +5,7 @@ import sys
 class Viktor:
 
     rettinntak = ["A", "a", "B", "b", "C", "c", "D", "d"]
-    rettinntakprint = ("\nNotaðu aðeins A, B, eða C") #Til að koma í veg fyrir misskilning
+    rettinntakprint = ("\nNotaðu aðeins A, B, C eða D") #Til að koma í veg fyrir misskilning
 
     def __init__(self):
         pass
