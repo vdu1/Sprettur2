@@ -649,7 +649,7 @@ class Aron:
                 time.sleep(0.000000000001)
         if svefn >= svefnkrafa:
             einkunn= einkunn+2
-            print51='Vel gert, þú varst vel sofinn og fattaðir trixið í svæsnu 20% dæmi frá Rögga'
+            print51='Vel gert, þú varst vel sofinn og fattaðir trixið í svæsnu 20% dæmi frá Rögga'+"\n"
             for char in print51:
                 sys.stdout.write(char)
                 sys.stdout.flush()
@@ -709,7 +709,7 @@ class Aron:
                 sys.stdout.write(char)
                 sys.stdout.flush()
                 time.sleep(0.000000000001)
-            print61='Verzló er rétt svar'
+            print61="Verzló er rétt svar"+"\n"+"\n"
             for char in print61:
                 sys.stdout.write(char)
                 sys.stdout.flush()
