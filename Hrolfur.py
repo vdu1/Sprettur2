@@ -87,8 +87,21 @@ class Hrolfur:
         elif choice in svar_C:
             counter += self.option_Verzl()
         else:
-            print ("A, B eða C takk fyrir")
-            self.intro()
+            while (choice not in svar_A and choice not in svar_B and choice not in svar_C):
+                print ("A, B eða C takk fyrir")
+                choice = input(">>>")
+                if choice in svar_A:
+                    print8="Jæja, þú ert ömurlegur ráðgjafi. Hrólfur missti allt hárið og féll úr MR á fyrstu önninni. Hann er samt mjög ánægður á dælunni."
+                    for char in print8:
+                        sys.stdout.write(char)
+                        sys.stdout.flush()
+                        time.sleep(.050)
+                    return 100
+                elif choice in svar_B:
+                    counter += self.option_Flens()
+                elif choice in svar_C:
+                    counter += self.option_Verzl()
+
         return counter
 
     def option_Flens(self):
