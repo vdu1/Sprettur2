@@ -68,7 +68,7 @@ class Aron:
     time.sleep(1)
     def Velja2(self, namskeid1):
         time.sleep(1)
-        annad = "\nNú ertu búinn að velja eitt námskeið til að taka í endurtekt, veldu seinna.\n"
+        annad = "\nNú ertu búinn að velja eitt námskeið til að taka í endurtekt, veldu seinna."
         for char in annad:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -79,7 +79,7 @@ class Aron:
 
             if namskeid1.lower() =='s':
                 time.sleep(1)
-                valmoguleiki2 = '\nL fyrir Línulega Algebru eða E fyrir Eðlisfræði: '
+                valmoguleiki2 = '\n\nL fyrir Línulega Algebru eða E fyrir Eðlisfræði: '
                 for char in valmoguleiki2:
                     sys.stdout.write(char)
                     sys.stdout.flush()
@@ -129,7 +129,7 @@ class Aron:
         time.sleep(1)
         #Maður lærir hvort maður eyði tímanum sínum í að læra diffrun eða heildun, það er 50/50 hvort kemur.
         dh = None
-        diffhei = '\nDiffrun = D eða Heildun = H: '
+        diffhei = '\n\nDiffrun = D eða Heildun = H: '
         time.sleep(1)
         for char in diffhei:
             sys.stdout.write(char)
@@ -155,7 +155,7 @@ class Aron:
         #Hérna fær maður að velja hversu mikið maður ætlar að sofa fyrir prófið, það fer eftir hvernig próf kennarinn gerir hvort það gagnist manni að sofa mikið
         time.sleep(1)
 
-        svefninn = "\nÞú ert illa undirbúinn en veist að svefn getur gert gott fyrir þig, hvað ætlar þú að sofa mikið nóttinni fyrir prófið?"
+        svefninn = "\nÞú ert illa undirbúinn en veist að svefn getur gert gott fyrir þig, hvað ætlar þú að sofa marga tíma nóttina fyrir prófið (svaraðu með heiltölu)?"
         for char in svefninn:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -168,15 +168,17 @@ class Aron:
             except ValueError:
                 svefn = None
                 printekkirett = "\nVeldu heiltölu"
+                time.sleep(1)
                 for char in printekkirett:
                     sys.stdout.write(char)
                     sys.stdout.flush()
                     time.sleep(0.000000000001)
+                time.sleep(1)
 
         #Til þess að maður græði eitthvað á að læra fram eftir þá nær maður að læra um Taylor margliður ef maður lærir frameftir
         if svefn<4.5:
             time.sleep(1)
-            Taylor = "\nÞú fórst svo seint að sofa að þú hafðir tíma til að læra Taylor margliður, vonandi koma þær á prófinu."
+            Taylor = "\nÞú fórst svo seint að sofa að þú hafðir tíma til að læra Taylor margliður, vonandi koma þær á prófinu.\n"
             for char in Taylor:
                 sys.stdout.write(char)
                 sys.stdout.flush()
@@ -187,7 +189,7 @@ class Aron:
         time.sleep(1)
         if DH==1:
             time.sleep(1)
-            Diffrun = '\n\nNú ertu mættur í prófið, fyrsta spurningin er um Diffrun.'
+            Diffrun = '\nNú ertu mættur í prófið, fyrsta spurningin er um Diffrun.'
             for char in Diffrun:
                 sys.stdout.write(char)
                 sys.stdout.flush()
@@ -211,7 +213,7 @@ class Aron:
 
         if DH==0:
             time.sleep(1)
-            Mprof = '\n\nNú ertu mættur í prófið, fyrsta spurningin er um heildun.'
+            Mprof = '\nNú ertu mættur í prófið, fyrsta spurningin er um heildun.'
             for char in Mprof:
                 sys.stdout.write(char)
                 sys.stdout.flush()
@@ -234,7 +236,6 @@ class Aron:
         # 50/50 hvort Taylor margliður komi á prófinu. Ef maður lærði frameftir nær maður spurningunni rétt annars fær maður 0 stig.
         if random.randint(0,1)==1:
             time.sleep(1)
-            print("\n")
             Tkom = '\n\nTaylor margliður komu á prófinu.'
             for char in Tkom:
                 sys.stdout.write(char)
@@ -265,16 +266,29 @@ class Aron:
         # Já eða nei spurning um hvort fall sé samfell
         # Gætum bætt við mynd af falli í næsta sprett til að hafa smá raunverulega stærðfræðigreiningu í þessu
         time.sleep(1)
-        print("\n")
         print3 = '\n\n20% spurning hvort að fall sé samfellt á ákveðnu bili, Er það ekki bara já og nei spurning, eða 50/50...'
         for char in print3:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(0.000000000001)
         svar = None
+        time.sleep(1)
+        print4 = '\n\nEr fallið samfellt eða ekki? Já = J eða Nei = N: '
+        for char in print4:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(0.000000000001)
+        svar = input("")
+        svar = svar.lower()
         while svar != "j" and svar != "n":
+            printvilla = "\nVeldu J eða N\n"
             time.sleep(1)
-            print4 = '\n\nEr fallið samfellt eða ekki? J fyrir Já, N fyrir nei: '
+            for char in printvilla:
+                sys.stdout.write(char)
+                sys.stdout.flush()
+                time.sleep(0.000000000001)
+            print4 = '\nEr fallið samfellt eða ekki? Já = J eða Nei = N: '
+            time.sleep(1)
             for char in print4:
                 sys.stdout.write(char)
                 sys.stdout.flush()
@@ -294,7 +308,7 @@ class Aron:
                 einkunn = einkunn + 1
             else:
                 time.sleep(1)
-                print6 = 'Þú giskaðir vitlaust og kunnir ekki nóg um efnið til að búa þér til stig.'
+                print6 = '\nÞú giskaðir vitlaust og kunnir ekki nóg um efnið til að búa þér til stig.'
                 for char in print6:
                     sys.stdout.write(char)
                     sys.stdout.flush()
@@ -303,7 +317,7 @@ class Aron:
             rsvar= 'n'
             if svar.lower() == rsvar:
                 time.sleep(1)
-                print7 = '\n\nVel gert, þú giskaðir rétt. Útskýringin þín var samt ekki nægilega góð svo þú færð bara helmingin af dæminu rétt.'
+                print7 = '\nVel gert, þú giskaðir rétt. Útskýringin þín var samt ekki nægilega góð svo þú færð bara helmingin af dæminu rétt.'
                 for char in print7:
                     sys.stdout.write(char)
                     sys.stdout.flush()
@@ -311,7 +325,7 @@ class Aron:
                 einkunn = einkunn + 1
             else:
                 time.sleep(1)
-                print8 = '\n\nÞú giskaðir vitlaust og kunnir ekki nóg um efnið til að búa þér til stig.'
+                print8 = '\nÞú giskaðir vitlaust og kunnir ekki nóg um efnið til að búa þér til stig.'
                 for char in print8:
                     sys.stdout.write(char)
                     sys.stdout.flush()
@@ -324,14 +338,15 @@ class Aron:
             sys.stdout.flush()
             time.sleep(0.000000000001)
         SvarImba = 1
+        StringImba = str(SvarImba)
         time.sleep(1)
         print10 = '\n\ncos^2(theta)+sin^2(theta)=x. Hvað er x? '
         for char in print10:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(0.000000000001)
-        Imba=int(input(""))
-        if Imba==SvarImba:
+        Imba = input("")
+        if Imba==StringImba:
             time.sleep(1)
             print11 = '\nVar þetta gisk? Það breytir engu, þetta var allavega rétt.'
             for char in print11:
@@ -341,7 +356,7 @@ class Aron:
             einkunn=einkunn+1
         else:
             time.sleep(1)
-            print12 = '\n\nSvona á að vita, þarna misstir þú dýrmætt stig úr pokanum.'
+            print12 = '\nSvona á að vita, þarna misstir þú dýrmætt stig úr pokanum.'
             for char in print12:
                 sys.stdout.write(char)
                 sys.stdout.flush()
@@ -366,15 +381,15 @@ class Aron:
                 time.sleep(0.000000000001)
         # Það stendur á hverri blaðsíðu á EdBook quote eftir Douglas Adams
         time.sleep(1)
-        print15 = '\n\nÞetta er nú fáranleg 10% spurning. Hver er uppáhalds rithöfundurinn hans Benna kennara?'
+        print15 = '\n\nÞetta er nú fáranleg 10% spurning. Hver er uppáhalds rithöfundurinn hans Benna kennara (A, B eða C)?'
         for char in print15:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(0.000000000001)
 
-        print15 = '\n\nA George R.R. Martin\n'
-        print16 = 'B Douglas Adams\n'
-        print17 = 'C Yrsa Sigurðardóttir\n'
+        print15 = '\n      A George R.R. Martin\n'
+        print16 = '      B Douglas Adams\n'
+        print17 = '      C Yrsa Sigurðardóttir\n'
         for char in print15:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -388,15 +403,8 @@ class Aron:
             sys.stdout.flush()
             time.sleep(0.000000000001)
         skrifa = None
-        while skrifa != "a" and skrifa != "b" and skrifa != "c":
-            time.sleep(1)
-            print18 = '\nA, B eða C? '
-            for char in print18:
-                sys.stdout.write(char)
-                sys.stdout.flush()
-                time.sleep(0.000000000001)
-            skrifa=input("")
-            skrifa = skrifa.lower()
+        skrifa=input("\n>>> ")
+        skrifa = skrifa.lower()
         if skrifa.lower() == 'b':
             time.sleep(1)
             einkunn= einkunn +1
@@ -406,13 +414,42 @@ class Aron:
                 sys.stdout.write(char)
                 sys.stdout.flush()
                 time.sleep(0.000000000001)
-        else:
+        if (skrifa.lower() == 'a' or skrifa.lower() == 'c'):
             time.sleep(1)
             print20 = '\nÞað þarf að lesa EdBook til að ná svona prófum.'
             for char in print20:
                 sys.stdout.write(char)
                 sys.stdout.flush()
                 time.sleep(0.000000000001)
+        else:
+            while skrifa != "a" and skrifa != "b" and skrifa != "c":
+                time.sleep(1)
+                printvilla = "\nVeldu A, B eða C\n"
+                time.sleep(1)
+                for char in printvilla:
+                    sys.stdout.write(char)
+                    sys.stdout.flush()
+                    time.sleep(0.000000000001)
+                time.sleep(1)
+                skrifa=input("\n>>> ")
+                skrifa = skrifa.lower()
+                if skrifa.lower() == 'b':
+                    time.sleep(1)
+                    einkunn= einkunn +1
+                    time.sleep(1)
+                    print19 = '\nÞú varst augljóslega duglegur að lesa EdBook yfir önnina.'
+                    for char in print19:
+                        sys.stdout.write(char)
+                        sys.stdout.flush()
+                        time.sleep(0.000000000001)
+                if (skrifa.lower() == 'a' or skrifa.lower() == 'c'):
+                    time.sleep(1)
+                    print20 = '\nÞað þarf að lesa EdBook til að ná svona prófum.'
+                    for char in print20:
+                        sys.stdout.write(char)
+                        sys.stdout.flush()
+                        time.sleep(0.000000000001)
+
         #Prentum í lokin út lokaeinkunn og hvort viðkomandi hafi náð prófinu eða ekki
         time.sleep(1)
         print21 = '\n\nÞú fékkst '+ str(einkunn) +' á prófinu.'
@@ -477,6 +514,12 @@ class Aron:
                 svefn = int(input(">>>"))
             except ValueError:
                 svefn = None
+                printekkirett = "\nVeldu heiltölu"
+                time.sleep(1)
+                for char in printekkirett:
+                    sys.stdout.write(char)
+                    sys.stdout.flush()
+                    time.sleep(0.000000000001)
         if svefn<4.5:
             time.sleep(1)
             print27='\nÞú fórst svo seint að sofa að þú hafðir tíma til að læra um Eigin gildi, vonandi kemur það á prófinu.\n'
@@ -496,7 +539,7 @@ class Aron:
                 time.sleep(0.000000000001)
             if gf.lower() == 'f':
                 time.sleep(1)
-                print29='Þú ert heppinn, þú lærðir Gauss eyðingu og hún kom á prófinu, einkunin þín hækkar um 2'
+                print29='\nÞú ert heppinn, þú lærðir Gauss eyðingu og hún kom á prófinu, einkunin þín hækkar um 2'
                 for char in print29:
                     sys.stdout.write(char)
                     sys.stdout.flush()
@@ -504,27 +547,27 @@ class Aron:
                 einkunn = einkunn +2
             if gf.lower() == 'g':
                 time.sleep(1)
-                print30='Þú valdir vitlaust, þú lærðir ekki Gauss eyðingu og hún var 20% af prófinu, þú getur í mesta lagi fengið 8.'
+                print30='\nÞú valdir vitlaust, þú lærðir ekki Gauss eyðingu og hún var 20% af prófinu, þú getur í mesta lagi fengið 8.'
                 for char in print30:
                     sys.stdout.write(char)
                     sys.stdout.flush()
                     time.sleep(0.000000000001)
         if GF==0:
             time.sleep(1)
-            print31='Nú ertu mættur í prófið, fyrsta spurningin er um fylkja margföldun.'
+            print31='\nNú ertu mættur í prófið, fyrsta spurningin er um fylkja margföldun.'
             for char in print31:
                 sys.stdout.write(char)
                 sys.stdout.flush()
                 time.sleep(0.000000000001)
             if gf.lower() == 'g':
-                print32='Þú ert heppinn, þú lærðir fylkja margföldun og hún kom á prófinu, einkunin þín hækkar um 2'
+                print32='\nÞú ert heppinn, þú lærðir fylkja margföldun og hún kom á prófinu, einkunin þín hækkar um 2'
                 for char in print32:
                     sys.stdout.write(char)
                     sys.stdout.flush()
                     time.sleep(0.000000000001)
                 einkunn = einkunn +2
             if gf.lower() == 'f':
-                print33='Þú valdir vitlaust, þú lærðir ekki fylkja margföldun og hún var 20% af prófinu, þú getur í mesta lagi fengið 8.'
+                print33='\nÞú valdir vitlaust, þú lærðir ekki fylkja margföldun og hún var 20% af prófinu, þú getur í mesta lagi fengið 8.'
                 for char in print33:
                     sys.stdout.write(char)
                     sys.stdout.flush()
@@ -532,43 +575,43 @@ class Aron:
         # Hérna er valið tilviljanakennt hvort eigin gildi sem sumir lærðu komi á prófinu
         # Ef maður lærði um eigin gildin fær maður +2 í einkunn
         if random.randint(0,1)==1:
-            print34='Eigin gildi komu á prófinu'
+            print34='\nEigin gildi komu á prófinu'
             for char in print34:
                 sys.stdout.write(char)
                 sys.stdout.flush()
                 time.sleep(0.000000000001)
             time.sleep(1)
             if EG == 0:
-                print35='Þú hefðir kannski átt að vaka lengur til að læra Eigin gildi, þær voru 20% af prófinu'
+                print35='\nÞú hefðir kannski átt að vaka lengur til að læra Eigin gildi, þær voru 20% af prófinu'
                 for char in print35:
                     sys.stdout.write(char)
                     sys.stdout.flush()
                     time.sleep(0.000000000001)
             if EG == 1:
-                print36='Vel gert að læra Eigin gildi, þú varst að ná auka 2 heilum á prófinu'
+                print36='\nVel gert að læra Eigin gildi, þú varst að ná auka 2 heilum á prófinu'
                 for char in print36:
                     sys.stdout.write(char)
                     sys.stdout.flush()
                     time.sleep(0.000000000001)
                 einkunn=einkunn + 2
         else:
-            print37='Þarna varstu óheppinn í staðinn fyrir eigin gildis dæmi komu 20% skilgreiningar sem þú bullaðir eitthvað í.'
+            print37='\nÞarna varstu óheppinn í staðinn fyrir eigin gildis dæmi komu 20% skilgreiningar sem þú bullaðir eitthvað í.'
             for char in print37:
                 sys.stdout.write(char)
                 sys.stdout.flush()
                 time.sleep(0.000000000001)
-            print38='Röggi Möll sá í gegnum bullið þitt og gaf þér 0 stig fyrir dæmið'
+            print38='\nRöggi Möll sá í gegnum bullið þitt og gaf þér 0 stig fyrir dæmið'
             for char in print38:
                 sys.stdout.write(char)
                 sys.stdout.flush()
                 time.sleep(0.000000000001)
-        print39='20% spurning hvort að fall sé línulegt'
+        print39='\n20% spurning hvort að fall sé línulegt'
         for char in print39:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(0.000000000001)
         time.sleep(1)
-        print40='Er það ekki bara já og nei spurning, eða 50/50'
+        print40='\nEr það ekki bara já og nei spurning, eða 50/50\n'
         for char in print40:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -577,24 +620,24 @@ class Aron:
         # Gætum bætt við mynd af falli í næsta sprett til að hafa smá raunverulega línulega algebru í þessu
         svar = None
         while svar != "j" and svar != "n":
-            svar = input('Er fallið línulegt eða ekki? J fyrir Já, N fyrir nei: ')
+            svar = input('Er fallið línulegt eða ekki? Já = J eða Nei = N, N fyrir nei: ')
             svar = svar.lower()
         if random.randint(0,1)==0:
             rsvar = 'j'
             if svar == rsvar:
-                print41='Vel gert, þú giskaðir rétt'
+                print41='\nVel gert, þú giskaðir rétt'
                 for char in print41:
                     sys.stdout.write(char)
                     sys.stdout.flush()
                     time.sleep(0.000000000001)
-                print42='Útskýringin þín var samt ekki nægilega góð svo þú færð bara helmingin af dæminu rétt'
+                print42='\nÚtskýringin þín var samt ekki nægilega góð svo þú færð bara helmingin af dæminu rétt'
                 for char in print42:
                     sys.stdout.write(char)
                     sys.stdout.flush()
                     time.sleep(0.000000000001)
                 einkunn = einkunn + 1
             else:
-                print43='Þú giskaðir vitlaust og kunnir ekki nóg um efnið til að búa þér til stig'
+                print43='\nÞú giskaðir vitlaust og kunnir ekki nóg um efnið til að búa þér til stig'
                 for char in print43:
                     sys.stdout.write(char)
                     sys.stdout.flush()
@@ -602,8 +645,8 @@ class Aron:
         else:
             rsvar = 'n'
             if svar == rsvar:
-                print44='Vel gert, þú giskaðir rétt'
-                print45='Útskýringin þín var samt ekki nægilega góð svo þú færð bara helmingin af dæminu rétt'
+                print44='\nVel gert, þú giskaðir rétt'
+                print45='\nÚtskýringin þín var samt ekki nægilega góð svo þú færð bara helmingin af dæminu rétt'
                 for char in print44:
                     sys.stdout.write(char)
                     sys.stdout.flush()
@@ -614,12 +657,12 @@ class Aron:
                     time.sleep(0.000000000001)
                 einkunn = einkunn + 1
             else:
-                print46='Þú giskaðir vitlaust og kunnir ekki nóg um efnið til að búa þér til stig'
+                print46='\nÞú giskaðir vitlaust og kunnir ekki nóg um efnið til að búa þér til stig'
                 for char in print46:
                     sys.stdout.write(char)
                     sys.stdout.flush()
                     time.sleep(0.000000000001)
-        print47='Einföld spurning, sem gildir 10%. Wu-hu.'
+        print47='\nEinföld spurning, sem gildir 10%. Wu-hu.'
         for char in print47:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -627,14 +670,14 @@ class Aron:
         #Hérna á að svara með Ákveða
         akveda=input('Hvað kallast Det(A) á Íslensku?')
         if akveda=='Ákveða' or akveda=='ákveða' or akveda=='Akveda' or akveda=='akveda':
-            print48='Var þetta gisk? Það breytir engu, þetta var allavega rétt'
+            print48='\nVar þetta gisk? Það breytir engu, þetta var allavega rétt'
             for char in print48:
                 sys.stdout.write(char)
                 sys.stdout.flush()
                 time.sleep(0.000000000001)
             einkunn=einkunn+1
         else:
-            print49='Svona á að vita, þarna misstir þú dýrmætt stig úr pokanum'
+            print49='\nSvona á að vita, þarna misstir þú dýrmætt stig úr pokanum'
             for char in print49:
                 sys.stdout.write(char)
                 sys.stdout.flush()
@@ -642,26 +685,26 @@ class Aron:
         # Hérna kemur svefninn inn. Ef maður fékk nægan svefn nær maður flóknu dæmi. Það er tilviljanakennt hversu mikinn svefn maður þarf.
         svefnkrafa = random.randint(0,9)
         if svefnkrafa >svefn:
-            print50='Þú hefðir átt að sofa meira. Röggi Möll henti í svæsið 20% dæmi sem þú fattaðir ekki hvernig á að leysa.'
+            print50='\nÞú hefðir átt að sofa meira. Röggi Möll henti í svæsið 20% dæmi sem þú fattaðir ekki hvernig á að leysa.'
             for char in print50:
                 sys.stdout.write(char)
                 sys.stdout.flush()
                 time.sleep(0.000000000001)
         if svefn >= svefnkrafa:
             einkunn= einkunn+2
-            print51='Vel gert, þú varst vel sofinn og fattaðir trixið í svæsnu 20% dæmi frá Rögga'
+            print51='\nVel gert, þú varst vel sofinn og fattaðir trixið í svæsnu 20% dæmi frá Rögga'
             for char in print51:
                 sys.stdout.write(char)
                 sys.stdout.flush()
                 time.sleep(0.000000000001)
         #Þórður bróðir Rögnvalds kenndi okkur í Verzlunarskólanum svo okkur fannst tilvalið að hafa spurningu um hann
-        print52='Þetta er nú fáranleg spurning 10% spurning'
-        print53='Í hvaða framhaldsskóla kennir Þórður bróðir Rögnvalds stærðfræði?'
-        print54='Verzunarskóla Íslands'
-        print55='Menntaskólanum í Reykjavík'
-        print56='Leikskólanum í Skeifunni'
-        print57='Verkmenntaskólanum á Akureyri'
-        print58='Trúðaskólanum í Nauthólsvík'
+        print52='\nÞetta er nú fáranleg spurning 10% spurning'
+        print53='\nÍ hvaða framhaldsskóla kennir Þórður bróðir Rögnvalds stærðfræði?'
+        print54='\nVerzunarskóla Íslands'
+        print55='\nMenntaskólanum í Reykjavík'
+        print56='\nLeikskólanum í Skeifunni'
+        print57='\nVerkmenntaskólanum á Akureyri'
+        print58='\nTrúðaskólanum í Nauthólsvík\n'
         for char in print52:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -697,19 +740,19 @@ class Aron:
         if skrifa.lower() == "ví" or skrifa.lower() == "vi":
             einkunn= einkunn +1
             time.sleep(1)
-            print59='Vel gert. Þú veist að bræðurnir Möller myndu alltaf bara kenna í bestu menntastofnunum landsins'
+            print59='\nVel gert. Þú veist að bræðurnir Möller myndu alltaf bara kenna í bestu menntastofnunum landsins'
             for char in print59:
                 sys.stdout.write(char)
                 sys.stdout.flush()
                 time.sleep(0.000000000001)
         else:
             time.sleep(1)
-            print60='Ekki nógu gott, þú hefðir átt að vita að bræðurnir Möller myndu alltaf bara kenna í bestu menntastofnunum landsins.'
+            print60='\nEkki nógu gott, þú hefðir átt að vita að bræðurnir Möller myndu alltaf bara kenna í bestu menntastofnunum landsins.'
             for char in print60:
                 sys.stdout.write(char)
                 sys.stdout.flush()
                 time.sleep(0.000000000001)
-            print61='Verzló er rétt svar'
+            print61='\nVerzló er rétt svar'
             for char in print61:
                 sys.stdout.write(char)
                 sys.stdout.flush()
@@ -722,7 +765,7 @@ class Aron:
             time.sleep(0.000000000001)
         if einkunn>4:
             time.sleep(1)
-            print63='Vel gert að ná prófinu, þú færð 6 einingar'
+            print63='\nVel gert að ná prófinu, þú færð 6 einingar'
             for char in print63:
                 sys.stdout.write(char)
                 sys.stdout.flush()
@@ -730,7 +773,7 @@ class Aron:
             StadFall=1
         if einkunn<5:
             time.sleep(1)
-            print64='Þú náðir ekki prófinu og ert kominn ennþá meira aftur úr í náminu'
+            print64='\nÞú náðir ekki prófinu og ert kominn ennþá meira aftur úr í náminu'
             for char in print64:
                 sys.stdout.write(char)
                 sys.stdout.flush()
@@ -753,12 +796,12 @@ def main():
     # Til að spara forritun átti maður ekki séns á að ná eðlisfræðinni
     # Bætum mögulega við prófi í eðlisfræði fyrir næsta sprett
     if namskeid1.lower() == 'e' or namskeid2.lower() == 'e':
-        print65='Aldeilis mistök sem þú gerðir að velja Eðlisfræði prófið.'
+        print65='\nAldeilis mistök sem þú gerðir að velja Eðlisfræði prófið.'
         for char in print65:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(0.000000000001)
-        print66='Þú áttir aldrei séns og fékkst núll í prófinu'
+        print66='\nÞú áttir aldrei séns og fékkst núll í prófinu'
         for char in print66:
             sys.stdout.write(char)
             sys.stdout.flush()
