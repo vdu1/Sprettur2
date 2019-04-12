@@ -37,7 +37,7 @@ def main():
     for char in print7:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.01)
+        time.sleep(0.050)
     time.sleep(1)
     shuffle(spurningar)
     for spurning, rettsvar in spurningar:
