@@ -163,8 +163,8 @@ class Hrolfur:
         else:
             print ("A eða B koma svo")
             while choice not in svar_A and choice not in svar_B:
-                print (" A. FH  "
-                "B. Passion League ")
+                print (" A. FH "+"\n")
+                print("B. Passion League ")
                 choice = input(">>> ")
                 if choice in svar_A:
                     print15="Þetta var slæm ákvörðun. Hrólf líður ekki vel í FH reynir í nokkra mánuði að æfa undir miklu álagi en hættir síðan. -10 hár"
