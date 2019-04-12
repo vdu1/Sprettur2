@@ -784,7 +784,7 @@ class Hrolfur:
             time.sleep(.000000001)
         choice1 = input(">>> ")
         if choice1 in Ja:
-            print48="Slæm ákvörðun, þar sem Hrólfur getur ekki slakað á um helgar með félögunum og einn skíítkaldan missir hann 20 hár"
+            print48="Slæm ákvörðun, þar sem Hrólfur getur ekki slakað á um helgar með félögunum og einn skíítkaldan missir hann 20 hár"+"\n"
             for char in print48:
                 sys.stdout.write(char)
                 sys.stdout.flush()
