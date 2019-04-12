@@ -97,8 +97,13 @@ class Hrolfur:
                 time.sleep(1)
                 choice = input(">>> ")
                 if choice in svar_A:
-                    print8="Jæja, þú ert ömurlegur ráðgjafi. Hrólfur missti allt hárið og féll úr MR á fyrstu önninni. Hann er samt mjög ánægður á dælunni."
+                    print8="Jæja, þú ert ömurlegur ráðgjafi. Hrólfur missti allt hárið og féll úr MR á fyrstu önninni.\n"
                     for char in print8:
+                        sys.stdout.write(char)
+                        sys.stdout.flush()
+                        time.sleep(.000000001)
+                    printMR ="Hann er samt mjög ánægður á dælunni."
+                    for char in printMR:
                         sys.stdout.write(char)
                         sys.stdout.flush()
                         time.sleep(.000000001)
@@ -168,19 +173,29 @@ class Hrolfur:
         else:
             print ("A eða B koma svo")
             while choice not in svar_A and choice not in svar_B:
-                print ("    A. FH" + "\n"
-                "    B. Passion League")
+                print ("    A. FH")
+                print("    B. Passion League")
                 choice = input(">>> ")
                 if choice in svar_A:
-                    print15="Þetta var slæm ákvörðun. Hrólf líður ekki vel í FH reynir í nokkra mánuði að æfa undir miklu álagi en hættir síðan. -10 hár"
+                    print15="Þetta var slæm ákvörðun.\n "
+                    for char in print15:
+                        sys.stdout.write(char)
+                        sys.stdout.flush()
+                        time.sleep(.000000001)
+                    print15="Hrólf líður ekki vel í FH reynir í nokkra mánuði að æfa undir miklu álagi en hættir síðan. -10 hár"
                     for char in print15:
                         sys.stdout.write(char)
                         sys.stdout.flush()
                         time.sleep(.000000001)
                     counter += 10
                 elif choice in svar_B:
-                    print16 ="Geggjuð ákvörðun. Hrólfur skemmtir sér konunglega með félögunum í Passion League, einn stóran Tuborg takk."+"\n"
+                    print16 ="Geggjuð ákvörðun." +"\n"
                     for char in print16:
+                        sys.stdout.write(char)
+                        sys.stdout.flush()
+                        time.sleep(.000000001)
+                    print4f ="Hrólfur skemmtir sér konunglega með félögunum í Passion League, einn stóran Tuborg takk."+"\n"
+                    for char in print4f:
                         sys.stdout.write(char)
                         sys.stdout.flush()
                         time.sleep(.000000001)
@@ -203,7 +218,7 @@ class Hrolfur:
         choice = input(">>> ")
         if choice in svar_A:
             print20="Ekki vera svona heimskur, maður græðir ekkert á að vera Dúx, spurðu bara Erni Jónsson"+"\n"
-            print21="-10 hár fyrir óþarfa metnað í námi"
+            print21="-10 hár fyrir óþarfa metnað í námi"+"\n"
             for char in print20:
                 sys.stdout.write(char)
                 sys.stdout.flush()
@@ -214,7 +229,7 @@ class Hrolfur:
                 time.sleep(.000000001)
             counter += 10
         elif choice in svar_B:
-            print22="Hrólfur nýtur sín vel í náminu þar sem hann var ekki að eltast við einkunnir. Hann lærir efnið vel og missir ekkert hár."+"\n"
+            print22="Hrólfur nýtur sín vel í náminu þar sem hann var ekki að eltast við einkunnir.\n Hann lærir efnið vel og missir ekkert hár."+"\n"
             for char in print22:
                 sys.stdout.write(char)
                 sys.stdout.flush()
@@ -246,7 +261,7 @@ class Hrolfur:
                         sys.stdout.flush()
                         time.sleep(.000000001)
 
-        print24="Hrólfur útskrifaðist úr Flensborg og stefnir núna á Iðnaðarverkfræði við Háskóla Íslands"
+        print24="Hrólfur útskrifaðist úr Flensborg og stefnir núna á Iðnaðarverkfræði við Háskóla Íslands\n"
         for char in print24:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -298,9 +313,13 @@ class Hrolfur:
             sys.stdout.flush()
             time.sleep(.000000001)
         time.sleep(1)
-        printfh = """    A. FH
-    B. Passion League """
+        printfh = "    A. FH"
+        printpl = "\n    B. Passion League "
         for char in printfh:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(.000000001)
+        for char in printpl:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(.000000001)
@@ -320,19 +339,12 @@ class Hrolfur:
                 sys.stdout.flush()
                 time.sleep(.000000001)
         else:
-            printabc = "A eða B koma svo"
-            for char in printabc:
-                sys.stdout.write(char)
-                sys.stdout.flush()
-                time.sleep(.000000001)
             while choice not in svar_A and choice not in svar_B:
-                printfh1 = """\n    A. FH
-            B. Passion League """
-                for char in printfh1:
+                printabc = "A eða B koma svo"
+                for char in printabc:
                     sys.stdout.write(char)
                     sys.stdout.flush()
                     time.sleep(.000000001)
-                time.sleep(1)
                 choice = input("\n>>> ")
                 if choice in svar_A:
                     print15="Þetta var slæm ákvörðun. Hrólf líður ekki vel í FH reynir í nokkra mánuði að æfa undir miklu álagi en hættir síðan. -10 hár"
@@ -443,7 +455,13 @@ class Hrolfur:
         elif choice in svar_B:
             counter += self.HaskoliB()
         else:
-            self.HaskoliStart()
+            while choice not in svar_A and choice not in svar_B:
+                print("A eða B takk fyrir ")
+                choice = input(">>> ")
+                if choice in svar_A:
+                    counter += self.HaskoliA()
+                elif choice in svar_B:
+                    counter += self.HaskoliB()
         return counter
 
     def HaskoliA(self):
@@ -477,7 +495,7 @@ class Hrolfur:
             sys.stdout.flush()
             time.sleep(.000000001)
         time.sleep(1)
-        print47="      Á Hrólfur að hætta að drekka eins og T-Paul vinur hans? (já eða nei)"+"\n"
+        print47="Á Hrólfur að hætta að drekka eins og T-Paul vinur hans? (já eða nei)"+"\n"
         for char in print47:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -492,7 +510,7 @@ class Hrolfur:
             counter += 20
         if choice1 in Nei:
             print49="Góð ákvörðun, þrátt fyrir að Hrólfur prjónaði stundum yfir sig þá getur hann slakað vel á um helgar með félögunum"+"\n"
-            print50="Hann þarf samt oft að hafa áhyggjur eftir að hafa trúðað yfir sig og missir því 5 hár"
+            print50="Hann þarf samt oft að hafa áhyggjur eftir að hafa trúðað yfir sig og missir því 5 hár"+"\n"
             for char in print49:
                 sys.stdout.write(char)
                 sys.stdout.flush()
@@ -516,8 +534,12 @@ class Hrolfur:
                 sys.stdout.flush()
                 time.sleep(.000000001)
         else:
-            print7000="Já eða nei takk fyrir."
             while choice1 not in Ja and choice1 not in Nei:
+                print7000="Já eða nei takk fyrir."
+                for char in print7000:
+                    sys.stdout.write(char)
+                    sys.stdout.flush()
+                    time.sleep(.000000001)
                 choice1 = input(">>> ")
                 if choice1 in Ja:
                     print48="Slæm ákvörðun, þar sem Hrólfur getur ekki slakað á um helgar með félögunum og einn skíítkaldan missir hann 20 hár"
@@ -528,7 +550,7 @@ class Hrolfur:
                     counter += 20
                 if choice1 in Nei:
                     print49="Góð ákvörðun, þrátt fyrir að Hrólfur prjónaði stundum yfir sig þá getur hann slakað vel á um helgar með félögunum"+"\n"
-                    print50="Hann þarf samt oft að hafa áhyggjur eftir að hafa trúðað yfir sig og missir því 5 hár"
+                    print50="Hann þarf samt oft að hafa áhyggjur eftir að hafa trúðað yfir sig og missir því 5 hár"+"\n"
                     for char in print49:
                         sys.stdout.write(char)
                         sys.stdout.flush()
@@ -601,7 +623,7 @@ class Hrolfur:
             time.sleep(1)
             print61="Í staðinn fær Hrólfur að sofa aðeins lengur því nú fær hann nesti tilbúið af Nesinu"+"\n"
             print62="Mínus 5 hár samt fyrir að missa einbeitingu frá náminu"
-            print63="Þetta gengur vel en auðvitað eru einhverjir hnökkrar og Hrólfur missir samtals 5 hár"
+            print63="Þetta gengur vel en auðvitað eru einhverjir hnökkrar og Hrólfur missir samtals 5 hár"+"\n"
             for char in print61:
                 sys.stdout.write(char)
                 sys.stdout.flush()
@@ -804,8 +826,12 @@ class Hrolfur:
                 sys.stdout.flush()
                 time.sleep(.000000001)
         else:
-            print7000="Já eða nei takk fyrir."
             while choice1 not in Ja and choice1 not in Nei:
+                print7000="Já eða nei takk fyrir."
+                for char in print7000:
+                    sys.stdout.write(char)
+                    sys.stdout.flush()
+                    time.sleep(.000000001)
                 choice1 = input(">>> ")
                 if choice1 in Ja:
                     print48="Slæm ákvörðun, þar sem Hrólfur getur ekki slakað á um helgar með félögunum og einn skíítkaldan missir hann 20 hár"
@@ -816,7 +842,7 @@ class Hrolfur:
                     counter += 20
                 if choice1 in Nei:
                     print49="Góð ákvörðun, þrátt fyrir að Hrólfur prjónaði stundum yfir sig þá getur hann slakað vel á um helgar með félögunum"+"\n"
-                    print50="Hann þarf samt oft að hafa áhyggjur eftir að hafa trúðað yfir sig og missir því 5 hár"
+                    print50="Hann þarf samt oft að hafa áhyggjur eftir að hafa trúðað yfir sig og missir því 5 hár"+"\n"
                     for char in print49:
                         sys.stdout.write(char)
                         sys.stdout.flush()
@@ -906,17 +932,17 @@ class Hrolfur:
 
 
     def Nidurstada(self, x):
-        print95="Nú er Hrólfur búinn með skólann"
-        print96="Hann endaði með "+str(x)+"hár eftir á kollinum"
-        for char in print95:
-            sys.stdout.write(char)
-            sys.stdout.flush()
-            time.sleep(.000000001)
-        for char in print96:
-            sys.stdout.write(char)
-            sys.stdout.flush()
-            time.sleep(.000000001)
         if x>50:
+            print95="Nú er Hrólfur búinn með skólann"
+            for char in print95:
+                sys.stdout.write(char)
+                sys.stdout.flush()
+                time.sleep(.000000001)
+            print96="Hann endaði með "+str(x)+"hár eftir á kollinum\n"
+            for char in print96:
+                sys.stdout.write(char)
+                sys.stdout.flush()
+                time.sleep(.000000001)
             print97="Þarf sem Hrólfur átti meira en 50 hár eftir á hausnum þá hafði hann nóg sjálfstraust til að klára dæmið og útskrifaðist"+"\n"
             for char in print97:
                 sys.stdout.write(char)
@@ -924,7 +950,12 @@ class Hrolfur:
                 time.sleep(.000000001)
             return 1
         if x <= 50:
-            print98="Þarf sem Hrólfur missti of mikið hár gat hann ekki náð að klára dæmið, þú náðir ekki að útskrifa Hrólf\n"
+            print96="Hann endaði með "+str(x)+"hár eftir á kollinum\n"
+            for char in print96:
+                sys.stdout.write(char)
+                sys.stdout.flush()
+                time.sleep(.000000001)
+            print98="Þar sem Hrólfur missti of mikið hár gat hann ekki náð að klára dæmið, þú náðir ekki að útskrifa Hrólf\n"
             for char in print98:
                 sys.stdout.write(char)
                 sys.stdout.flush()
