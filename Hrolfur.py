@@ -127,7 +127,7 @@ class Hrolfur:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(.000000001)
-        print10="Þrátt fyrir að vera heimakær hefur Hrólfur áhyggjur af að finna ekki spennandi kvenkost í Hafnarfirðinum."+"\n"
+        print10="Þrátt fyrir að vera heimakær hefur Hrólfur áhyggjur af að finna ekki spennandi kvenkost í Hafnarfirðinum."+"\n"+"\n"
         for char in print10:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -510,7 +510,7 @@ class Hrolfur:
             counter += 20
         if choice1 in Nei:
             print49="Góð ákvörðun, þrátt fyrir að Hrólfur prjónaði stundum yfir sig þá getur hann slakað vel á um helgar með félögunum"+"\n"
-            print50="Hann þarf samt oft að hafa áhyggjur eftir að hafa trúðað yfir sig og missir því 5 hár"+"\n"
+            print50="Hann þarf samt oft að hafa áhyggjur eftir að hafa trúðað yfir sig og missir því 5 hár"+"\n"+"\n"
             for char in print49:
                 sys.stdout.write(char)
                 sys.stdout.flush()
@@ -542,7 +542,7 @@ class Hrolfur:
                     time.sleep(.000000001)
                 choice1 = input(">>> ")
                 if choice1 in Ja:
-                    print48="Slæm ákvörðun, þar sem Hrólfur getur ekki slakað á um helgar með félögunum og einn skíítkaldan missir hann 20 hár"
+                    print48="Slæm ákvörðun, þar sem Hrólfur getur ekki slakað á um helgar með félögunum og einn skíítkaldan missir hann 20 hár"+"\n"
                     for char in print48:
                         sys.stdout.write(char)
                         sys.stdout.flush()
@@ -550,7 +550,7 @@ class Hrolfur:
                     counter += 20
                 if choice1 in Nei:
                     print49="Góð ákvörðun, þrátt fyrir að Hrólfur prjónaði stundum yfir sig þá getur hann slakað vel á um helgar með félögunum"+"\n"
-                    print50="Hann þarf samt oft að hafa áhyggjur eftir að hafa trúðað yfir sig og missir því 5 hár"+"\n"
+                    print50="Hann þarf samt oft að hafa áhyggjur eftir að hafa trúðað yfir sig og missir því 5 hár"+"\n"+"\n"
                     for char in print49:
                         sys.stdout.write(char)
                         sys.stdout.flush()
@@ -604,7 +604,7 @@ class Hrolfur:
         time.sleep(1)
         if choice2 in svar_A:
             print58="Þið djammið mikið saman og skemmtið ykkur vel"+"\n"
-            print59="Of mikið myndu sumir segja og hann missir 10 hár"+"\n"
+            print59="Of mikið myndu sumir segja og hann missir 10 hár"+"\n"+"\n"
             for char in print58:
                 sys.stdout.write(char)
                 sys.stdout.flush()
@@ -622,13 +622,8 @@ class Hrolfur:
                 time.sleep(.000000001)
             time.sleep(1)
             print61="Í staðinn fær Hrólfur að sofa aðeins lengur því nú fær hann nesti tilbúið af Nesinu"+"\n"
-            print62="Mínus 5 hár samt fyrir að missa einbeitingu frá náminu"
             print63="Þetta gengur vel en auðvitað eru einhverjir hnökkrar og Hrólfur missir samtals 5 hár"+"\n"
             for char in print61:
-                sys.stdout.write(char)
-                sys.stdout.flush()
-                time.sleep(.000000001)
-            for char in print62:
                 sys.stdout.write(char)
                 sys.stdout.flush()
                 time.sleep(.000000001)
@@ -675,13 +670,8 @@ class Hrolfur:
                         time.sleep(.000000001)
                     time.sleep(1)
                     print61="Í staðinn fær Hrólfur að sofa aðeins lengur því nú fær hann nesti tilbúið af Nesinu"+"\n"
-                    print62="Mínus 5 hár samt fyrir að missa einbeitingu frá náminu"
-                    print63="Þetta gengur vel en auðvitað eru einhverjir hnökkrar og Hrólfur missir samtals 5 hár"
+                    print63="Þetta gengur vel en auðvitað eru einhverjir hnökkrar og Hrólfur missir samtals 5 hár"+"\n"
                     for char in print61:
-                        sys.stdout.write(char)
-                        sys.stdout.flush()
-                        time.sleep(.000000001)
-                    for char in print62:
                         sys.stdout.write(char)
                         sys.stdout.flush()
                         time.sleep(.000000001)
@@ -734,7 +724,7 @@ class Hrolfur:
                 sys.stdout.flush()
                 time.sleep(.000000001)
             time.sleep(1)
-        print91="Hrólfur fer hlægjandi í gegnum önn 4 og 5"+"\n"
+        print91="Hrólfur fer hlægjandi í gegnum önn 4 og 5"+"\n"+"\n"
         for char in print91:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -750,7 +740,7 @@ class Hrolfur:
             sys.stdout.flush()
             time.sleep(.000000001)
         print76="Nú er hann kominn í þá gríðarlega erfiðu stöðu að þurfa að ná þessum námskeiðum"+"\n"
-        print77="Við það að reyna að ná þessum fáranlegu námskeiðum sem Lexi valdi missti Hrólfur 10 hár, vonandi átti hann efni á því"+"\n"
+        print77="Við það að reyna að ná þessum fáranlegu námskeiðum sem Lexi valdi missti Hrólfur 10 hár, vonandi átti hann efni á því"+"\n"+"\n"
         for char in print76:
             sys.stdout.write(char)
             sys.stdout.flush()
