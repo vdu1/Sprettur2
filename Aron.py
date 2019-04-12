@@ -709,7 +709,7 @@ class Aron:
                 sys.stdout.write(char)
                 sys.stdout.flush()
                 time.sleep(0.000000000001)
-            print61="Verzló er rétt svar"+"\n"+"\n"
+            print61="Verzló er rétt svar"+"\n"+"\ns"
             for char in print61:
                 sys.stdout.write(char)
                 sys.stdout.flush()
