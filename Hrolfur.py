@@ -777,7 +777,7 @@ class Hrolfur:
             sys.stdout.flush()
             time.sleep(.000000001)
         time.sleep(1)
-        print47="   Á Hrólfur að hætta að drekka eins og T-Paul vinur hans? (já eða nei)"
+        print47="Á Hrólfur að hætta að drekka eins og T-Paul vinur hans? (já eða nei)"
         for char in print47:
             sys.stdout.write(char)
             sys.stdout.flush()
