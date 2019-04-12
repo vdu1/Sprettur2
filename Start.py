@@ -46,6 +46,7 @@ def main():
             counter += 1
 
     Teljari += kall.nidurstada(counter, len(spurningar))
+    time.sleep(4)
 
     #Kallið fyrir leikur2
     print("\n" * get_terminal_size().lines, end='')
@@ -61,6 +62,7 @@ def main():
         Útskrift = True
     if Útskrift is True:
         Teljari += 1
+    time.sleep(4)
 
     #Kallið fyrir leikur3
     print("\n" * get_terminal_size().lines, end='')
@@ -82,6 +84,7 @@ def main():
     print('Þú endaðir með '+ str(einingar) + " einingar, til hamingju! Hjálpaðu næsta nemanda að útskrifast")
     if einingar == 12:
         Teljari += 1
+    time.sleep(4)
 
     #Kallið fyrir leikur4
     print("\n" * get_terminal_size().lines, end='')
@@ -91,10 +94,12 @@ def main():
     if har>20:
         har -= kall.HaskoliStartintro()
     kall.Nidurstada(har)
+    time.sleep(4)
 
     #Nú viljum við taka allt saman til að birta niðurstöður leikjanna
     print("\n" * get_terminal_size().lines, end='')
     print(nafn1 + " þú útskrifaðir " + str(Teljari) + " af 4 nemendum")
+
 
 if __name__ == "__main__":
     main()
