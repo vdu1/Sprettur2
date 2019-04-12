@@ -163,8 +163,8 @@ class Hrolfur:
         else:
             print ("A eða B koma svo")
             while choice not in svar_A and choice not in svar_B:
-                print (" A. FH  "
-                "B. Passion League ")
+                print ("    A. FH" + "\n"
+                "    B. Passion League")
                 choice = input(">>> ")
                 if choice in svar_A:
                     print15="Þetta var slæm ákvörðun. Hrólf líður ekki vel í FH reynir í nokkra mánuði að æfa undir miklu álagi en hættir síðan. -10 hár"
@@ -292,8 +292,8 @@ class Hrolfur:
             sys.stdout.flush()
             time.sleep(.000000001)
         time.sleep(1)
-        print (" A. FH  "
-        "B. Passion League ")
+        print ("    A. FH  " + "\n"
+        "    B. Passion League ")
         choice = input(">>> ")
         if choice in svar_A:
             print15="Þetta var slæm ákvörðun. Hrólf líður ekki vel í FH reynir í nokkra mánuði að æfa undir miklu álagi en hættir síðan. -10 hár"
@@ -311,8 +311,8 @@ class Hrolfur:
         else:
             print ("A eða B koma svo")
             while choice not in svar_A and choice not in svar_B:
-                print (" A. FH  "
-                "B. Passion League ")
+                print ("    A. FH  " + "\n"
+                "    B. Passion League ")
                 choice = input(">>> ")
                 if choice in svar_A:
                     print15="Þetta var slæm ákvörðun. Hrólf líður ekki vel í FH reynir í nokkra mánuði að æfa undir miklu álagi en hættir síðan. -10 hár"
@@ -329,7 +329,7 @@ class Hrolfur:
                         time.sleep(.000000001)
         print33="Námið í Verzló er erfitt fyrir Hrólf. Hann er að velta því fyrir sér hvort hann eigi að halda áfram eða hætta bara í skólanum."+"\n"
         print34="Hann gæti átt erfitt með að halda sér í Verzló en það gæti verið að hann flosni úr skóla ef hann fer í Flensborg"+"\n"
-        print35="A fyrir að halda áfram eða B fyrir Flensborg"
+        print35="     A fyrir að halda áfram" + "\n"  "     B fyrir Flensborg" + "\n"
         for char in print33:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -739,13 +739,13 @@ class Hrolfur:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(.000000001)
-        print80="Á annarri önninni trúðar Hrólfur oft yfir sig á djamminu"+"\n"
+        print80="Á annarri önninni trúðar Hrólfur oft yfir sig á djamminu."+"\n"
         for char in print80:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(.000000001)
         time.sleep(1)
-        print47="Á Hrólfur að hætta að drekka eins og T-Paul vinur hans?"
+        print47="   Á Hrólfur að hætta að drekka eins og T-Paul vinur hans? (já eða nei)"
         for char in print47:
             sys.stdout.write(char)
             sys.stdout.flush()
