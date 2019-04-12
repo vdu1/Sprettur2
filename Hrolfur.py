@@ -19,7 +19,7 @@ class Hrolfur:
         Nei = ["N", "n", "nei", "Nei", "NEI"]
         choice = None
 
-        print1 ="Hrólfur Sveinsson er ungur drengur úr Hafnarfirðinum."+"\n"
+        print1 ="Hrólfur Sveinsson er ungur drengur úr Hafnarfirðinum."+"\n\n"
         for char in print1:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -31,7 +31,7 @@ class Hrolfur:
             sys.stdout.flush()
             time.sleep(.000000001)
         time.sleep(1)
-        print3= "Þökk sé streitu sér Hrólfur ungur að hann er nálægt því að missa hárið."+"\n"
+        print3= "Þökk sé streitu sér Hrólfur ungur að hann er nálægt því að missa hárið."+"\n\n"
         for char in print3:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -43,13 +43,13 @@ class Hrolfur:
             sys.stdout.flush()
             time.sleep(.000000001)
         time.sleep(1)
-        print5="Hrólfur veit að ef hann missir allt hárið þá mun hafa ekki hafa sjálfstraustið í að klára háskólann."+"\n"
+        print5="Hrólfur veit að ef hann missir allt hárið þá mun hafa ekki hafa sjálfstraustið í að klára háskólann."+"\n\n"
         for char in print5:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(.000000001)
         time.sleep(1)
-        print6="Fyrsta stóra ákvörðunin sem þú þarft að hjálpa Hrólf með er í hvaða framhaldsskóla hann á að fara."
+        print6="Fyrsta stóra ákvörðunin sem þú þarft að hjálpa Hrólf með er í hvaða framhaldsskóla hann á að fara. Veldu skóla."
         for char in print6:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -89,8 +89,13 @@ class Hrolfur:
             counter += self.option_Verzl()
         else:
             while (choice not in svar_A and choice not in svar_B and choice not in svar_C):
-                print ("A, B eða C takk fyrir")
-                choice = input(">>>")
+                printabc = "\nA, B eða C takk fyrir\n\n"
+                for char in printabc:
+                    sys.stdout.write(char)
+                    sys.stdout.flush()
+                    time.sleep(.000000001)
+                time.sleep(1)
+                choice = input(">>> ")
                 if choice in svar_A:
                     print8="Jæja, þú ert ömurlegur ráðgjafi. Hrólfur missti allt hárið og féll úr MR á fyrstu önninni. Hann er samt mjög ánægður á dælunni."
                     for char in print8:
@@ -259,9 +264,10 @@ class Hrolfur:
         Ja = ["J", "j", "já", "JÁ", "Já"]
         Nei = ["N", "n", "nei", "Nei", "NEI"]
 
-        print25="Hrólfur er mættur í Verzló. Honum finnst félagslífið skemmtilegt en námið er erfitt."+"\n"
+        time.sleep(1)
+        print25="\nHrólfur er mættur í Verzló. Honum finnst félagslífið skemmtilegt en námið er erfitt."+"\n"
         print26="Snappið hans Hrólfs er ekki lengi að fyllast af skonsum eftir að hann byrjar í Verzló."+"\n"
-        print27="Álagið við að svara öllum þessum skonsum lætur hann missa 10 hár af hausnum"+"\n"
+        print27="Álagið við að svara öllum þessum skonsum lætur hann missa 10 hár af hausnum."+"\n\n"
         for char in print25:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -276,13 +282,13 @@ class Hrolfur:
             time.sleep(.000000001)
         counter += 10
         time.sleep(1)
-        print12="Hrólfur er mikill fótboltastrákur. Hann elskar fátt meira en að sparka í boltann með góðum félögum"+"\n"
+        print12="Hrólfur er mikill fótboltastrákur. Hann elskar fátt meira en að sparka í boltann með góðum félögum."+"\n"
         for char in print12:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(.000000001)
-        print13="Hrólfur er hinsvegar í erfiðri stöðu. Félagarnir eru ekki með jafn mikið metnað í boltanum. Hrólfur sjálfur gæti fengið að æfa með meistaraflokki FH í sumar."+"\n"
-        print14="Hrólfur veit samt að það er mikið álag að vera í meistaraflokki"+"Ætti hann að eltast við draumana í FH eða ætti hann að fara með félögunum í Passion League"+"\n"
+        print13="Hrólfur er hins vegar í erfiðri stöðu. Félagarnir eru ekki með jafn mikið metnað í boltanum. Hrólfur sjálfur gæti fengið að æfa með meistaraflokki FH í sumar."+"\n"
+        print14="Hrólfur veit samt að það er mikið álag að vera í meistaraflokki.\n\n"+"Ætti hann að eltast við draumana í FH eða ætti hann að fara með félögunum í Passion League?"+"\n"
         for char in print13:
             sys.stdout.write(char)
             sys.stdout.flush()
@@ -292,9 +298,14 @@ class Hrolfur:
             sys.stdout.flush()
             time.sleep(.000000001)
         time.sleep(1)
-        print ("    A. FH  " + "\n"
-        "    B. Passion League ")
-        choice = input(">>> ")
+        printfh = """    A. FH
+    B. Passion League """
+        for char in printfh:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(.000000001)
+        time.sleep(1)
+        choice = input("\n>>> ")
         if choice in svar_A:
             print15="Þetta var slæm ákvörðun. Hrólf líður ekki vel í FH reynir í nokkra mánuði að æfa undir miklu álagi en hættir síðan. -10 hár"
             for char in print15:
@@ -309,11 +320,20 @@ class Hrolfur:
                 sys.stdout.flush()
                 time.sleep(.000000001)
         else:
-            print ("A eða B koma svo")
+            printabc = "A eða B koma svo"
+            for char in printabc:
+                sys.stdout.write(char)
+                sys.stdout.flush()
+                time.sleep(.000000001)
             while choice not in svar_A and choice not in svar_B:
-                print ("    A. FH  " + "\n"
-                "    B. Passion League ")
-                choice = input(">>> ")
+                printfh1 = """\n    A. FH
+            B. Passion League """
+                for char in printfh1:
+                    sys.stdout.write(char)
+                    sys.stdout.flush()
+                    time.sleep(.000000001)
+                time.sleep(1)
+                choice = input("\n>>> ")
                 if choice in svar_A:
                     print15="Þetta var slæm ákvörðun. Hrólf líður ekki vel í FH reynir í nokkra mánuði að æfa undir miklu álagi en hættir síðan. -10 hár"
                     for char in print15:
