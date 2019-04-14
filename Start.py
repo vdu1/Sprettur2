@@ -124,6 +124,8 @@ def main():
     if har>20:
         har -= kall.HaskoliStartintro()
     kall.Nidurstada(har)
+    if har >50:
+        Teljari += 1
 
     #Nú viljum við taka allt saman til að birta niðurstöður leikjanna
     time.sleep(1)
